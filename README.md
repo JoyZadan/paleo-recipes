@@ -121,11 +121,90 @@ The non-highlighted elements in these diagrams will return the use to the same p
 
 
 ## Skeleton
-## Features
+To view the wireframe created for this project, [click here]().
 
+### Design
+[FINALISE: Bootstrap5 | Materialize]() was used and customised for the front-end development.
+
+#### Colour Scheme
+[INSERT HERE]()
+
+#### Typography
+[INSERT HERE]()
+
+#### Imagery
+[INSERT HERE]()
+The background image for the home page inspired the colour scheme and typography used for the App.
+
+## Features
+Breakdown of the features and elements implemented for the App.
+### Multi Page Elements
+#### Navbar
+- Logo
+- Home
+- About
+
+#### Footer
+#### /home
+#### /recipes
+#### /search
+
+### CRUD TABLE
+| Page | Create | Read | Update | Delete |
+| --- | --- | --- | --- | --- |
+| home | | | | |
+| recipes | | | | |
+
+### Defensive Programming
 
 # Technologies Used
+* Languages:
+    * [HTML5](https://en.wikipedia.org/wiki/HTML5) was used for the content and structure of the site.
+    * [CSS3](https://en.wikipedia.org/wiki/CSS#CSS_3) was used for the styling of the site.
+    * [JavaScript](https://en.wikipedia.org/wiki/JavaScript) was used for the interactivity of the site.
+    * [Python](https://www.python.org/) was used for the back end programming of the site.
 
+* [Flask](https://flask.palletsprojects.com/en/2.0.x/)
+    * Flask was used to handle the templating for the site.
+
+* [Flask-PyMongo](https://pypi.org/project/Flask-PyMongo/)
+    * Flask-PyMongo provides MongoDB support for Flask applications.
+
+* [pip](https://pip.pypa.io/en/stable/)
+    * Pip is the package installer for Python, allowing us to install the packages we need for this site.
+
+* [dnspython](https://www.dnspython.org/)
+    * Dnspython is a DNS toolkit for python.
+
+* [Werkzeug](https://wsgi.readthedocs.io/en/latest/what.html)
+    * Werkzeug is a Web Server Gateway Interface web application library.
+
+* [Jinja](https://www.palletsprojects.com/p/jinja/)
+    * Jinja is a templating engine for Python, used to write Flask and other templating services.
+
+* [Balsamiq](https://balsamiq.com/)
+    * Balsamiq was used to create the wireframes for this project.
+
+* [Git](https://git-scm.com/)
+    * Git was used for version control and saving work in the repository, using the GitPod extension in Google Chrome to commit to GitHub.
+
+* [Bootstrap 5](https://getbootstrap.com/)
+    * Bootstrap is one of the most popular front-end open source toolkit and was used for ease of styling the Earthlings app.
+
+* [Chrome](https://www.google.com/intl/en_uk/chrome/)
+    * This project was created in the Google Chrome browser, and as such Chrome was used as the default testing browser.
+
+* [Heroku](https://devcenter.heroku.com/)
+    * Heroku is where we deploy this live site. Throughout, we have ensured the version being deployed to Heroku matches the development version by checking features and screen layouts on both versions.
+
+* [MongoDB](https://www.mongodb.com/)
+    * MongoDB is where we host our NoSQL database.
+
+* [GitHub](https://github.com/)
+    * GitHub is where we host our site.
+
+* [Online-Convert](https://www.online-convert.com/)
+    * Online-Convert was used to convert the png images to webp.
 
 # Testing
 All testing undertaken for this project can be found in the [Testing Document](/readme_docs/testing.md)

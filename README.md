@@ -97,6 +97,28 @@ Based on the results of the Feature Ideas Planning, I have decided to attempt to
 * Contact the developer for feedback and bug reports
 
 ## Structure
+### Topology Diagrams
+The green elements in these diagrams illustrate the pages that are always accessible from the Navbar for all visitors.
+The non-highlighted elements in these diagrams will return the use to the same page or to the home page. Add, edit and delete elements are only available to logged in users. The delete functions will return to:
+- [INSERT]
+- [INSERT]
+
+#### Guest User
+- [INSERT DIAGRAM]()
+
+#### Registered User
+- [INSERT DIAGRAM]()
+
+#### Admin User
+- [INSERT DIAGRAM]()
+
+#### Jinja Template Structure and Relationships
+- [INSERT DIAGRAM]()
+
+### Database Schema and Structure
+- [INSERT SCHEMA FOR RELATIONAL DB]()
+- [INSERT DB STRUCTURE FOR MONGODB]()
+
 
 ## Skeleton
 ## Features

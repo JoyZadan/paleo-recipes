@@ -1,10 +1,9 @@
-# Paleo Recipes
-
-(INSERT HERE one sentence overview)
-
-Welcome to Paleo Recipes.
+# PALEO RECIPES
 
 (INSERT HERE am i responsive screenshot)
+
+# Project Overview
+Welcome to Paleo Recipes, an App designed to ...
 
 (INSERT HERE longer overview incl the what, why, who, where, how)
 
@@ -34,10 +33,10 @@ Table of Contents - Click to Expand
 
 ---
 
-## UX Development
+# UX Development
 
-### Strategy
-#### Project Goals
+## Strategy
+### Project Goals
 * To develop an App where users can easily find Paleo recipes, add and manage their own Paleo recipes and share their opinion on recipes and find other users' opinions and recipe contribution
 * Use Mobile First design principle in building a responsive App
 * Present the available information in a user friendly way
@@ -45,31 +44,31 @@ Table of Contents - Click to Expand
 * Provide registered users access to a full CRUD functionality
 * Include defensive programming to enable users to make an informed decision when deleting recipes
 * Handle any errors to help the users understand the issue and contact the App owner if any error should persist
-#### Business Goals
+### Business Goals
 * Potentially include referral links to specialist sellers of Paleo-friendly ingredients
-#### User Demographic
+### User Demographic
 * Ages 16 and above for viewing, registering and contributing to recipes
 * Visitors who are interested in Paleo recipes
 * Registered users who want to contribute and share their opinions
-#### User Stories
-##### First Time Visitor Goals - As a first time user who has not created an account, I want to be able to:
+### User Stories
+#### First Time Visitor Goals - As a first time user who has not created an account, I want to be able to:
 * Immediately understand the main purpose and use of the application, Paleo Recipes, and how to use it
 * Search for specific recipes or view all recipes
 * Register/ create a user account
-##### Registered User Goals - As a registered user, I want to be able to:
+#### Registered User Goals - As a registered user, I want to be able to:
 * Add, edit, retrieve and delete my own Paleo recipe(s)
 * Add my own Paleo recipe(s), based on Categories
 * Add, edit, retrieve and delete my review of the recipes
 * Edit my account information
 * Delete my account
-##### Site Admin Goals - As an administrator, I want to be able to:
+#### Site Admin Goals - As an administrator, I want to be able to:
 * Have the ability to maintain the Paleo Recipe App and its content
 * Edit and delete any recipe
 * Add, edit, retrieve and delete any recipe by category
 * Add, edit, retrieve and delete any reviews
 
-### Scope
-#### Feature Ideas Planning
+## Scope
+### Feature Ideas Planning
 When planning the App features and scope, I drew up an Importance Viability analysis of these features, please see below:
 
 | # | Feature | Importance | Viability |
@@ -91,30 +90,33 @@ When planning the App features and scope, I drew up an Importance Viability anal
 
 Based on the results of the Feature Ideas Planning, I have decided to attempt to implement Features numbers 1, 2, 3, 4, 5, 7, 9, 14 for this production release and park the remaining features due to time limitations.
 
-#### Functionality Requirements
+### Functionality Requirements
 * Clean and themed presentation of recipe details
 * Intuitive App navigation
 * Fresh-looking, appetising and themed use of images across the App
 * Contact the developer for feedback and bug reports
 
-### Structure
-### Skeleton
-### Features
+## Structure
+
+## Skeleton
+## Features
 
 
-## Technologies Used
+# Technologies Used
 
 
-## Testing
+# Testing
 All testing undertaken for this project can be found in the [Testing Document](/readme_docs/testing.md)
 
-## Bugs and Issues
+# Bugs and Issues
 
-## Deployment
+# Deployment
 
-## Credits
+# Credits
+## Resources
+README and Testing Inspirations from [Nick Lennon](https://github.com/nlenno1/moviewiki-ms3) and [Naoise Gaffney](https://github.com/NaoiseGaffney/Training)
 
-## Acknowledgements
+# Acknowledgements
 
 
 

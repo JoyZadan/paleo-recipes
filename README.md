@@ -211,13 +211,22 @@ All testing undertaken for this project can be found in the [Testing Document](/
 
 # Bugs and Issues
 
-# Deployment
+# Deployment & Local Development
+## Deployment to Heroku
+## Local Development
+## Making Local Clone
 
 # Credits
+## Code
+## Content
+## Media
 ## Resources
 README and Testing Inspirations from [Nick Lennon](https://github.com/nlenno1/moviewiki-ms3) and [Naoise Gaffney](https://github.com/NaoiseGaffney/Training)
 
 # Acknowledgements
+
+# Copyrights
+
 
 
 

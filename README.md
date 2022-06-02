@@ -57,17 +57,46 @@ Table of Contents - Click to Expand
 * Search for specific recipes or view all recipes
 * Register/ create a user account
 ##### Registered User Goals - As a registered user, I want to be able to:
-* Add, edit and delete my own Paleo recipe(s)
+* Add, edit, retrieve and delete my own Paleo recipe(s)
 * Add my own Paleo recipe(s), based on Categories
+* Add, edit, retrieve and delete my review of the recipes
 * Edit my account information
 * Delete my account
 ##### Site Admin Goals - As an administrator, I want to be able to:
 * Have the ability to maintain the Paleo Recipe App and its content
 * Edit and delete any recipe
-* Add, edit and delete any recipe by category
-
+* Add, edit, retrieve and delete any recipe by category
+* Add, edit, retrieve and delete any reviews
 
 ### Scope
+#### Feature Ideas Planning
+When planning the App features and scope, I drew up an Importance Viability analysis of these features, please see below:
+
+| # | Feature | Importance | Viability |
+| --- | --- | --- | --- |
+| 1 | View, Create, Edit and Delete Recipes | 5 | 5 |
+| 2 | View, Create, Edit and Delete Recipe Reviews | 5 | 5 |
+| 3 | View, Create, Edit and Delete Recipe Category | 5 | 5 |
+| 4 | Create, Edit and Delete Account | 5 | 5 |
+| 5 | Login and Logout to Account | 5 | 5 |
+| 6 | Moderate Content Submitted by Registered Users | 5 | 1 |
+| 7 | Send message and/ or feedback to Admin | 5 | 5 |
+| 8 | Receive Notifications on users activities | 2 | 2 |
+| 9 | Search for Recipes | 5 | 5 |
+| 10 | Search Recipes by Ingredients | 3 | 1 |
+| 11 | Search Recipes by Category | 5 | 3 |
+| 12 | Share Recipes on Social Media | 3 | 3 |
+| 13 | Display Suggested Recipes | 3 | 2 |
+| 14 | User Input Validation | 5 | 5 |
+
+Based on the results of the Feature Ideas Planning, I have decided to attempt to implement Features numbers 1, 2, 3, 4, 5, 7, 9, 14 for this production release and park the remaining features due to time limitations.
+
+#### Functionality Requirements
+* Clean and themed presentation of recipe details
+* Intuitive App navigation
+* Fresh-looking, appetising and themed use of images across the App
+* Contact the developer for feedback and bug reports
+
 ### Structure
 ### Skeleton
 ### Features

@@ -24,7 +24,7 @@ Table of Contents - Click to Expand
     - [Skeleton](#skeleton)
     - [Features](#features)
 - [Technologies Used](#technologies-used)
-- [Testing](#readme_docs/testing.md)
+- [Testing](#testing)
 - [Bugs and Issues](#bugs-and-issues)
 - [Deployment](#deployment)
 - [Credits](#credits)
@@ -36,25 +36,25 @@ Table of Contents - Click to Expand
 
 ## UX Development
 
------
 ### Strategy
 ### Scope
 ### Structure
 ### Skeleton
 ### Features
 
----
+
 ## Technologies Used
 
----
+
 ## Testing
----
+All testing undertaken for this project can be found in the [Testing Document](/readme_docs/testing.md)
+
 ## Bugs and Issues
----
+
 ## Deployment
----
+
 ## Credits
----
+
 ## Acknowledgements
 
 

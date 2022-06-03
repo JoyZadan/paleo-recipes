@@ -24,7 +24,7 @@ Table of Contents - Click to Expand
     - [Features](#features)
 - [Technologies Used](#technologies-used)
 - [Testing](#testing)
-- [Bugs and Issues](#bugs-and-issues)
+- [Bugs, Issues and Solutions](#bugs-issues-and-solutions)
 - [Deployment](#deployment)
 - [Credits](#credits)
 - [Acknowledgements](#acknowledgements)
@@ -209,7 +209,8 @@ Breakdown of the features and elements implemented for the App.
 # Testing
 All testing undertaken for this project can be found in the [Testing Document](/readme_docs/testing.md)
 
-# Bugs and Issues
+# Bugs, Issues and Solutions
+[INSERT]
 
 # Deployment & Local Development
 ## Deployment to Heroku

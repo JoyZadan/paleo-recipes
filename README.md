@@ -121,6 +121,7 @@ The non-highlighted elements in these diagrams will return the use to the same p
 
 
 ## Skeleton
+### Wireframes
 To view the wireframe created for this project, [click here]().
 
 ### Design

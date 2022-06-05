@@ -22,3 +22,4 @@ db = SQLAlchemy(app)
 mongo = PyMongo(app)
 
 from paleorecipes import routes  # noqa
+

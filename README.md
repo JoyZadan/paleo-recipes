@@ -131,7 +131,7 @@ To view the wireframe created for this project, [click here]().
 [INSERT HERE]()
 
 #### Typography
-[INSERT HERE]()
+![COLOURS]()
 
 #### Imagery
 [INSERT HERE]()

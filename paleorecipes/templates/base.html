@@ -10,7 +10,8 @@
     <!-- Facebook, LinkedIn, Google -->
     <meta property="og:type" content="article" />
     <meta property="og:title" content="Paleo Recipes App" />
-    <meta property="og:description" content="Paleo Recipes help users find paleo-friendly delicious meals, share their own recipes, tips and 		ideas on eating healthy" />
+    <meta property="og:description" content="Paleo Recipes help users find paleo-friendly delicious meals,
+        share their own recipes, tips and ideas on eating healthy" />
     <meta name="image" property="og:image" content="" />
     <meta property="og:image:alt" content="Paleo Recipes App shown on a variety of devices" />
     <meta property="og:url" content="" />
@@ -27,11 +28,12 @@
     <!-- Font Awesome -->
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <!-- Materialize - Compiled and minified CSS -->
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
-        type="text/css">
-    <link rel="stylesheet" href="">
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+        rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+        crossorigin="anonymous" type="text/css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="" type="text/css">
 
     <title>Paleo Recipes App</title>
 </head>
@@ -39,6 +41,124 @@
 <body>
 
     Hello World!
+    <!-- NAVBAR STYLING -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="" alt="" class="logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Pricing</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Dropdown link
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
+    <!-- VERTICAL SIDEBAR THAT SWITCHES TO HORIZONTAL NAVBAR ON MOBILE -->
+    <!-- credit: Carol Skelly for Codeply - https://dev.to/codeply/bootstrap-5-sidebar-examples-38pb -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-auto bg-light sticky-top">
+                <div class="d-flex flex-sm-column flex-row flex-nowrap bg-light align-items-center sticky-top">
+                    <a href="/" class="d-block p-3 link-dark text-decoration-none" title="" data-bs-toggle="tooltip"
+                        data-bs-placement="right" data-bs-original-title="Icon-only">
+                        <i class="bi-bootstrap fs-1"></i>
+                    </a>
+                    <ul
+                        class="nav nav-pills nav-flush flex-sm-column flex-row flex-nowrap mb-auto mx-auto text-center align-items-center">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip"
+                                data-bs-placement="right" data-bs-original-title="Home">
+                                <i class="bi-house fs-1"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip"
+                                data-bs-placement="right" data-bs-original-title="Dashboard">
+                                <i class="bi-speedometer2 fs-1"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip"
+                                data-bs-placement="right" data-bs-original-title="Orders">
+                                <i class="bi-table fs-1"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip"
+                                data-bs-placement="right" data-bs-original-title="Products">
+                                <i class="bi-heart fs-1"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip"
+                                data-bs-placement="right" data-bs-original-title="Customers">
+                                <i class="bi-people fs-1"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="dropdown">
+                        <a href="#"
+                            class="d-flex align-items-center justify-content-center p-3 link-dark text-decoration-none dropdown-toggle"
+                            id="dropdownUser3" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi-person-circle h2"></i>
+                        </a>
+                        <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser3">
+                            <li><a class="dropdown-item" href="#">New project...</a></li>
+                            <li><a class="dropdown-item" href="#">Settings</a></li>
+                            <li><a class="dropdown-item" href="#">Profile</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm p-3 min-vh-100">
+                <!-- content -->
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous">
+    </script>
 </body>
 </html>

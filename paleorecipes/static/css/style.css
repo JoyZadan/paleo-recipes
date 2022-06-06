@@ -34,6 +34,12 @@
     padding: 0;
 }
 
+/* LOGO */
+.logo {
+    width: 1.875rem;
+    height: 1.5rem;
+}
+
 /* HEADERS AND TEXT */
 h1 {
     font-family: var(--ff-display);

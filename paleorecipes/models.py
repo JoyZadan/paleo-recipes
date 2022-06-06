@@ -26,6 +26,7 @@ class User(db.Model):
     # schema for the User model
     id = db.Column(db.Integer, primary_key=True)
     user_name = db.Column(db.String(40), unique=True, nullable=False)
+    firstname = db.Column(db.String(20), unique=True, nullable=False)
     password = db.Column(db.String(260), nullable=False)
 
     def __repr__(self):

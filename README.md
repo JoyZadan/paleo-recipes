@@ -1,4 +1,13 @@
-# PALEO RECIPES
+# **PALEO RECIPES**
+
+A paleo recipe management Application built using **Python**, **Flask+SQLAlchemy**, **Flask+PyMongo**, **Bootstrap 5**, and **JavaScript**. This Application is a **hybrid database project** using both **MongoDB** and **PostgreSQL**.
+- User Authentication is handled using **relational-backed database** (PostgreSQL using Flask+SQLAlchemy).
+- Standard CRUD data manipulation is handled using a **nonrelational-backed database** (MongoDB using Flask+PyMongo).
+
+![GitHub last commit](https://img.shields.io/github/last-commit/JoyZadan/paleo-recipes?color=blue&style=for-the-badge)
+![GitHub contributors](https://img.shields.io/github/contributors/JoyZadan/paleo-recipes?color=green&style=for-the-badge)
+![GitHub language count](https://img.shields.io/github/languages/count/JoyZadan/paleo-recipes?color=orange&style=for-the-badge)
+![GitHub top language](https://img.shields.io/github/languages/top/JoyZadan/paleo-recipes?color=brown&style=for-the-badge)
 
 (INSERT HERE am i responsive screenshot)
 

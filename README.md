@@ -208,7 +208,7 @@ Breakdown of the features and elements implemented for the App.
     * Online-Convert was used to convert the png images to webp.
 
 # Testing
-All testing undertaken for this project can be found in the [Testing Document](/readme_docs/testing.md)
+All testing undertaken for this project can be found in the [Testing Document](/TESTING.md)
 
 # Bugs, Issues and Solutions
 [INSERT]

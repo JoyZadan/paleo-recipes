@@ -1,0 +1,62 @@
+/* GOOGLE FONTS IMPORT */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&family=Poppins:ital,wght@0,400;0,500;1,300&display=swap');
+
+
+:root {
+    --ff-display: 'Dancing Script', Handwriting;
+    --ff-primary: 'Poppins', Sans-serif;
+
+    --fw-bold: 700;
+    --fw-medium: 500;
+    --fw-normal: 400;
+
+    --fs-display: 2rem;
+    --fc-h: #181818;
+
+    /* Colours  */
+    --custom-color-primary: #bfjb04;
+    --custom-color-secondary: #401b05;
+    --custom-color-tertiary: #0d0d0d;
+
+    --text-shadow: 2px 8px 6px rgba(0,0,0,0.6),
+                    0px -5px 35px rgba(255,255,255,0.3);
+
+    --buttons-color: #aebf2c;
+
+    --border-color: #d2d6d9;
+
+    --bg-dark: #0d0d0d;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* HEADERS AND TEXT */
+h1 {
+    font-family: var(--ff-display);
+    font-weight: var(--fw-bold);
+    font-size: 3rem;
+}
+
+h2 {
+    font-family: var(--ff-primary);
+    font-weight: var(--fw-medium);
+    font-size: 2.5rem;
+}
+
+h3 {
+    font-family: var(--ff-primary);
+    font-weight: var(--fw-normal);
+    font-size: 2rem;
+}
+
+p {
+    font-family: var(--ff-primary);
+}
+
+a {
+    text-decoration: none;
+}

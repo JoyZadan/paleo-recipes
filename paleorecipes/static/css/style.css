@@ -85,6 +85,16 @@ body {
     background-color: transparent;
     box-shadow: 5px 0px 5px 0px rgba(0,0,0,0.3);
 }
+.logo-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.sidebar-icon {
+    color: var(--custom-color-secondary);
+    width: 2.5rem;
+    height: 2.5rem;
+}
 
 /* HEADERS AND TEXT */
 h1 {

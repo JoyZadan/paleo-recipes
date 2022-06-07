@@ -1,6 +1,6 @@
 # **PALEO RECIPES**
 
-A paleo recipe management Application built using **Python**, **Flask+SQLAlchemy**, **Flask+PyMongo**, **Bootstrap 5**, and **JavaScript**. This Application is a **hybrid database project** using both **MongoDB** and **PostgreSQL**.
+A paleo recipe management Application built using **Python**, **Flask+SQLAlchemy**, **Flask+PyMongo**, **Bootstrap 5**, **Jinja2** and **JavaScript**. This Application is a **hybrid database project** using both **MongoDB** and **PostgreSQL**.
 - User Authentication is handled using **relational-backed database** (PostgreSQL using Flask+SQLAlchemy).
 - Standard CRUD data manipulation is handled using a **nonrelational-backed database** (MongoDB using Flask+PyMongo).
 

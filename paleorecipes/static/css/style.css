@@ -82,25 +82,42 @@ body {
 
 /* SIDEBAR STYLING */
 .sidebar {
-    background-color: transparent;
     box-shadow: 5px 0px 5px 0px rgba(0,0,0,0.3);
 }
-.logo-icon {
+
+.logo-icon,
+.profile-img {
     width: 2.5rem;
     height: 2.5rem;
 }
 
 .sidebar-icon {
-    color: var(--custom-color-secondary);
-    width: 2.5rem;
-    height: 2.5rem;
+    color: var(--custom-color-primary);
+    width: 4rem;
+    height: 4rem;
+    font-family: var(--ff-primary);
+    margin-left: 2px;
 }
+
+.signout-item {
+    font-family: var(--ff-primary);
+}
+
+.signout-item:hover {
+    color: var(--buttons-color);
+}
+
+
+
+
+
 
 /* HEADERS AND TEXT */
 h1 {
     font-family: var(--ff-display);
     font-weight: var(--fw-bold);
     font-size: 3rem;
+    text-shadow: var(--text-shadow);
 }
 
 h2 {
@@ -121,4 +138,39 @@ p {
 
 a {
     text-decoration: none;
+}
+
+
+
+
+/* FOOTER STYLING */
+
+footer {
+    background-color: var(--custom-color-tertiary);
+    font-family: var(--ff-primary);
+}
+
+.text-display {
+    font-size: 0.8rem;
+    color: var(--border-color);
+    padding-top: 0.5rem;
+}
+
+footer h6 {
+    color: var(--buttons-color);
+    text-shadow: var(--text-shadow);
+}
+
+footer p {
+    font-size: 0.8rem;
+}
+
+.social-icon {
+    background-color: var(--buttons-color);
+    border: 1px solid var(--border-color);
+    text-shadow: var(--text-shadow);
+}
+
+.copyright-bg {
+    background-color: #bf6b04;
 }

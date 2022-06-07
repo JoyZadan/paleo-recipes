@@ -19,10 +19,9 @@
     <meta name="author" content="Joy Zadan">
 
     <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="">
-    <link rel="icon" type="image/png" sizes="32x32" href="">
-    <link rel="icon" type="image/png" sizes="16x16" href="">
-    <link rel="manifest" href="">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='favicon/apple-touch-icon') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='favicon/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='favicon/favicon-16x16.png') }}">
 
     <!-- STYLESHEETS -->
     <!-- Font Awesome -->
@@ -33,113 +32,133 @@
         rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
         crossorigin="anonymous" type="text/css">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="" type="text/css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
 
     <title>Paleo Recipes App</title>
 </head>
 
 <body>
 
-    Hello World!
+    <!-- <header> -->
     <!-- NAVBAR STYLING -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">
-                <img src="" alt="" class="logo">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Features</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Pricing</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            Dropdown link
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <!-- VERTICAL SIDEBAR THAT SWITCHES TO HORIZONTAL NAVBAR ON MOBILE -->
-    <!-- credit: Carol Skelly for Codeply - https://dev.to/codeply/bootstrap-5-sidebar-examples-38pb -->
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-sm-auto bg-light sticky-top">
-                <div class="d-flex flex-sm-column flex-row flex-nowrap bg-light align-items-center sticky-top">
-                    <a href="/" class="d-block p-3 link-dark text-decoration-none" title="" data-bs-toggle="tooltip"
-                        data-bs-placement="right" data-bs-original-title="Icon-only">
-                        <i class="bi-bootstrap fs-1"></i>
-                    </a>
-                    <ul
-                        class="nav nav-pills nav-flush flex-sm-column flex-row flex-nowrap mb-auto mx-auto text-center align-items-center">
+        <nav class="navbar navbar-expand-lg bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="{{ url_for('home') }}">
+                    <img src="{{ url_for('static', filename='images/logo.svg') }}"
+                    alt="Paleo Recipes logo" class="logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav" aria-controls="navbarNav"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a href="#" class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip"
-                                data-bs-placement="right" data-bs-original-title="Home">
-                                <i class="bi-house fs-1"></i>
-                            </a>
+                            <a class="nav-link active" aria-current="page" href="{{ url_for('home') }}">Home</a>
                         </li>
-                        <li>
-                            <a href="#" class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip"
-                                data-bs-placement="right" data-bs-original-title="Dashboard">
-                                <i class="bi-speedometer2 fs-1"></i>
-                            </a>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Recipes</a>
                         </li>
-                        <li>
-                            <a href="#" class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip"
-                                data-bs-placement="right" data-bs-original-title="Orders">
-                                <i class="bi-table fs-1"></i>
-                            </a>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Blog</a>
                         </li>
-                        <li>
-                            <a href="#" class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip"
-                                data-bs-placement="right" data-bs-original-title="Products">
-                                <i class="bi-heart fs-1"></i>
-                            </a>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About</a>
                         </li>
-                        <li>
-                            <a href="#" class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip"
-                                data-bs-placement="right" data-bs-original-title="Customers">
-                                <i class="bi-people fs-1"></i>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">FAQ</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Account
                             </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item" href="#">Register</a></li>
+                                <li><a class="dropdown-item" href="#">Login</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
                         </li>
                     </ul>
-                    <div class="dropdown">
-                        <a href="#"
-                            class="d-flex align-items-center justify-content-center p-3 link-dark text-decoration-none dropdown-toggle"
-                            id="dropdownUser3" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="bi-person-circle h2"></i>
-                        </a>
-                        <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser3">
-                            <li><a class="dropdown-item" href="#">New project...</a></li>
-                            <li><a class="dropdown-item" href="#">Settings</a></li>
-                            <li><a class="dropdown-item" href="#">Profile</a></li>
-                        </ul>
-                    </div>
                 </div>
             </div>
-            <div class="col-sm p-3 min-vh-100">
-                <!-- content -->
+        </nav>
+    </header>
+
+    <main>
+        <div class="container-fluid ">
+            <div class="row">
+                <!-- VERTICAL SIDEBAR THAT SWITCHES TO HORIZONTAL ON MOBILE -->
+                <!-- credit: Carol Skelly for Codeply - https://dev.to/codeply/bootstrap-5-sidebar-examples-38pb -->
+                <!-- SIDEBAR -->
+                <div class="col-sm-auto sticky-top sidebar">
+                    <div class="d-flex flex-sm-column flex-row flex-nowrap align-items-center sticky-top">
+                        <a href="/" class="d-block p-3 link-dark text-decoration-none" title="" data-bs-toggle="tooltip"
+                            data-bs-placement="right" data-bs-original-title="Icon-only">
+                            <i class="bi-bootstrap fs-1"></i>
+                        </a>
+                        <ul
+                            class="nav nav-pills nav-flush flex-sm-column flex-row flex-nowrap mb-auto mx-auto text-center align-items-center">
+                            <li class="nav-item">
+                                <a href="{{ url_for('home') }}" class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip"
+                                    data-bs-placement="right" data-bs-original-title="Home">
+                                    <i class="bi-house fs-1"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip"
+                                    data-bs-placement="right" data-bs-original-title="Dashboard">
+                                    <i class="bi-speedometer2 fs-1"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip"
+                                    data-bs-placement="right" data-bs-original-title="Orders">
+                                    <i class="bi-table fs-1"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip"
+                                    data-bs-placement="right" data-bs-original-title="Products">
+                                    <i class="bi-heart fs-1"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip"
+                                    data-bs-placement="right" data-bs-original-title="Customers">
+                                    <i class="bi-people fs-1"></i>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="dropdown">
+                            <a href="#"
+                                class="d-flex align-items-center justify-content-center p-3 link-dark text-decoration-none dropdown-toggle"
+                                id="dropdownUser3" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="bi-person-circle h2"></i>
+                            </a>
+                            <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser3">
+                                <li><a class="dropdown-item" href="#">New project...</a></li>
+                                <li><a class="dropdown-item" href="#">Settings</a></li>
+                                <li><a class="dropdown-item" href="#">Profile</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- CONTENT -->
+                <div class="col-sm p-3 min-vh-100">
+
+                </div>
             </div>
         </div>
-    </div>
+    </main>
+    <footer class="footer mt-auto py-3 bg-light">
+        <div class="container">
+            <span class="text-muted">STICKY FOOTER CONTENT TO BE DETERMINED</span>
+        </div>
+    </footer>
 
 
 
@@ -160,5 +179,6 @@
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous">
     </script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
 </html>

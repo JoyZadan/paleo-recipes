@@ -14,7 +14,7 @@
     --fc-h: #181818;
 
     /* Colours  */
-    --custom-color-primary: #bfjb04;
+    --custom-color-primary: #bf6b04;
     --custom-color-secondary: #401b05;
     --custom-color-tertiary: #0d0d0d;
 
@@ -25,7 +25,6 @@
 
     --border-color: #d2d6d9;
 
-    --bg-dark: #0d0d0d;
 }
 
 * {
@@ -34,10 +33,57 @@
     padding: 0;
 }
 
+body {
+    background-color: var(--bg-dark);
+    color: var(--border-color);
+}
+
 /* LOGO */
 .logo {
-    width: 1.875rem;
-    height: 1.5rem;
+    width: 8rem;
+    height: 2rem;
+}
+
+/* NAVBAR STYLING */
+.nav-link {
+    font-family: var(--ff-primary);
+    color: #d2d6d9;
+}
+
+.navbar-toggler {
+    padding: 0;
+}
+
+.navbar-toggler-icon {
+    border: 2px solid var(--buttons-color);
+    border-radius: 5px;
+}
+
+.dropdown-menu {
+    color: var(--buttons-color);
+    margin-right: 1rem;
+}
+
+.nav-link:hover {
+    color: var(--buttons-color);
+}
+
+.nav-link:active {
+    color: var(--ff-primary);
+}
+
+.dropdown-item:hover {
+    color: var(--custom-color-secondary);
+}
+
+.dropdown-item:active {
+    color: var(--buttons-color);
+}
+
+/* SIDEBAR STYLING */
+.sidebar {
+    background-color: transparent;
+    box-shadow: 5px 0px 5px 0px rgba(0,0,0,0.3);
 }
 
 /* HEADERS AND TEXT */

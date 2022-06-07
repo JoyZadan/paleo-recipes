@@ -137,7 +137,7 @@ To view the wireframe created for this project, [click here]().
 [FINALISE: Bootstrap5 | Materialize]() was used and customised for the front-end development.
 
 #### Colour Scheme
-[INSERT HERE]()
+![INSERT HERE](../paleo-recipes/paleorecipes/static/images/colours.webp)
 
 #### Typography
 ![COLOURS]()

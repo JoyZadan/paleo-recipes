@@ -172,5 +172,5 @@ footer p {
 }
 
 .copyright-bg {
-    background-color: #bf6b04;
+    background-color: var(--custom-color-secondary);
 }

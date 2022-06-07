@@ -92,7 +92,7 @@
             <div class="row">
                 <!-- VERTICAL SIDEBAR THAT SWITCHES TO HORIZONTAL ON MOBILE -->
                 <!-- Inspired by Carol Skelly for Codeply - https://dev.to/codeply/bootstrap-5-sidebar-examples-38pb -->
-                <!-- SIDEBAR -->
+                <!-- SIDEBAR, visible to loggedin users -->
                 <div class="col-12 col-sm-3 col-xl-2 px-sm-2 px-0 sidebar bg-dark d-flex sticky-top">
                     <div class="d-flex flex-sm-column flex-row flex-grow-1 align-items-center align-items-sm-start px-3 pt-2 text-white">
                         <!-- Paleo Recipes logo icon -->
@@ -103,6 +103,12 @@
                         </a>
                         <ul class="nav nav-pills flex-sm-column flex-row flex-nowrap flex-shrink-1 flex-sm-grow-0 flex-grow-1 mb-sm-auto mb-0 justify-content-center align-items-center align-items-sm-start"
                             id="menu">
+                            <li class="nav-item">
+                                <a href="#" class="nav-link px-sm-0 px-2">
+                                    <i class="fs-5 bi-person-circle"></i>
+                                    <span class="ms-1 d-none d-sm-inline">Profile</span>
+                                </a>
+                            </li>
                             <!-- Recipes dropdown -->
                             <li class="dropdown">
                                 <a href="#" class="nav-link dropdown-toggle px-sm-0 px-1" id="dropdown" data-bs-toggle="dropdown" aria-expanded="false">
@@ -137,12 +143,6 @@
                                     <li><a class="dropdown-item" href="#"> Register</a></li>
                                 </ul>
                             </li>
-                            <li class="nav-item">
-                                <a href="#" class="nav-link px-sm-0 px-2">
-                                    <i class="fs-5 bi-person-circle"></i>
-                                    <span class="ms-1 d-none d-sm-inline">Profile</span>
-                                </a>
-                            </li>
                         <!-- Sign Out dropdown -->
                         <div class="dropdown py-sm-5 mt-sm-auto ms-auto ms-sm-0 flex-shrink-1">
                             <a href="#"
@@ -161,9 +161,9 @@
                 </div>
 
                 <!-- CONTENT AREA-->
-                <div class="col-sm p-3 min-vh-100">
+                <section class="col-sm p-3 min-vh-100">
 
-                </div>
+                </section>
             </div>
         </div>
     </main>

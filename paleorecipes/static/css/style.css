@@ -37,10 +37,10 @@
     padding: 0;
 }
 
-body {
+/* body {
     background-color: var(--bg-dark);
     color: var(--border-color);
-}
+} */
 
 /* LOGO */
 .logo {
@@ -49,9 +49,13 @@ body {
 }
 
 /* NAVBAR STYLING */
+.navbar {
+    z-index: 2;
+}
+
 .nav-link {
     font-family: var(--ff-primary);
-    color: #d2d6d9;
+    color: #ffffff;
 }
 
 .navbar-toggler {
@@ -187,7 +191,7 @@ a {
 
 .hero-image {
     /* Use "linear-gradient" to add a darken background effect to the image. This will make the text easier to read */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../images/stuffed-peppers.webp");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/stuffed-peppers.webp");
 
     /* Set a specific height */
     height: 100%;
@@ -207,6 +211,24 @@ a {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+
+.search .bi-search {
+    position: absolute;
+    top: 1.25rem;
+    left: 1rem;
+}
+
+.search button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    height: 2.9rem;
+    width: 6.875rem;
+    background-color: var(--buttons-color);
+    text-shadow: var(--text-shadow);
+    font-weight: var(--fw-medium);
 }
 
 .hero-text {
@@ -252,4 +274,23 @@ footer p {
 
 .copyright-bg {
     background-color: var(--custom-color-secondary);
+}
+
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 26.25em) {
+    .hero-text {
+        font-family: var(--ff-display);
+        font-size: 4rem;
+        text-shadow: var(--text-shadow);
+        color: #aebf2c;
+    }
+
+}
+
+@media screen and (max-width: 25.25em) {
+        .search button {
+            background-color: transparent;
+        }
+
 }

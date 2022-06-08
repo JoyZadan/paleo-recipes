@@ -21,7 +21,11 @@
     --text-shadow: 2px 8px 6px rgba(0,0,0,0.6),
                     0px -5px 35px rgba(255,255,255,0.3);
 
+    --box-shadow:  8px 8px 8px rgba(0,0,0,0.6),
+                    8px 8px 35px rgba(255,255,255,0.3);
+
     --buttons-color: #aebf2c;
+    --buttons-color-secondary: #bf6b04;
 
     --border-color: #d2d6d9;
 
@@ -107,17 +111,13 @@ body {
     color: var(--buttons-color);
 }
 
-
-
-
-
-
 /* HEADERS AND TEXT */
 h1 {
     font-family: var(--ff-display);
     font-weight: var(--fw-bold);
     font-size: 3rem;
     text-shadow: var(--text-shadow);
+    color: var(--custom-color-secondary);
 }
 
 h2 {
@@ -139,6 +139,84 @@ p {
 a {
     text-decoration: none;
 }
+
+/* SEARCH BAR STYLING */
+/* credit: https://bbbootstrap.com/snippets/bootstrap-search-box-input-icons-inside-88211241 */
+
+.search {
+    position: relative;
+    box-shadow: 0 0 2.5rem rgba(51, 51, 51, 0.5)
+}
+
+.search-btn {
+    position: relative;
+}
+
+.search input {
+    height: 3.5rem;
+    text-indent: 1.5rem;
+    border: 2px solid var(--buttons-color);
+}
+
+.search input:focus {
+    box-shadow: none;
+    border: 2px solid var(--buttons-color);
+}
+
+.search .bi-search {
+    position: absolute;
+    top: 1.25rem;
+    left: 1rem;
+}
+
+.search button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    height: 2.9rem;
+    width: 6.875rem;
+    background-color: var(--buttons-color);
+}
+
+
+
+/* INDEX PAGE STYLING   */
+
+/* hero section styling */
+    /* credit: https://www.w3schools.com/howto/howto_css_hero_image.asp */
+
+.hero-image {
+    /* Use "linear-gradient" to add a darken background effect to the image. This will make the text easier to read */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../images/stuffed-peppers.webp");
+
+    /* Set a specific height */
+    height: 90%;
+
+    /* Position and center the image to scale nicely on all screens */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+/* Place text in the middle of the image */
+.hero-content {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hero-text {
+    font-family: var(--ff-display);
+    font-size: 5rem;
+    text-shadow: var(--text-shadow);
+    color: #aebf2c;
+}
+
+
+
 
 
 

@@ -14,6 +14,8 @@
     --fc-h: #181818;
 
     /* Colours  */
+    --custom-color-white: #fff;
+    --custom-color-display: #aebf2c;
     --custom-color-primary: #bf6b04;
     --custom-color-secondary: #401b05;
     --custom-color-tertiary: #0d0d0d;
@@ -37,11 +39,6 @@
     padding: 0;
 }
 
-/* body {
-    background-color: var(--bg-dark);
-    color: var(--border-color);
-} */
-
 /* LOGO */
 .logo {
     width: 8rem;
@@ -49,13 +46,23 @@
 }
 
 /* NAVBAR STYLING */
-.navbar {
-    z-index: 2;
+/* .navbar {
+    position: fixed;
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.3);
+    width: 100%;
 }
+
+.navbar.active {
+    position: fixed;
+    padding: 0 20px;
+    z-index: 100;
+    background: var(--custom-color-tertiary);
+} */
 
 .nav-link {
     font-family: var(--ff-primary);
-    color: #ffffff;
+    color: var(--custom-color-white);
 }
 
 .navbar-toggler {
@@ -144,6 +151,15 @@ a {
     text-decoration: none;
 }
 
+/* LOGGED IN USERS - CONTENT AREA STYLING */
+.content-area {
+    background-color: #e1e1e1;
+}
+
+
+
+
+
 /* SEARCH BAR STYLING */
 /* credit: https://bbbootstrap.com/snippets/bootstrap-search-box-input-icons-inside-88211241 */
 
@@ -185,13 +201,12 @@ a {
 
 
 /* INDEX PAGE STYLING   */
-
 /* hero section styling */
     /* credit: https://www.w3schools.com/howto/howto_css_hero_image.asp */
 
 .hero-image {
     /* Use "linear-gradient" to add a darken background effect to the image. This will make the text easier to read */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/stuffed-peppers.webp");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../images/green-foods.webp");
 
     /* Set a specific height */
     height: 100%;
@@ -235,9 +250,12 @@ a {
     font-family: var(--ff-display);
     font-size: 5rem;
     text-shadow: var(--text-shadow);
-    color: #aebf2c;
+    color: var(--custom-color-display);
 }
 
+.form-control {
+    background-color: var(--custom-color-white);
+}
 
 
 

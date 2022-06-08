@@ -13,6 +13,7 @@ def home():
 
 
 
-# @app.route("/profile/<username>", methods=["GET", "POST"])
-# def profile(username):
-#     return render_template("profile.html")
+@app.route("/profile")
+def profile():
+    return render_template("profile.html")
+

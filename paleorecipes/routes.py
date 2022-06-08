@@ -9,3 +9,10 @@ from paleorecipes.models import Category, Recipe, User
 @app.route("/")
 def home():
     return render_template("index.html")
+
+
+
+
+# @app.route("/profile/<username>", methods=["GET", "POST"])
+# def profile(username):
+#     return render_template("profile.html")

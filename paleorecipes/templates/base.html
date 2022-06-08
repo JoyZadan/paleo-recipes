@@ -40,7 +40,7 @@
 
     <header>
     <!-- NAVBAR STYLING -->
-        <nav class="navbar navbar-expand-lg bg-dark">
+        <nav class="navbar navbar-expand-lg bg-dark transparent">
             <div class="container-fluid">
                 <a class="navbar-brand" href="{{ url_for('home') }}">
                     <img src="{{ url_for('static', filename='images/logo.svg') }}"
@@ -88,86 +88,13 @@
     </header>
 
     <main>
-        <div class="container-fluid ">
-            <div class="row">
-                <!-- VERTICAL SIDEBAR THAT SWITCHES TO HORIZONTAL ON MOBILE -->
-                <!-- Inspired by Carol Skelly for Codeply - https://dev.to/codeply/bootstrap-5-sidebar-examples-38pb -->
-                <!-- SIDEBAR, visible to loggedin users -->
-                <div class="col-12 col-sm-3 col-xl-2 px-sm-2 px-0 sidebar bg-dark d-flex sticky-top">
-                    <div class="d-flex flex-sm-column flex-row flex-grow-1 align-items-center align-items-sm-start px-3 pt-2 text-white">
-                        <!-- Paleo Recipes logo icon -->
-                        <a href="/" class="d-block p-3 link-dark text-decoration-none" title="" data-bs-toggle="tooltip"
-                            data-bs-placement="right" data-bs-original-title="Icon-only">
-                            <img src="{{ url_for('static', filename='images/logo-icon.webp') }}" class="logo-icon"
-                                alt="Paleo Recipes logo icon">
-                        </a>
-                        <ul class="nav nav-pills flex-sm-column flex-row flex-nowrap flex-shrink-1 flex-sm-grow-0 flex-grow-1 mb-sm-auto mb-0 justify-content-center align-items-center align-items-sm-start"
-                            id="menu">
-                            <li class="nav-item">
-                                <a href="#" class="nav-link px-sm-0 px-2">
-                                    <i class="fs-5 bi-person-circle"></i>
-                                    <span class="ms-1 d-none d-sm-inline">Profile</span>
-                                </a>
-                            </li>
-                            <!-- Recipes dropdown -->
-                            <li class="dropdown">
-                                <a href="#" class="nav-link dropdown-toggle px-sm-0 px-1" id="dropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <i class="fs-5 bi-card-checklist"></i>
-                                    <span class="ms-1 d-none d-sm-inline">Recipes</span>
-                                </a>
-                                <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdown">
-                                    <li><a class="dropdown-item" href="#">Search Recipes</a></li>
-                                    <li><a class="dropdown-item" href="#">Add Recipes</a></li>
-                                    <li><a class="dropdown-item" href="#">Update Recipes</a></li>
-                                    <li><a class="dropdown-item" href="#">Delete Recipes</a></li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a class="dropdown-item" href="#"> Register</a></li>
-                                </ul>
-                            </li>
-                            <!-- Blog dropdown -->
-                            <li class="dropdown">
-                                <a href="#" class="nav-link dropdown-toggle px-sm-0 px-1" id="dropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <i class="fs-5 bi-chat-text"></i>
-                                    <span class="ms-1 d-none d-sm-inline">Blog</span>
-                                </a>
-                                <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdown">
-                                    <li><a class="dropdown-item" href="#">Search Blog</a></li>
-                                    <li><a class="dropdown-item" href="#">Post Tips and Ideas</a></li>
-                                    <li><a class="dropdown-item" href="#">Update Post</a></li>
-                                    <li><a class="dropdown-item" href="#">Delete Post</a></li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a class="dropdown-item" href="#"> Register</a></li>
-                                </ul>
-                            </li>
-                        <!-- Sign Out dropdown -->
-                        <div class="dropdown py-sm-5 mt-sm-auto ms-auto ms-sm-0 flex-shrink-1">
-                            <a href="#"
-                                class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
-                                id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-                                <img src="{{ url_for('static', filename='images/img-placeholder.webp') }}" alt="image placeholder"
-                                    class="rounded-circle profile-img">
-                                <span class="d-none d-sm-inline mx-1 signout-item">Logged In</span>
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-dark text-small shadow"
-                                aria-labelledby="dropdownUser1">
-                                <li class="signout-item"><a class="dropdown-item signout-item" href="#">Sign out</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+        {% block content %}
 
-                <!-- CONTENT AREA-->
-                <section class="col-sm min-vh-100 bg-dark">
-                    {% block content %}
 
-                    {% endblock %}
-                </section>
-            </div>
-        </div>
+        {% endblock %}
+
+
+
     </main>
 
     <!-- FOOTER STYLING -->

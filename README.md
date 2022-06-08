@@ -9,7 +9,7 @@ A paleo recipe management Application built using **Python**, **Flask+SQLAlchemy
 ![GitHub language count](https://img.shields.io/github/languages/count/JoyZadan/paleo-recipes?color=orange&style=for-the-badge)
 ![GitHub top language](https://img.shields.io/github/languages/top/JoyZadan/paleo-recipes?color=brown&style=for-the-badge)
 
-(INSERT HERE am i responsive screenshot)
+![Home Page for Logged In User](documentation/user-stories/home-logged-in.webp)
 
 # Project Overview
 Welcome to Paleo Recipes, an App designed to ...

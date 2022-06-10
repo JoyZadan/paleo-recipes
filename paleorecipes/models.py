@@ -22,7 +22,7 @@ class Recipe(db.Model):
         return self.recipe_name
 
 
-class User(db.Model):
+class Users(db.Model):
     # schema for the User model
     id = db.Column(db.Integer, primary_key=True)
     user_name = db.Column(db.String(40), unique=True, nullable=False)

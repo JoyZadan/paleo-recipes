@@ -3,7 +3,7 @@ from flask import flash, render_template, request, redirect, session, url_for
 from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
 from paleorecipes import app, db, mongo
-from paleorecipes.models import Category, Recipe, User
+from paleorecipes.models import Category, Recipe, Users
 
 
 @app.route("/")
@@ -29,7 +29,7 @@ def register():
 
     if request.method == "POST":
         # check if username already exists in db
-        existing_user = User.query.filter(User.user_name == \
+        existing_user = Users.query.filter(Users.user_name == \
                                           request.form.get
                                           ("username").lower()).all()
 
@@ -37,7 +37,7 @@ def register():
             flash("Username already exists")
             return redirect(url_for("register"))
 
-        user = User(
+        user = Users(
             user_name=request.form.get("username").lower(),
             firstname=request.form.get("firstname"),
             password=generate_password_hash(request.form.get("password")),
@@ -48,12 +48,14 @@ def register():
 
         # add user profile to mongodb
         user_profile = {
+            "user_id": (),
             "avatar_no": int(request.form.get("avatar_no")),
             "fave_recipes": [],
             "my_recipes": [],
-            "my_blog": [],
+            "my_blog": []
         }
-        mongodb.users.insert_one(user_profile)
+
+        mongo.db.users.insert_one(user_profile)
 
         # put the new user into 'session' cookie
         session["user"] = request.form.get("firstname")

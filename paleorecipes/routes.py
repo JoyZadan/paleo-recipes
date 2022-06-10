@@ -20,8 +20,8 @@ def register():
         to the profile page. Get user's username from the form,
         check if it already exists in the database.
         If it does, flash a message to the user and redirect
-        to the registration page. Check if passwords match and
-        in the correct format. Save user in the database, put user
+        to the registration page. Save user in postgres db,
+        insert user_profile in mongodb, put user
         into session cookie and redirect to profile page.
     """
     if "user" in session:

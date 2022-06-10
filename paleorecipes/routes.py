@@ -46,7 +46,14 @@ def register():
         db.session.add(user)
         db.session.commit()
 
+
         new_user = db.session.add(user)
+        print(new_user)
+
+        # query psql db to get the id of the new user
+        # get and save the id of the new user into a variable as an int
+        # try to access the index of the new user id or
+        # pass it to line 60
 
         # add user profile to mongodb
         user_profile = {

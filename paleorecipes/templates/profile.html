@@ -36,7 +36,7 @@
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
-                                <li><a class="dropdown-item" href="#"> Back to Home Page</a></li>
+                                <li><a class="dropdown-item" href="{{ url_for('home') }}"> Back to Home Page</a></li>
                             </ul>
                         </li>
                         <!-- Blog dropdown -->
@@ -53,7 +53,7 @@
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
-                                <li><a class="dropdown-item" href="#"> Back to Home Page</a></li>
+                                <li><a class="dropdown-item" href="{{ url_for('home') }}"> Back to Home Page</a></li>
                             </ul>
                         </li>
                     <!-- Sign Out dropdown -->
@@ -67,7 +67,7 @@
                         </a>
                         <ul class="dropdown-menu dropdown-menu-dark text-small shadow"
                             aria-labelledby="dropdownUser1">
-                            <li class="signout-item"><a class="dropdown-item signout-item" href="#">Log out</a></li>
+                            <li class="signout-item"><a class="dropdown-item signout-item" href="{{ url_for('logout') }}">Log out</a></li>
                         </ul>
                     </div>
                 </div>

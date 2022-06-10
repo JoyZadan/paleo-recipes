@@ -4,70 +4,137 @@
 
 
     <section class="container mb-5 wrapper bg-dark">
-        <!-- <div class="container"> -->
-            <h1 class="text-center my-3 display-1">Register</h1>
-            <div class="row">
-                <form action="{{ url_for('register') }}" method="POST" class="card col-12 col-md-8 offset-md-2 mb-5" >
-                    <div class="card-body">
-                        <div class="row g-2">
-                            <!-- username -->
-                            <div class="align-self-center col-md-1">
-                                <i class="bi-person-plus-fill fs-6"></i>
-                            </div>
-                            <div class="col-md-10 col-lg-11 offset-md-1 offset-lg-0">
-                                <div class="form-floating mb-3">
-                                    <input type="text" name="username" id="username" class="form-control validate"
-                                    minlength="6" maxlength="15" pattern="^[a-zA-Z0-9]{6,15}$" placeholder="username" required>
-                                    <label for="floatingInput">Username</label>
-                                </div>
-                            </div>
-                            <!-- first name -->
-                            <div class="align-self-center col-md-1">
-                                <i class="bi-person-badge fs-6"></i>
-                            </div>
-                            <div class="col-md-10 col-lg-11 offset-md-1 offset-lg-0">
-                                <div class="form-floating mb-3">
-                                    <input type="text" name="firstname" id="firstname" class="form-control validate"
-                                    minlength="5" maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" placeholder="firstname" required>
-                                    <label for="floatingInput">First Name</label>
-                                </div>
-                            </div>
-                            <!-- password -->
-                            <div class="align-self-center col-md-1">
-                                <i class="bi-file-lock2-fill fs-6"></i>
-                            </div>
-                            <div class="col-md-10 col-lg-11 offset-md-1 offset-lg-0">
-                                <div class="form-floating mb-3">
-                                    <input type="text" name="password" id="password" class="form-control validate"
-                                    minlength="8" maxlength="15" pattern="^[a-zA-Z0-9]{8,15}$" placeholder="password" required>
-                                    <label for="floatingInput">Password</label>
-                                </div>
-                            </div>
-                            <!-- select an avatar -->
-                            <div class="align-self-center col-md-1">
-                                <i class="bi-person-video fs-6"></i>
-                            </div>
-                            <div class="col-md-10 col-lg-11 offset-md-1 offset-lg-0">
-                                <div class="form-floating mb-3">
-                                    <input type="number" name="avatar_no" id="avatar_no" class="form-control validate"
-                                    placeholder="avatar number"min="1" max="9" required>
-                                    <label for="floatingInput">Select Avatar</label>
-                                    <p class="select-avatar text-muted">Choose an avatar from options below</p>
-                                </div>
-                            </div>
-
+        <h1 class="text-center my-3 display-1">Register</h1>
+        <div class="row">
+            <form action="{{ url_for('register') }}" method="POST" class="card col-12 col-md-8 offset-md-2 mb-5" >
+                <div class="card-body">
+                    <div class="row g-2">
+                        <!-- username -->
+                        <div class="align-self-center col-md-1">
+                            <i class="bi-person-plus-fill fs-6"></i>
                         </div>
-
-
+                        <div class="col-md-10 col-lg-11 offset-md-1 offset-lg-0">
+                            <div class="form-floating mb-3">
+                                <input type="text" name="username" id="username" class="form-control validate"
+                                    	minlength="6" maxlength="15" pattern="^[a-zA-Z0-9]{6,15}$"
+                                        placeholder="username" required>
+                                <label for="floatingInput">Username</label>
+                            </div>
+                        </div>
+                        <!-- first name -->
+                        <div class="align-self-center col-md-1">
+                            <i class="bi-person-badge fs-6"></i>
+                        </div>
+                        <div class="col-md-10 col-lg-11 offset-md-1 offset-lg-0">
+                            <div class="form-floating mb-3">
+                                <input type="text" name="firstname" id="firstname" class="form-control validate"
+                                    minlength="5" maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$"
+                                    placeholder="firstname" required>
+                                <label for="floatingInput">First Name</label>
+                            </div>
+                        </div>
+                        <!-- password -->
+                        <div class="align-self-center col-md-1">
+                            <i class="bi-file-lock2-fill fs-6"></i>
+                        </div>
+                        <div class="col-md-10 col-lg-11 offset-md-1 offset-lg-0">
+                            <div class="form-floating mb-3">
+                                <input type="text" name="password" id="password" class="form-control validate"
+                                    minlength="8" maxlength="15" pattern="^[a-zA-Z0-9]{8,15}$"
+                                    placeholder="password" required>
+                                <label for="floatingInput">Password</label>
+                            </div>
+                        </div>
+                        <!-- select an avatar -->
+                        <div class="align-self-center col-md-1">
+                            <i class="bi-person-video fs-6"></i>
+                        </div>
+                        <div class="col-md-10 col-lg-11 offset-md-1 offset-lg-0">
+                            <div class="form-floating mb-3">
+                                <input type="number" name="avatar_no" id="avatar_no" class="form-control validate"
+                                    placeholder="avatar number"min="1" max="9" required>
+                                <label for="floatingInput">Select Avatar</label>
+                                <p class="select-avatar text-muted">Choose an avatar from options below</p>
+                            </div>
+                        </div>
+                        <!-- register -->
+                        <div class="row d-flex justify-content-center mt-2">
+                            <div class="text-center">
+                                <button class="btn btn-solid border-0 px-3" type="submit">Register
+                                    <i class="bi-box-arrow-in-right"></i>
+                                </button>
+                            </div>
+                        </div>
                     </div>
-
-                </form>
-
+                </div>
+            </form>
+        </div>
+    </section>
+    <!-- Inspiration borrowed from https://the-collector-project.herokuapp.com/register -->
+    <!-- avatar carousel -->
+    <section class="row">
+        <div class="col-sm-12 col-md-6 offset-md-3 mb-5">
+            <div id="carouselExampleCaptions" class="carousel slide carousel-dark mx-auto" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="{{ url_for('static', filename='images/avatar1.webp') }}"
+                            alt="smiling emoji in yellow background" class="rounded-circle avatar-img">
+                        <h2 class="carousel-caption">Avatar 1</h2>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{{ url_for('static', filename='images/avatar2.webp') }}"
+                            alt="red emoji with heart for eyes" class="rounded-circle avatar-img">
+                        <h2 class="carousel-caption">Avatar 2</h2>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{{ url_for('static', filename='images/avatar3.webp') }}"
+                            alt="smiling emoji in yellow background" class="rounded-circle avatar-img">
+                        <h2 class="carousel-caption">Avatar 3</h2>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{{ url_for('static', filename='images/avatar4.webp') }}"
+                            alt="smiling emoji in yellow background" class="rounded-circle avatar-img">
+                        <h2 class="carousel-caption">Avatar 4</h2>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{{ url_for('static', filename='images/avatar5.webp') }}"
+                            alt="smiling emoji in yellow background" class="rounded-circle avatar-img">
+                        <h2 class="carousel-caption">Avatar 5</h2>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{{ url_for('static', filename='images/avatar6.webp') }}"
+                            alt="smiling emoji in yellow background" class="rounded-circle avatar-img">
+                        <h2 class="carousel-caption">Avatar 6</h2>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{{ url_for('static', filename='images/avatar7.webp') }}"
+                            alt="smiling emoji in yellow background" class="rounded-circle avatar-img">
+                        <h2 class="carousel-caption">Avatar 7</h2>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{{ url_for('static', filename='images/avatar8.webp') }}"
+                            alt="smiling emoji in yellow background" class="rounded-circle avatar-img">
+                        <h2 class="carousel-caption">Avatar 8</h2>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{{ url_for('static', filename='images/avatar9.webp') }}"
+                            alt="smiling emoji in yellow background" class="rounded-circle avatar-img">
+                        <h2 class="carousel-caption">Avatar 9</h2>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
-        <!-- </div> -->
+        </div>
 
     </section>
-
 
 
 

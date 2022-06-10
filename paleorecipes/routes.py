@@ -83,7 +83,8 @@ def login():
     if request.method == "POST":
         # check if username exists in db
         existing_user = Users.query.filter(Users.user_name ==
-                                           request.form.get("username").lower()).all()
+                                           request.form.get(
+                                            "username").lower()).all()
 
         if existing_user:
             print(request.form.get("username"))

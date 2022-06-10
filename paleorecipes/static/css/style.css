@@ -68,8 +68,8 @@ a {
     border: 1px solid var(--buttons-color);
     border-radius: 5px;
     color: #fff;
-    margin: 1rem;
     background-color: transparent;
+    margin: 1rem;
 }
 
 .btn-transparent:hover {
@@ -99,6 +99,14 @@ a {
     margin-left: 5rem;
     background-color: rgba(0, 0, 0, 0.4);
     border-radius: 5px;
+}
+
+.wrapper {
+    border-radius: 5px;
+    box-shadow: 1rem 1rem 1.4rem #cbced1, 1rem 1rem 1.4rem #fff;
+    /* box-shadow: var(--box-shadow); */
+    margin-top: 2rem;
+    margin-bottom: 1rem;
 }
 
 /* LOGO */
@@ -204,6 +212,13 @@ a {
     background-color: rgba(0, 0, 0, 0.4);
     border-radius: 5px;
 }
+
+/* REGISTRATION PAGE */
+.select-avatar {
+    font-size: 0.75rem;
+    color: var(--custom-color-secondary);
+}
+
 
 /* LOGGED IN USERS - CONTENT AREA STYLING */
 .content-area {

@@ -61,8 +61,11 @@
                         <a href="#"
                             class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
                             id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-                            <img src="{{ url_for('static', filename='images/img-placeholder.webp') }}" alt="image placeholder"
-                                class="rounded-circle profile-img">
+
+                            <!-- TRY ENDIF STATEMENT TO LOAD SELECTED AVATAR -->
+                            <!-- <img src="{{ url_for('static', filename='images/avatars/avatar'+user.avatar_no|string()+'.webp') }}"
+                                alt="{{user.username}}'s Avatar" class="rounded-circle profile-img"> -->
+
                             <span class="d-none d-sm-inline mx-1 signout-item fs-6 text"></span>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-dark text-small shadow"

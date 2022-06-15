@@ -65,10 +65,14 @@ a {
 
 /* FLASH MESSAGES STYLING */
 .flash {
-    font-family: var(--ff-display);
-    color: var(--custom-color-display);
+    font-family: var(--ff-primary);
+    color: var(--custom-color-primary);
     margin-bottom: 0;
     border-radius: 0;
+}
+
+.flash-btn {
+    background-color: var(--buttons-color-secondary);
 }
 
 

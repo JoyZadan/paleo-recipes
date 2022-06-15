@@ -79,11 +79,14 @@
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ url_for('profile')}}">Profile</a>
-                        </li>
-                        <li class="nav-item">
                             <a class="nav-link" href="#">Feedback</a>
                         </li>
+                        {% if session.user %}
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url_for('profile')}}">Profile</a>
+                            </li>
+                        {% endif%}
+
                     </ul>
                 </div>
             </div>
@@ -96,7 +99,10 @@
             {% with messages = get_flashed_messages() %}
                 {% if messages %}
                     {% for message in messages %}
-                        <div class="alert text-center display-2 flash bg-dark" role="alert">{{ message }}</div>
+                        <div class="alert text-center h4 flash bg-dark" role="alert">
+                            {{ message }}
+                            <button class="btn-close flash-btn" data-bs-dismiss="alert"></button>
+                        </div>
                     {% endfor %}
                 {% endif %}
             {% endwith %}

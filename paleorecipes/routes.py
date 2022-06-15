@@ -1,4 +1,5 @@
 """ imports """
+from functools import wraps
 from flask import flash, render_template, request, redirect, session, url_for
 from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
@@ -10,6 +11,20 @@ from paleorecipes.models import Category, Recipe, Users
 def home():
     """ Renders Home page"""
     return render_template("index.html")
+
+
+def login_required(f):
+    """
+        Ensures page us only accessible to logged in users
+        @login_required decorator - https://flask.palletsprojects.com/en/2.1.x/patterns/viewdecorators/
+    """
+    @wraps(f)
+    def decorated_function(*args, **kwargs):
+        if "user" not in session:
+            flash("You need to be logged in to view this page")
+            return redirect(url_for('login'))
+        return f(*args, **kwargs)
+    return decorated_function
 
 
 # HANDLE REGISTER, CREATE PROFILE, LOGIN AND LOGOUT
@@ -85,6 +100,8 @@ def login():
         insert user_profile in mongodb, put user
         into session cookie and redirect to profile page.
     """
+    if "user" in session:
+        return redirect(url_for('profile'))
     if request.method == "POST":
         # check if username exists in db
         existing_user = Users.query.filter(Users.user_name ==
@@ -97,7 +114,6 @@ def login():
             if check_password_hash(
                     existing_user[0].password, request.form.get("password")):
                 session["user"] = request.form.get("username").lower()
-                session["user"] = request.form.get("firstname")
                 flash("Welcome, {}".format(
                     request.form.get("username")))
                 return redirect(url_for(
@@ -123,7 +139,28 @@ def logout():
     return redirect(url_for("login"))
 
 
-@app.route("/profile")
+@app.route("/profile/<>", methods=["GET", "POST"])
+@login_required
 def profile():
-    """ render the profile page """
-    return render_template("profile.html")
+    """
+        Get user's firstname from MongoDB
+        Get user's input for all fields and update in db.
+    """
+    if "user" not in session:
+        return redirect(url_for('register'))
+
+    if request.method == "POST":
+        # check if username already exists in db
+        existing_user = Users.query.filter(Users.id ==
+                                          request.form.get
+                                          ("user.id").lower()).all()
+
+    new_user = Users.query.get_or_404(user.id)
+
+    user_profile = {
+            "avatar_no": int(request.form.get("avatar_no")),
+        }
+
+    mongo.db.users_update_one(user_profile)
+
+

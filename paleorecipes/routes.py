@@ -45,12 +45,12 @@ def register():
         db.session.add(user)
         db.session.commit()
 
+        # query postgres db to get the id of the new user
+        # get and save the id of the new user into a variable
+        # pass said id to user_id as a string in MongoDB
+        # MongoDB by default saves the user id as a string
+        # according to Code Institute's combining databases lesson 2
         new_user = Users.query.get_or_404(user.id)
-
-        # query psql db to get the id of the new user
-        # get and save the id of the new user into a variable as an int
-        # try to access the index of the new user id or
-        # pass it to line 60
 
         # add user profile to mongodb
         user_profile = {

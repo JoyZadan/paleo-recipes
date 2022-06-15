@@ -225,6 +225,7 @@ All testing undertaken for this project can be found in the [Testing Document](/
 | :--- | :--- | :--- |
 | 1 | NoneType error of object has no attribute 'startswith' when attempting to run the application | With the assistance of tutor team, the solution was to add ![this extra line of code]() to the init file and the Application successfully started running locally |
 | 2 | NoneType error object has no attribute 'drivername' when attempting to generate and migrate the models into a new database in Postgres | With the assistance of tutor team, the solution was to remove the extra line of code (see error 1), if uri: , and replace it with ![this code block](). According to James from Tutor Support: This new code block "checks if you are in development/ local and if true, assigns the sql database uri to DB_URL from env.py. (DB_URL is the local database.) Otherwise, it assigns it to the Heroku one,  DATABASE_URL." The db.create_all() was then ![successfully executed](). |
+| 3 | New user id (Primary Key) is not being stored as a user_id in MongoDB | The solution was to query Postgres db for the new user's id, save the result in a new variable and pass it on to MongoDB as a string using dot notation |
 
 # Deployment & Local Development
 ## Deployment to Heroku

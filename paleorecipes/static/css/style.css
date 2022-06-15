@@ -63,6 +63,15 @@ a {
     text-decoration: none;
 }
 
+/* FLASH MESSAGES STYLING */
+.flash {
+    font-family: var(--ff-display);
+    color: var(--custom-color-display);
+    margin-bottom: 0;
+    border-radius: 0;
+}
+
+
 /* BUTTONS STYLING */
 .btn-transparent {
     border: 1px solid var(--buttons-color);

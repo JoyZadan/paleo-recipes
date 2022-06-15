@@ -39,16 +39,13 @@ def register():
 
         user = Users(
             user_name=request.form.get("username").lower(),
-            firstname=request.form.get("firstname"),
             password=generate_password_hash(request.form.get("password")),
         )
 
         db.session.add(user)
         db.session.commit()
 
-
-        new_user = db.session.add(user)
-        print(new_user)
+        new_user = Users.query.get_or_404(user.id)
 
         # query psql db to get the id of the new user
         # get and save the id of the new user into a variable as an int
@@ -57,7 +54,8 @@ def register():
 
         # add user profile to mongodb
         user_profile = {
-            "user_id": str(new_user),
+            "user_id": str(new_user.id),
+            "firstname": str(request.form.get("firstname")),
             "avatar_no": int(request.form.get("avatar_no")),
             "fave_recipes": [],
             "my_recipes": [],

@@ -63,6 +63,11 @@ a {
     text-decoration: none;
 }
 
+.paleo-font {
+    font-family: var(--ff-primary);
+    text-shadow: var(--text-shadow);
+}
+
 /* FLASH MESSAGES STYLING */
 .flash {
     font-family: var(--ff-primary);
@@ -136,7 +141,7 @@ a {
     text-align: center;
     margin-left: 5rem;
     margin-right: 5rem;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.4);
     border-radius: 5px;
     max-width: 80%;
 }
@@ -155,6 +160,12 @@ a {
     box-shadow: 1rem 1rem 1.4rem #cbced1, 1rem 1rem 1.4rem #fff;
     margin-top: 2rem;
     margin-bottom: 1rem;
+}
+
+
+.categories-card {
+    width: 18rem;
+    margin: 0.5rem auto;
 }
 
 /* LOGO */
@@ -252,7 +263,7 @@ a {
 /* ADD CATEGORIES CARD STYLING */
 .categories-bg {
     /* Use "linear-gradient" to add a darken background effect to the image. This will make the text easier to read */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../images/placeholder-img1.webp");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../images/placeholder-img1.webp");
 
     /* Set a specific height */
     height: 100%;

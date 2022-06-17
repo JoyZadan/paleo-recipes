@@ -1,26 +1,34 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <section class="col-sm min-vh-100 bg-dark categories-bg">
-        <!-- <div class="container-category"> -->
-
-            <div class="category-container px-3">
-                <h1 class="text-center display-1 mt-5">Recipe Categories</h1>
-                <p class="text-center text-white mt-2"> A place to find different types of paleo recipes.</p>
-                <p class="text-center text-white">
-                    To help you start your paleo diet and set yourself up for success.
-                </p>
-                <div class="text-center">
-                    <a href="{{ url_for('add_category') }}" class="btn btn-alt border-0 px-3" role="button">Add Category
-                        <i class="bi-plus-circle"></i>
-                    </a>
-                </div>
+    <section class="min-vh-100 bg-dark categories-bg">
+        <div class="category-container">
+            <h1 class="text-center display-3 mt-4">Recipe Categories</h1>
+            <p class="text-center text-white mt-2"> A place to find different types of paleo recipes.</p>
+            <div class="text-center">
+                <a href="{{ url_for('add_category') }}" class="btn btn-alt border-0 px-3" role="button">Add Category
+                    <i class="bi-plus-circle"></i>
+                </a>
             </div>
-        <!-- </div> -->
+        </div>
+
+        <!-- categories cards -->
+        <div class="container-fluid">
+            <div class="row">
+                    {% for category in categories %}
+                    <div class="col-sm-6 col-md-3 mt-3 mb-2">
+                        <div class="card paleo-font bg-secondary">
+                            <div class="card-body text-center">
+                                <h2 class="card-title text-center">{{ category.category_name }}</h2>
+                                <a href="#" class="btn btn-solid">Edit</a>
+                                <a href="#" class="btn btn-alt">Delete</a>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+            </div>
+        </div>
     </section>
-
-
-
 
 
 

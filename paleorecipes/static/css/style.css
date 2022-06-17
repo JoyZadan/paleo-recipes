@@ -332,18 +332,13 @@ footer p {
         text-shadow: var(--text-shadow);
         color: #aebf2c;
     }
-}
 
-@media screen and (max-width: 25.25em) {
-    .avatar-img {
-        width: 3rem;
-        height: 3rem;
-        right: 0%;
-    }
-
-    .carousel-caption {
-        bottom: 0.5rem;
-        text-align: end;
+    .category-container {
+        margin-left: 2rem;
+        margin-right: 2rem;
+        background-color: rgba(0, 0, 0, 0.6);
+        border-radius: 5px;
+        max-width: 90%;
     }
 }
 

@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <div class="container-fluid ">
+    <div class="container-fluid">
         <div class="row">
             <!-- VERTICAL SIDEBAR THAT SWITCHES TO HORIZONTAL ON MOBILE -->
             <!-- Inspired by Carol Skelly for Codeply - https://dev.to/codeply/bootstrap-5-sidebar-examples-38pb -->
@@ -10,7 +10,7 @@
                 <div class="d-flex flex-sm-column flex-row flex-grow-1 align-items-center align-items-sm-start px-3 pt-2 text-white">
                     <ul class="nav nav-pills flex-sm-column flex-row flex-nowrap flex-shrink-1 flex-sm-grow-0 flex-grow-1 mb-sm-auto mb-0 justify-content-center align-items-center align-items-sm-start"
                         id="menu">
-                        <li class="nav-item">
+                        <li class="nav-item mt-5">
                             <a href="#" class="nav-link px-sm-0 px-2">
                                 <i class="fs-5 bi-person-circle"></i>
                                 <span class="ms-1 d-none d-sm-inline">Profile</span>
@@ -53,17 +53,18 @@
                     <!-- Sign Out dropdown -->
                     <div class="dropdown py-sm-5 mt-sm-auto ms-auto ms-sm-0 flex-shrink-1">
                         <!-- Paleo Recipes logo icon -->
-                        <a href="#"
-                            class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
-                            id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-                            <img src="{{ url_for('static', filename='images/logo-icon.webp') }}" class="logo-icon"
-                                alt="Paleo Recipes logo icon">
-                            <span class="d-none d-sm-inline mx-1 signout-item fs-6 text"></span>
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-dark text-small shadow"
-                            aria-labelledby="dropdownUser1">
-                            <li class="signout-item"><a class="dropdown-item signout-item" href="{{ url_for('logout') }}">Log out</a></li>
-                        </ul>
+                        <li class="dropdown">
+                            <a href="{{ url_for('home') }}"
+                                class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
+                                id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="{{ url_for('static', filename='images/logo-icon.webp') }}" class="logo-icon"
+                                    alt="Paleo Recipes logo icon">
+                                <span class="d-none d-sm-inline mx-1 signout-item fs-6 text">Logged In</span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdown">
+                                <li><a class="dropdown-item" href="#">Log Out</a></li>
+                            </ul>
+                        </li>
                     </div>
                 </div>
             </div>

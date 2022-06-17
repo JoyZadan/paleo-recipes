@@ -103,6 +103,20 @@ a {
     color: var(--custom-color-white);
 }
 
+.btn-alt{
+    border-radius: 10px;
+    background-color: var(--buttons-color-secondary);
+    color: var(--custom-color-white);
+    margin: 1rem;
+
+}
+
+.btn-alt:hover,
+.btn-alt:active {
+    background-color: var(--buttons-color);
+    color: var(--custom-color-tertiary);
+}
+
 /* CONTAINERS STYLING */
 .custom-container {
     display: flex;
@@ -112,6 +126,27 @@ a {
     margin-left: 5rem;
     background-color: rgba(0, 0, 0, 0.4);
     border-radius: 5px;
+}
+
+.category-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-left: 5rem;
+    margin-right: 5rem;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 5px;
+    max-width: 80%;
+}
+
+.wrapper-category {
+    margin-top: 0;
+    margin-bottom: 0;
+    border: 2px solid var(--custom-color-display);
+    border-radius: 5px;
+
 }
 
 .wrapper {
@@ -215,6 +250,25 @@ a {
 }
 
 /* ADD CATEGORIES CARD STYLING */
+.categories-bg {
+    /* Use "linear-gradient" to add a darken background effect to the image. This will make the text easier to read */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../images/placeholder-img1.webp");
+
+    /* Set a specific height */
+    height: 100%;
+    width: 100%;
+
+    /* Position and center the image to scale nicely on all screens */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bd-highlight {
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+}
+
 .add-category {
     width: 18rem;
 }

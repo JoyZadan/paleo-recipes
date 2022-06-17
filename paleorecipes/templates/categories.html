@@ -1,17 +1,22 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <section class="container mb-5 wrapper bg-dark">
-        <h1 class="text-center my-3">Categories</h1>
+    <section class="col-sm min-vh-100 bg-dark categories-bg">
+        <!-- <div class="container-category"> -->
 
-        <!-- link to the form to add a new category -->
-        <div class="row d-flex justify-content-center mt-2">
-            <div class="text-center">
-                <a href="{{ url_for('add_category') }}" class="btn btn-solid border-0 px-3" role="button">Add Category
-                    <i class="bi-plus-circle bootstrap-icon"></i>
-                </a>
+            <div class="category-container px-3">
+                <h1 class="text-center display-1 mt-5">Recipe Categories</h1>
+                <p class="text-center text-white mt-2"> A place to find different types of paleo recipes.</p>
+                <p class="text-center text-white">
+                    To help you start your paleo diet and set yourself up for success.
+                </p>
+                <div class="text-center">
+                    <a href="{{ url_for('add_category') }}" class="btn btn-alt border-0 px-3" role="button">Add Category
+                        <i class="bi-plus-circle"></i>
+                    </a>
+                </div>
             </div>
-        </div>
+        <!-- </div> -->
     </section>
 
 

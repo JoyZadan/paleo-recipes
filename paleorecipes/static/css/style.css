@@ -215,37 +215,10 @@ a {
     border-radius: 5px;
 }
 
-/* REGISTRATION PAGE */
-.select-avatar {
-    font-size: 0.75rem;
-    color: var(--custom-color-secondary);
-}
-
-.avatar-img {
-    width: 5rem;
-    height: 5rem;
-    right: 0%;
-}
-
-.carousel-caption {
-    color: var(--custom-color-primary);
-    text-shadow: var(--text-shadow);
-    font-weight: var(--fw-bold);
-    padding-bottom: 0;
-}
-
-.carousel-inner,
-.carouse-item {
-    max-width: 70%;
-    margin: 0.5rem auto;
-}
-
 /* LOGGED IN USERS - CONTENT AREA STYLING */
 .content-area {
     background-color: #e1e1e1;
 }
-
-
 
 /* FOOTER STYLING */
 footer {

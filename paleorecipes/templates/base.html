@@ -60,6 +60,9 @@
                             <a class="nav-link" href="#">Recipes</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link" href="#">Categories</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="#">Blog</a>
                         </li>
                         <li class="nav-item">
@@ -74,7 +77,7 @@
                                 Account
                             </a>
                             <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdownMenuLink">
-                                <li><a class="dropdown-item" href="{{ url_for('register')}}">Register</a></li>
+                                <li><a class="dropdown-item" href="{{ url_for('register' )}}">Register</a></li>
                                 <li><a class="dropdown-item" href="{{ url_for('login')}}">Login</a></li>
                             </ul>
                         </li>
@@ -83,7 +86,7 @@
                         </li>
                         {% if session.user %}
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ url_for('profile')}}">Profile</a>
+                                <a class="nav-link" href="{{ url_for('profile', username=session['user']) }}">Profile</a>
                             </li>
                         {% endif%}
 

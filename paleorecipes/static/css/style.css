@@ -74,6 +74,7 @@ a {
     color: var(--custom-color-primary);
     margin-bottom: 0;
     border-radius: 0;
+    text-shadow: var(--text-shadow);
 }
 
 .flash-btn {
@@ -88,6 +89,7 @@ a {
     color: #fff;
     background-color: transparent;
     margin: 1rem;
+    text-shadow: var(--text-shadow);
 }
 
 .btn-transparent:hover {
@@ -100,6 +102,7 @@ a {
     border-radius: 10px;
     background-color: var(--buttons-color);
     margin: 1rem;
+    text-shadow: var(--text-shadow);
 }
 
 .btn-solid:hover,
@@ -113,7 +116,7 @@ a {
     background-color: var(--buttons-color-secondary);
     color: var(--custom-color-white);
     margin: 1rem;
-
+    text-shadow: var(--text-shadow);
 }
 
 .btn-alt:hover,

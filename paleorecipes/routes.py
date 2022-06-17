@@ -28,6 +28,7 @@ def login_required(f):
     return decorated_function
 
 
+# HANDLE CREATE, READ, UPDATE AND DELETE CATEGORIES
 @app.route("/get_recipes")
 def get_recipes():
     """ docstrings """
@@ -54,7 +55,7 @@ def add_category():
     """
     checks if user is superadmin
     if not, user is redirected to recipes page
-    add a category
+    add categories
     """
     if "user" not in session or session["user"] != "superadmin":
         flash("You must be a superadmin to manage categories of recipes!")
@@ -66,6 +67,25 @@ def add_category():
         db.session.commit()
         return redirect(url_for("categories"))
     return render_template("add_category.html")
+
+
+@app.route("/edit_category/<int:category_id>", methods=["GET", "POST"])
+def edit_category(category_id):
+    """
+        checks if user is superadmin
+        if not, user is redirected to recipes page
+        edit categories
+    """
+    if "user" not in session or session["user"] != "superadmin":
+        flash("You must be a superadmin to manage categories of recipes!")
+        return redirect(url_for("get_recipes"))
+
+    category = Category.query.get_or_404(category_id)
+    if request.method == "POST":
+        category.category_name = request.form.get("category_name")
+        db.session.commit()
+        return redirect(url_for("categories"))
+    return render_template("edit_category.html", category=category)
 
 
 # HANDLE REGISTER, LOGIN, LOGOUT, AND CREATE PROFILE

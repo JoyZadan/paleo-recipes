@@ -1,7 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
 
-
     <section class="container mb-5 wrapper bg-dark">
         <h1 class="text-center my-3">Register</h1>
         <div class="row">
@@ -10,19 +9,19 @@
                     <div class="row g-2">
                         <!-- username -->
                         <div class="align-self-center col-md-1">
-                            <i class="bi-person-plus-fill fs-6"></i>
+                            <i class="bi-person-plus-fill bootstrap-icon btn btn-primary btn-floating m-1"></i>
                         </div>
                         <div class="col-md-10 col-lg-11 offset-md-1 offset-lg-0">
                             <div class="form-floating mb-3">
                                 <input type="text" name="username" id="username" class="form-control validate"
-                                    	minlength="6" maxlength="15" pattern="^[a-zA-Z0-9]{6,15}$"
+                                    	minlength="5" maxlength="15" pattern="^[a-zA-Z0-9]{6,15}$"
                                         placeholder="username" required>
                                 <label for="floatingInput">Username</label>
                             </div>
                         </div>
                         <!-- first name -->
                         <div class="align-self-center col-md-1">
-                            <i class="bi-person-badge fs-6"></i>
+                            <i class="bi-person-badge bootstrap-icon btn btn-primary btn-floating m-1"></i>
                         </div>
                         <div class="col-md-10 col-lg-11 offset-md-1 offset-lg-0">
                             <div class="form-floating mb-3">
@@ -34,7 +33,7 @@
                         </div>
                         <!-- password -->
                         <div class="align-self-center col-md-1">
-                            <i class="bi-file-lock2-fill fs-6"></i>
+                            <i class="bi-file-lock2-fill bootstrap-icon btn btn-primary btn-floating m-1"></i>
                         </div>
                         <div class="col-md-10 col-lg-11 offset-md-1 offset-lg-0">
                             <div class="form-floating mb-3">
@@ -44,7 +43,7 @@
                                 <label for="floatingInput">Password</label>
                             </div>
                         </div>
-                        <!-- register -->
+                        <!-- register button -->
                         <div class="row d-flex justify-content-center mt-2">
                             <div class="text-center">
                                 <button class="btn btn-solid border-0 px-3" type="submit">Register

@@ -79,7 +79,7 @@ a {
 /* BUTTONS STYLING */
 .btn-transparent {
     border: 1px solid var(--buttons-color);
-    border-radius: 5px;
+    border-radius: 10px;
     color: #fff;
     background-color: transparent;
     margin: 1rem;
@@ -92,15 +92,15 @@ a {
 }
 
 .btn-solid {
-    border-radius: 5px;
+    border-radius: 10px;
     background-color: var(--buttons-color);
-    color: #fff;
     margin: 1rem;
 }
 
-.btn-solid:hover{
+.btn-solid:hover,
+.btn-solid:active {
     background-color: var(--buttons-color-secondary);
-    color: #fff;
+    color: var(--custom-color-white);
 }
 
 /* CONTAINERS STYLING */
@@ -209,11 +209,16 @@ a {
     background-size: cover;
 }
 
-
 .bd-highlight {
     background-color: rgba(0, 0, 0, 0.4);
     border-radius: 5px;
 }
+
+/* ADD CATEGORIES CARD STYLING */
+.add-category {
+    width: 18rem;
+}
+
 
 /* LOGGED IN USERS - CONTENT AREA STYLING */
 .content-area {
@@ -241,10 +246,23 @@ footer p {
     font-size: 0.8rem;
 }
 
-.social-icon {
+.social-icon,
+.bootstrap-icon {
     background-color: var(--buttons-color);
-    border: 1px solid var(--border-color);
+    border: 1px solid rgba(255,255,255,0.1);
     text-shadow: var(--text-shadow);
+    border-radius: 10px;
+}
+
+.social-icon:hover,
+.bootstrap-icon:hover {
+    background-color: var(--buttons-color-secondary);
+    border: none;
+}
+
+.social-icon:active,
+.bootstrap-icon:active {
+    background-color: var(--custom-color-secondary);
 }
 
 .copyright-bg {

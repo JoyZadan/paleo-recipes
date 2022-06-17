@@ -4,7 +4,7 @@ from flask import flash, render_template, request, redirect, session, url_for
 from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
 from paleorecipes import app, db, mongo
-from paleorecipes.models import Category, Recipe, Users
+from paleorecipes.models import Category, Users
 
 
 @app.route("/")
@@ -15,7 +15,7 @@ def home():
 
 def login_required(f):
     """
-        Ensures page us only accessible to logged in users
+        Ensures page is only accessible to logged in users
         @login_required decorator -
         https://flask.palletsprojects.com/en/2.1.x/patterns/viewdecorators/
     """
@@ -35,15 +35,37 @@ def get_recipes():
     return render_template("recipes.html", recipes=recipes)
 
 
-@app.route("/get_categories")
-def get_categories():
-    """ docstrings """
-    if "user" not in session or session["user"] != "admin":
-        flash("You must be admin to manage categories of recipes!")
+@app.route("/categories")
+def categories():
+    """
+    checks if user is superadmin
+    if not, user is redirected to recipes page
+    """
+    if "user" not in session or session["user"] != "superadmin":
+        flash("You must be a superadmin to manage categories of recipes!")
         return redirect(url_for("get_recipes"))
 
     categories = list(Category.query.order_by(Category.category_name).all())
     return render_template("categories.html", categories=categories)
+
+
+@app.route("/add_category", methods=["GET", "POST"])
+def add_category():
+    """
+    checks if user is superadmin
+    if not, user is redirected to recipes page
+    add a category
+    """
+    if "user" not in session or session["user"] != "superadmin":
+        flash("You must be a superadmin to manage categories of recipes!")
+        return redirect(url_for("get_recipes"))
+
+    if request.method == "POST":
+        category = Category(category_name=request.form.get("category_name"))
+        db.session.add(category)
+        db.session.commit()
+        return redirect(url_for("categories"))
+    return render_template("add_category.html")
 
 
 # HANDLE REGISTER, LOGIN, LOGOUT, AND CREATE PROFILE

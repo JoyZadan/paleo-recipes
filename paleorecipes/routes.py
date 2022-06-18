@@ -28,14 +28,24 @@ def login_required(f):
     return decorated_function
 
 
-# HANDLE CREATE, READ, UPDATE AND DELETE CATEGORIES
-@app.route("/get_recipes")
-def get_recipes():
-    """ docstrings """
+# HANDLE CREATE, READ, UPDATE AND DELETE RECIPES
+# from Code Institute combined databases source code
+# amended for my requirements
+@app.route("/recipes")
+def recipes():
+    """ finds recipes from db and renders them on recipes page """
     recipes = list(mongo.db.recipes.find())
     return render_template("recipes.html", recipes=recipes)
 
 
+@app.route("/add_recipe")
+def add_recipe():
+    return render_template("add_recipe.html")
+
+
+# HANDLE CREATE, READ, UPDATE AND DELETE CATEGORIES
+# from Code Institute combined databases source code
+# amended for my requirements
 @app.route("/categories")
 def categories():
     """
@@ -187,7 +197,7 @@ def login():
                                             "username").lower()).all()
 
         if existing_user:
-            print(request.form.get("username"))
+            request.form.get("username")
             # ensure hashed password matches user input
             if check_password_hash(
                     existing_user[0].password, request.form.get("password")):
@@ -228,3 +238,4 @@ def profile():
     if "user" in session:
         return render_template("profile.html", username=session["user"])
     return redirect(url_for("login"))
+

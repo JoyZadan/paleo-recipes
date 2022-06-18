@@ -69,6 +69,15 @@ a {
     text-shadow: var(--text-shadow);
 }
 
+.paleo-link {
+    color: var(--custom-color-primary);
+}
+
+.paleo-link:hover,
+.paleo-link:active {
+    color: var(--custom-color-secondary);
+}
+
 /* FLASH MESSAGES STYLING */
 .flash {
     font-family: var(--ff-primary);

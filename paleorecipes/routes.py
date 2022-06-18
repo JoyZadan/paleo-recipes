@@ -88,6 +88,24 @@ def edit_category(category_id):
     return render_template("edit_category.html", category=category)
 
 
+@app.route("/delete_category/<int:category_id>")
+def delete_category(category_id):
+    """
+        checks if user is superadmin
+        if not, user is redirected to recipes page
+        delete category
+    """
+    if "user" not in session or session["user"] != "superadmin":
+        flash("You must be a superadmin to manage categories of recipes!")
+        return redirect(url_for("get_recipes"))
+
+    category = Category.query.get_or_404(category_id)
+    db.session.delete(category)
+    db.session.commit()
+    mongo.db.tasks.delete_many({"category_id": str(category_id)})
+    return redirect(url_for("categories"))
+
+
 # HANDLE REGISTER, LOGIN, LOGOUT, AND CREATE PROFILE
 @app.route("/register/", methods=["GET", "POST"])
 def register():

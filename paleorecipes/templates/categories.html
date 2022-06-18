@@ -2,7 +2,7 @@
 {% block content %}
 
     <section class="min-vh-100 bg-dark categories-bg">
-        <div class="category-container">
+        <div class="category-container mx-auto">
             <h1 class="text-center display-3 mt-4">Recipe Categories</h1>
             <p class="text-center text-white mt-2"> A place to find different types of paleo recipes.</p>
             <div class="text-center">
@@ -15,17 +15,17 @@
         <!-- categories cards -->
         <div class="container-fluid">
             <div class="row">
-                    {% for category in categories %}
+                {% for category in categories %}
                     <div class="col-sm-6 col-md-3 mt-3 mb-2">
                         <div class="card paleo-font bg-secondary">
                             <div class="card-body text-center">
                                 <h2 class="card-title text-center">{{ category.category_name }}</h2>
                                 <a href="{{ url_for('edit_category', category_id=category.id) }}" class="btn btn-solid">Edit</a>
-                                <a href="#" class="btn btn-alt">Delete</a>
+                                <a href="{{ url_for('delete_category', category_id=category.id) }}" class="btn btn-alt">Delete</a>
                             </div>
                         </div>
                     </div>
-                    {% endfor %}
+                {% endfor %}
             </div>
         </div>
     </section>

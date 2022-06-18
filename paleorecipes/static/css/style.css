@@ -33,6 +33,7 @@
 
     --border-color: #d2d6d9;
 
+    --body-bg-color: #d2d6d9;
 }
 
 * {
@@ -179,7 +180,6 @@ a {
     margin-bottom: 0;
     border: 2px solid var(--custom-color-display);
     border-radius: 5px;
-
 }
 
 .wrapper {
@@ -189,7 +189,6 @@ a {
     margin-top: 2rem;
     margin-bottom: 1rem;
 }
-
 
 .categories-card {
     width: 18rem;
@@ -235,33 +234,6 @@ a {
 }
 
 .dropdown-item:active {
-    color: var(--buttons-color);
-}
-
-/* SIDEBAR STYLING */
-.sidebar {
-    box-shadow: 5px 0px 5px 0px rgba(0,0,0,0.3);
-}
-
-.logo-icon,
-.profile-img {
-    width: 2.5rem;
-    height: 2.5rem;
-}
-
-.sidebar-icon {
-    color: var(--custom-color-primary);
-    width: 4rem;
-    height: 4rem;
-    font-family: var(--ff-primary);
-    margin-left: 2px;
-}
-
-.signout-item {
-    font-family: var(--ff-primary);
-}
-
-.signout-item:hover {
     color: var(--buttons-color);
 }
 
@@ -312,10 +284,40 @@ a {
     width: 18rem;
 }
 
+/* PROFILE PAGE STYLING */
+/* sidebar styling */
+.sidebar {
+    box-shadow: 5px 0px 5px 0px rgba(0,0,0,0.3);
+}
 
-/* LOGGED IN USERS - CONTENT AREA STYLING */
+.logo-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.sidebar-icon {
+    color: var(--custom-color-primary);
+    width: 4rem;
+    height: 4rem;
+    font-family: var(--ff-primary);
+    margin-left: 2px;
+}
+
+.signout-item {
+    font-family: var(--ff-primary);
+}
+
+.signout-item:hover {
+    color: var(--buttons-color);
+}
+
+/* logged in users - content area styling */
 .content-area {
-    background-color: #e1e1e1;
+    background-color: var(--body-bg-color);
+}
+
+.profile-header {
+    color: var(--custom-color-secondary);
 }
 
 /* FOOTER STYLING */

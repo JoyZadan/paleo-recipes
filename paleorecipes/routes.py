@@ -45,13 +45,21 @@ def upload_file():
             return jsonify(upload_result)
 
 
-# HANDLE CREATE, READ, UPDATE AND DELETE RECIPES
+# HANDLE CREATE, READ, UPDATE, DELETE AND SEARCH RECIPES
 # from Code Institute combined databases source code
 # amended for my requirements
 @app.route("/recipes")
 def recipes():
-    """ finds recipes from db and renders them on recipes page """
+    """ renders recipes on recipes page """
     recipes = list(mongo.db.recipes.find())
+    return render_template("recipes.html", recipes=recipes)
+
+
+@app.route("/search_recipes", methods=["GET", "POST"])
+def search_recipes():
+    """ finds recipes from db and renders them on recipes page """
+    query = request.form.get("query")
+    recipes = list(mongo.db.recipes.find({"$text": {"$search": query}}))
     return render_template("recipes.html", recipes=recipes)
 
 

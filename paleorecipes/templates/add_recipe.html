@@ -2,7 +2,7 @@
 {% block content %}
 
     <section class="min-vh-100 bg-dark recipe-bg">
-        <div class="recipe-container transparent">
+        <div class="add-recipe-container transparent">
             <h1 class="text-center display-3 mt-4">Add a Recipe</h1>
             <div class="row">
                 <form action="{{ url_for('add_recipe') }}" method="POST" class="input-text card col-12 mb-5" >
@@ -136,7 +136,6 @@
                                     </button>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </form>

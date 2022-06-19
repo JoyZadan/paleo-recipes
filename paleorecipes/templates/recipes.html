@@ -1,13 +1,56 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <section>
-        <h1>Recipes</h1>
+    <section class="min-vh-100 bg-dark categories-bg">
+        <div class="category-container mx-auto">
+            <h1 class="text-center display-3 mt-4">Search for Recipes</h1>
+            <p class="text-center text-white mt-2">Find delicious and healthy paleo recipes that everyone in your family will enjoy!</p>
+            <div class="text-center">
+                <a href="{{ url_for('add_category') }}" class="btn btn-alt border-0 px-3" role="button">Add Category
+                    <i class="bi-plus-circle"></i>
+                </a>
+            </div>
+        </div>
     </section>
 
 
 
+    <section class="min-vh-100 bg-dark">
+        <div class="search-container transparent">
+            <h1 class="text-center display-3 mt-4">Search for Recipes</h1>
+            <p class="text-center text-white mt-2">A place to find delicious and healthy paleo recipes.</p>
+            <!-- Recipe Search Bar Container -->
+            <!-- <div class="input-group mx-auto">
+                <div class="form-outline">
+                    <input type="search" id="form1" class="form-control" />
+                    <label class="form-label" for="form1">Search</label>
+                </div>
+                <button type="button" class="btn btn-primary">
+                    <i class="bi-search"></i>
+                </button>
+            </div> -->
 
+
+            <!-- Recipe Search Bar Container 2-->
+            <div class="row">
+                <form method="POST" action="{{ url_for('search_recipes') }}" class="input-text card col-12 mb-5">
+                    <div  class="mx-auto bg-dark">
+                        <div class="input-container">
+                            <input type="text" name="search_recipes" id="search_recipes" placeholder="Search for Recipes" minlength="5"
+                                maxlength="50" class="input-container validate" required>
+                            <label for="query">Search Recipes</label>
+                        </div>
+                        <button class="btn btn-solid border-0 px-3" type="submit">Search
+                            <i class="bi-search bootstrap-icon btn btn-primary btn-floating m-1"></i>
+                        </button>
+                        <a href="{{ url_for('recipes') }}" class="btn btn-alt border-0 px-3">Cancel
+                            <i class="bi-x-circle-fill bootstrap-icon btn btn-primary btn-floating m-1"></i>
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
 
 
 

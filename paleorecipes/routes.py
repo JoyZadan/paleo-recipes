@@ -135,6 +135,7 @@ def edit_recipe(recipe_id):
 # HANDLE CREATE, READ, UPDATE AND DELETE CATEGORIES
 # from Code Institute combined databases source code
 # amended for my requirements
+# full CRUD functionalities for superadmin user
 @app.route("/categories")
 def categories():
     """
@@ -327,3 +328,7 @@ def profile():
     if "user" in session:
         return render_template("profile.html", username=session["user"])
     return redirect(url_for("login"))
+
+
+
+

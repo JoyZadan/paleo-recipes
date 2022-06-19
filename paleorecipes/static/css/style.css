@@ -70,10 +70,14 @@ a {
     text-shadow: var(--text-shadow);
 }
 
-
-
 .paleo-link {
     color: var(--custom-color-primary);
+}
+
+.search-link {
+    color: var(--custom-color-display);
+    font-size: 2rem;
+    margin-left: 1rem;
 }
 
 .paleo-link:hover,
@@ -166,11 +170,14 @@ a {
 
 .category-container {
     background-color: rgba(0, 0, 0, 0.4);
-    max-width: 80%;
+    max-width: 90%;
+}
+
+.recipe-container {
+    max-width: 100%;
 }
 
 .category-container,
-.add-recipe-container,
 .recipe-container {
     display: flex;
     flex-direction: column;
@@ -184,10 +191,18 @@ a {
 
 .add-recipe-container {
     max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-left: 5rem;
+    margin-right: 5rem;
+    border-radius: 5px;
 }
 
 .search-icon {
-    background-color:#000;
+    background-color: var(--custom-color-display);
     color:#fff;
     height:3.125rem;
     width:3.125rem;
@@ -208,35 +223,6 @@ a {
 .form-inputs .form-control:focus{
     box-shadow:none;
     border:1px solid #000;
-}
-
-
-
-
-
-
-
-
-
-
-.input-container {
-    position: relative;
-    width: 15rem;
-}
-
-.search-container {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
-.search-container input {
-    width: 100%;
-    min-width: 11.25rem;
-    height: 5rem;
-    border-radius: 10px;
-    text-align: center;
 }
 
 .wrapper-category {
@@ -348,8 +334,23 @@ a {
     width: 18rem;
 }
 
-/* ADD RECIPE PAGE STYLING */
+/* RECIPES PAGE STYLING */
 .recipe-bg {
+    /* Use "linear-gradient" to add a darken background effect to the image. This will make the text easier to read */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/stew.webp");
+
+    /* Set a specific height */
+    height: 100%;
+    width: 100%;
+
+    /* Position and center the image to scale nicely on all screens */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* ADD RECIPE PAGE STYLING */
+.add-recipe-bg {
     /* Use "linear-gradient" to add a darken background effect to the image. This will make the text easier to read */
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/breakfast-2.webp");
 
@@ -362,6 +363,7 @@ a {
     background-repeat: no-repeat;
     background-size: cover;
 }
+
 .input-text {
     color: var(--custom-color-primary);
     font-family: var(--ff-primary);

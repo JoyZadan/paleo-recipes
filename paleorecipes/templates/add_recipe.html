@@ -87,7 +87,7 @@
                                 <div class="form-floating">
                                     <textarea name="ingredients" id="ingredients" rows="20" class="form-control validate"
                                         placeholder="recipe description" required></textarea>
-                                    <label for="ingredients">Description</label>
+                                    <label for="ingredients">Ingredients</label>
                                 </div>
                             </div>
                             <!-- instructions input -->
@@ -145,6 +145,7 @@
     </section>
 
 
-
+    <!-- Script to trigger the cloudinary widget on click of a button -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 
 {% endblock %}

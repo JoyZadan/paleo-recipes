@@ -2,21 +2,24 @@
 {% block content %}
 
     <section class="container mb-5 wrapper bg-dark">
-        <h1 class="text-center my-3">Add Recipe</h1>
+        <h1 class="text-center my-3">Add a Recipe</h1>
         <div class="row">
-            <form action="{{ url_for('add_recipe') }}" method="POST" class="card col-12 col-md-8 offset-md-2 mb-5" >
+            <form action="{{ url_for('add_recipe') }}" method="POST" class="input-text card col-12 col-md-8 offset-md-2 mb-5" >
                 <div class="card-body">
                     <div class="row g-2">
                         <!-- category selection -->
                         <div class="align-self-center col-md-1">
                             <i class="bi-check2-circle bootstrap-icon btn btn-primary btn-floating m-1"></i>
-                            <select name="category_id" id="category_id" class="validate" required>
-                                <option value="" disabled selected>Choose Category</option>
-                                {% for category in categories %}
-                                    <option value="{{ category.id }}">{{ category.category_name }}</option>
-                                {% endfor %}
-                            </select>
-                            <label for="category_id">Category</label>
+                        </div>
+                        <div class="col-md-10 col-lg-11 offset-md-1 offset-lg-0">
+                            <div class="form-floating mb-3">
+                                <select name="category_id" id="category_id" class="validate input-text" required>
+                                    <option value="" disabled selected>Choose Category</option>
+                                    {% for category in categories %}
+                                        <option value="{{ category.id }}">{{ category.category_name }}</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
                         </div>
                         <!-- recipe name input -->
                         <div class="align-self-center col-md-1">
@@ -24,11 +27,11 @@
                         </div>
                         <div class="col-md-10 col-lg-11 offset-md-1 offset-lg-0">
                             <div class="form-floating mb-3">
+                                <input type="text" name="recipe_name" id="recipe_name" class="form-control validate"
+                                    placeholder="Recipe Name" required>
+                                <label for="recipe_name">Recipe Name</label>
                                 <!-- hidden input for image url, returned by the cloudinary upload widget -->
                                 <input type="hidden" id="image_url" name="image_url" class="form-control validate" required>
-                                <input type="text" name="recipe_name" id="recipe_name" class="form-control validate"
-                                    placeholder="recipe_name" required>
-                                <label for="recipe_name">Recipe Name</label>
                             </div>
                         </div>
                         <!-- recipe description input -->
@@ -110,7 +113,7 @@
                         </div>
                         <!-- nutrition -->
                         <div class="align-self-center col-md-1">
-                            <i class="bi-file-medical btn btn-primary btn-floating m-1"></i>
+                            <i class="bi-file-medical bootstrap-icon btn btn-primary btn-floating m-1"></i>
                         </div>
                         <div class="col-md-10 col-lg-11 offset-md-1 offset-lg-0">
                             <div class="form-floating mb-3">

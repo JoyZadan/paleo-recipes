@@ -1,12 +1,13 @@
-// navbar changes background colour on scroll
-// const navbar = document.querySelector('.navbar');
+// JavaScript Code from Cloudinary for the Cloudinary widget
+var myWidget = cloudinary.createUploadWidget({
+    cloudName: 'joyzadan',
+    uploadPreset: 'efjhsjfdjrdnrhlk'
+}, (error, result) => {
+    if (!error && result && result.event === "success") {
+        console.log('Done! Here is the image info: ', result.info);
+    }
+})
 
-// window.onscroll = function() {
-//   var top = window.scrollY;
-//   console.log(top);
-//   if (top >= 50) {
-//     navbar.classList.add('active');
-//   } else {
-//     navbar.classList.remove('active');
-//   }
-// }
+document.getElementById("upload_widget").addEventListener("click", function () {
+    myWidget.open();
+}, false);

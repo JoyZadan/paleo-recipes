@@ -70,6 +70,8 @@ a {
     text-shadow: var(--text-shadow);
 }
 
+
+
 .paleo-link {
     color: var(--custom-color-primary);
 }
@@ -282,6 +284,12 @@ a {
 
 .add-category {
     width: 18rem;
+}
+
+/* ADD RECIPE PAGE STYLING */
+.input-text {
+    color: var(--custom-color-primary);
+    font-family: var(--ff-primary);
 }
 
 /* PROFILE PAGE STYLING */

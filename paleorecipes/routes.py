@@ -1,6 +1,6 @@
 """ imports """
 from functools import wraps
-from flask import flash, render_template, request, redirect, session, url_for
+from flask import flash, render_template, request, redirect, session, url_for, jsonify
 from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
 from paleorecipes import app, db, mongo
@@ -28,6 +28,23 @@ def login_required(f):
     return decorated_function
 
 
+# HANDLE CLOUDINARY IMAGE UPLOAD FROM USERS
+@app.route("/upload", methods=['POST'])
+def upload_file():
+    app.logger.info('in upload route')
+
+    cloudinary.config(cloud_name = os.getenv('CLOUD_NAME'),
+                      api_key=os.getenv('API_KEY'), api_secret=os.getenv('API_SECRET'))
+    upload_result = None
+    if request.method == 'POST':
+        file_to_upload = request.files['file']
+        app.logger.info('%s file_to_upload', file_to_upload)
+        if file_to_upload:
+            upload_result = cloudinary.uploader.upload(file_to_upload)
+            app.logger.info(upload_result)
+            return jsonify(upload_result)
+
+
 # HANDLE CREATE, READ, UPDATE AND DELETE RECIPES
 # from Code Institute combined databases source code
 # amended for my requirements
@@ -38,7 +55,7 @@ def recipes():
     return render_template("recipes.html", recipes=recipes)
 
 
-@app.route("/add_recipe")
+@app.route("/add_recipe", methods=["GET", "POST"])
 def add_recipe():
     """
     checks if user is in session, if not, redirects them to login page
@@ -67,7 +84,7 @@ def add_recipe():
         return redirect(url_for("recipes"))
 
     categories = list(Category.query.order_by(Category.category_name).all())
-    return render_template("add_recipe.html")
+    return render_template("add_recipe.html", categories=categories)
 
 
 # HANDLE CREATE, READ, UPDATE AND DELETE CATEGORIES

@@ -60,13 +60,14 @@ def add_recipe():
     checks if user is in session, if not, redirects them to login page
     handles Cloudinary image upload from users using a public API key
     which will be provided in the FAQ section
+    adds to mongodb the new recipe upload by the user
     """
     if "user" not in session:
         flash("You must be logged in to add a recipe")
         return redirect(url_for("login"))
 
     if request.method == "POST":
-        image = request.files['image_url']
+        image = request.files["image_url"]
         image_upload = cloudinary.uploader.upload(image,
                                                   upload_preset="efjhsj")
         recipe = {
@@ -89,6 +90,46 @@ def add_recipe():
 
     categories = list(Category.query.order_by(Category.category_name).all())
     return render_template("add_recipe.html", categories=categories)
+
+
+@app.route("/edit_recipe/<recipe_id>", methods=["GET", "POST"])
+def edit_recipe(recipe_id):
+    """
+    checks if user is in session, if not, redirects them to login page
+    allows a user to edit their own recipes
+    updates the user's own recipe in mongodb
+    """
+    recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+
+    if "user" not in session or session["user"] != recipe["created_by"]:
+        flash("You must be logged in to edit your own recipes!")
+        return redirect(url_for("recipes"))
+
+    if request.method == "POST":
+        request.form.get("recipe_name")
+        image = request.files["image_url"]
+        image_upload = cloudinary.uploader.upload(image,
+                                                  upload_preset="efjhsj")
+        submit = {
+            "category_id": request.form.get("category_id"),
+            "recipe_name": request.form.get("recipe_name"),
+            "recipe_description": request.form.get("recipe_description"),
+            "image_url": image_upload["secure_url"],
+            "created_by": session["user"],
+            "ingredients": request.form.get("ingredients"),
+            "instructions": request.form.get("instructions"),
+            "prep_time": request.form.get("prep_time"),
+            "cook_time": request.form.get("cook_time"),
+            "servings": request.form.get("servings"),
+            "notes": request.form.get("notes"),
+            "nutrition": request.form.get("nutrition")
+        }
+        mongo.db.recipes.update({"_id": ObjectId(recipe_id)}, submit)
+        flash("Recipe successfully updated!")
+
+    categories = list(Category.query.order_by(Category.category_name).all())
+    return render_template("add_recipe.html", recipes=recipes,
+                           categories=categories)
 
 
 # HANDLE CREATE, READ, UPDATE AND DELETE CATEGORIES

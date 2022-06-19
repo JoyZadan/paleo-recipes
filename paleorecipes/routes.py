@@ -40,6 +40,29 @@ def recipes():
 
 @app.route("/add_recipe")
 def add_recipe():
+    """
+    checks if user is in session, if not, redirects them to login page
+    """
+    if "user" not in session:
+        flash("You must be logged in to add a recipe")
+        return redirect(url_for("login"))
+
+    if request.method == "POST":
+        recipe = {
+            "category_id": request.form.get("category_id"),
+            "recipe_name": request.form.get("recipe_name"),
+            "recipe_description": request.form.get("recipe_description"),
+            "image_url": request.form.get("image_url"),
+            "created_by": session["user"],
+            "ingredients": request.form.get("ingredients"),
+            "instructions": request.form.get("instructions"),
+            "prep_time": request.form.get("prep_time"),
+            "cook_time": request.form.get("cook_time"),
+            "servings": request.form.get("servings"),
+            "notes": request.form.get("notes"),
+            "nutrition": request.form.get("nutrition")
+        }
+
     return render_template("add_recipe.html")
 
 
@@ -222,7 +245,7 @@ def login():
 @app.route("/logout")
 def logout():
     """ remove user from session cookie """
-    flash("You have been logged out")
+    flash("You have been logged out. See you soon!")
     session.pop("user")
     return redirect(url_for("login"))
 

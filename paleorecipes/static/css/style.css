@@ -337,7 +337,7 @@ a {
 /* RECIPES PAGE STYLING */
 .recipe-bg {
     /* Use "linear-gradient" to add a darken background effect to the image. This will make the text easier to read */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/stew.webp");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)), url("../images/stew.webp");
 
     /* Set a specific height */
     height: 100%;

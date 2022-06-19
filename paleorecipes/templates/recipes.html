@@ -1,72 +1,33 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <section class="min-vh-100 bg-dark categories-bg">
-        <div class="row g-0">
-            <div class="col">
-                <div class="text-center mt-4">
-                    <h1 class="text-center display-3 mt-4">Search for Recipes</h1>
-                    <p class="text-center text-white mt-2">
-                        Find delicious and healthy paleo recipes that everyone in your family will enjoy!
-                    </p>
-                </div>
-                <!-- Recipe Search Bar Container -->
-                <form method="POST" action="{{ url_for('search_recipes') }}" class="search-container">
-                    <div class="input-container">
-                        <div>
-                            <input type="text" name="search_recipes" id="search_recipes" placeholder="Search for Recipes" minlength="5"
-                            maxlength="50" class="validate" required>
-                        <label for="query">Search Recipes</label>
+        <section class="header-main border-bottom bg-white">
+            <div class="container-fluid">
+                <div class="row p-2 pt-3 pb-3 d-flex align-items-center">
+                    <div class="col-md-2">
+                        <img class="d-none d-md-flex" src="" width="100">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="d-flex form-inputs">
+                            <input class="form-control" type="text" placeholder="Search for recipes...">
+                            <i class="bx bx-search"></i>
                         </div>
                     </div>
-                    <button class="btn btn-solid border-0 px-3" type="submit">Search
-                        <i class="bi bi-search bootstrap-icon btn btn-primary btn-floating m-1"></i>
-                    </button>
-                    <a href="{{ url_for('recipes') }}" class="btn btn-alt border-0 px-3">Cancel
-                        <i class="bi bi-x-circle-fill bootstrap-icon btn btn-primary btn-floating m-1"></i>
-                    </a>
-                </form>
-            </div>
-        </div>
 
-<br>
-<br>
-<br>
+                    <div class="col-md-2">
+                        <div class="d-flex d-none d-md-flex flex-row align-items-center">
+                            <span class="shop-bag"><i class='bi bi-search'></i></span>
+                            <div class="d-flex flex-column ms-2">
 
-
-
-
-
-
-
-
-
-
-
-
-        <!-- Recipe Search Bar Container 2-->
-        <div class="row">
-            <form method="POST" action="{{ url_for('search_recipes') }}" class="input-text card col-12 mb-5">
-                <div  class="mx-auto bg-dark">
-                    <div class="input-container">
-                        <input type="text" name="search_recipes" id="search_recipes" placeholder="Search for Recipes" minlength="5"
-                            maxlength="50" class="input-container validate" required>
-                        <label for="query">Search Recipes</label>
+                                <span class="fw-bold">Cancel</span>
+                            </div>
+                        </div>
                     </div>
-                    <button class="btn btn-solid border-0 px-3" type="submit">Search
-                        <i class="bi-search bootstrap-icon btn btn-primary btn-floating m-1"></i>
-                    </button>
-                    <a href="{{ url_for('recipes') }}" class="btn btn-alt border-0 px-3">Cancel
-                        <i class="bi-x-circle-fill bootstrap-icon btn btn-primary btn-floating m-1"></i>
-                    </a>
                 </div>
-            </form>
-        </div>
+            </div>
+        </section>
 
 
-
-
-    </section>
 
 
 

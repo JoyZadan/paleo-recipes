@@ -1,11 +1,19 @@
 """ imports """
+import os
 from functools import wraps
-from flask import flash, render_template, request, redirect, session, url_for, jsonify
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
+from flask import flash, render_template, request, redirect, session, url_for
 from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
 from paleorecipes import app, db, mongo
 from paleorecipes.models import Category, Users
 
+
+cloudinary.config(cloud_name=os.getenv('CLOUD_NAME'),
+                  api_key=os.getenv('API_KEY'),
+                  api_secret=os.getenv('API_SECRET'))
 
 @app.route("/")
 def home():
@@ -26,23 +34,6 @@ def login_required(f):
             return redirect(url_for('login'))
         return f(*args, **kwargs)
     return decorated_function
-
-
-# HANDLE CLOUDINARY IMAGE UPLOAD FROM USERS
-@app.route("/upload", methods=['POST'])
-def upload_file():
-    app.logger.info('in upload route')
-
-    cloudinary.config(cloud_name = os.getenv('CLOUD_NAME'),
-                      api_key=os.getenv('API_KEY'), api_secret=os.getenv('API_SECRET'))
-    upload_result = None
-    if request.method == 'POST':
-        file_to_upload = request.files['file']
-        app.logger.info('%s file_to_upload', file_to_upload)
-        if file_to_upload:
-            upload_result = cloudinary.uploader.upload(file_to_upload)
-            app.logger.info(upload_result)
-            return jsonify(upload_result)
 
 
 # HANDLE CREATE, READ, UPDATE, DELETE AND SEARCH RECIPES
@@ -67,17 +58,22 @@ def search_recipes():
 def add_recipe():
     """
     checks if user is in session, if not, redirects them to login page
+    handles Cloudinary image upload from users using a public API key
+    which will be provided in the FAQ section
     """
     if "user" not in session:
         flash("You must be logged in to add a recipe")
         return redirect(url_for("login"))
 
     if request.method == "POST":
+        image = request.files['image_url']
+        image_upload = cloudinary.uploader.upload(image,
+                                                  upload_preset="efjhsj")
         recipe = {
             "category_id": request.form.get("category_id"),
             "recipe_name": request.form.get("recipe_name"),
             "recipe_description": request.form.get("recipe_description"),
-            "image_url": request.form.get("image_url"),
+            "image_url": image_upload["secure_url"],
             "created_by": session["user"],
             "ingredients": request.form.get("ingredients"),
             "instructions": request.form.get("instructions"),

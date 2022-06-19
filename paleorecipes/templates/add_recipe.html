@@ -5,7 +5,7 @@
         <div class="add-recipe-container transparent">
             <h1 class="text-center display-3 mt-4">Add a Recipe</h1>
             <div class="row">
-                <form action="{{ url_for('add_recipe') }}" method="POST" class="input-text card col-12 mb-5" >
+                <form action="{{ url_for('add_recipe') }}" method="POST" class="input-text card col-12 mb-5" enctype="multipart/form-data">
                     <div class="card-body">
                         <div class="row g-2">
                             <!-- category selection -->
@@ -32,7 +32,7 @@
                                         placeholder="Recipe Name" required>
                                     <label for="recipe_name">Recipe Name</label>
                                     <!-- hidden input for image url, returned by the cloudinary upload widget -->
-                                    <input type="hidden" id="image_url" name="image_url" class="form-control validate" required>
+                                    <!-- <input type="hidden" id="image_url" name="image_url" class="form-control validate" required> -->
                                 </div>
                             </div>
                             <!-- recipe description input -->
@@ -124,15 +124,33 @@
                                 </div>
                             </div>
                             <!-- buttons -->
-                            <div class="row d-flex justify-content-center mt-2">
+                            <!-- <div class="row d-flex justify-content-center mt-2 ">
                                 <div class="text-center">
-                                    <!-- button to trigger cloudinary upload image widget -->
+                                    button to trigger cloudinary upload image widget
                                     <button class="btn btn-solid border-0 px-3" type="button" id="upload_widget" href="#">
                                         Upload Recipe Image
                                     </button>
-                                    <!-- submit recipe button -->
+                                    submit recipe button
                                     <button class="btn btn-alt border-0 px-3" type="submit">Submit Recipe
                                         <i class="bi-box-arrow-in-right"></i>
+                                    </button>
+                                </div>
+                            </div> -->
+                            <!-- upload image button for users -->
+                            <div class="file-field input-field">
+                                <div class="btn btn-solid border-0 px-3">
+                                    <span>Upload Image</span>
+                                    <input type="file" accept="image" name="image_url" id="image_url">
+                                </div>
+                                <div class="file-path-wrapper">
+                                    <input type="file-path validate" type="text" required>
+                                </div>
+                            </div>
+                            <!-- submit button -->
+                            <div class="row">
+                                <div class="col s12 center-align">
+                                    <button type="submit" class="btn btn-alt border-0 px-3">
+                                        Add Recipe <i class="bi-box-arrow-in-right"></i>
                                     </button>
                                 </div>
                             </div>
@@ -145,6 +163,6 @@
 
 
     <!-- Script to trigger the cloudinary widget on click of a button -->
-    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <!-- <script src="{{ url_for('static', filename='js/script.js') }}"></script> -->
 
 {% endblock %}

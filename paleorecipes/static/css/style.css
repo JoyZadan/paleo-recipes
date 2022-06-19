@@ -187,17 +187,23 @@ a {
 }
 
 .input-container {
-    width: 60vw;
-    height: 3rem;
+    position: relative;
 }
 
-/* .search-container {
+.search-container {
     display: flex;
     justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
-    margin: 2rem auto;
-} */
+}
+
+.search-container input {
+    width: 100%;
+    min-width: 11.25rem;
+    border-radius: 10px;
+    text-align: center;
+}
+
 
 .wrapper-category {
     margin-top: 0;

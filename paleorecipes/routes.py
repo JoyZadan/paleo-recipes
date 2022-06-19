@@ -62,7 +62,11 @@ def add_recipe():
             "notes": request.form.get("notes"),
             "nutrition": request.form.get("nutrition")
         }
+        mongo.db.recipes.insert_one(recipe)
+        flash("Thank you for sharing your recipe!")
+        return redirect(url_for("recipes"))
 
+    categories = list(Category.query.order_by(Category.category_name).all())
     return render_template("add_recipe.html")
 
 
@@ -77,7 +81,7 @@ def categories():
     """
     if "user" not in session or session["user"] != "superadmin":
         flash("You must be a superadmin to manage categories of recipes!")
-        return redirect(url_for("get_recipes"))
+        return redirect(url_for("recipes"))
 
     categories = list(Category.query.order_by(Category.category_name).all())
     return render_template("categories.html", categories=categories)
@@ -261,4 +265,3 @@ def profile():
     if "user" in session:
         return render_template("profile.html", username=session["user"])
     return redirect(url_for("login"))
-

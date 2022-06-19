@@ -1,0 +1,155 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <section class="container mb-5 wrapper bg-dark">
+        <h1 class="text-center my-3">Add Recipe</h1>
+        <div class="row">
+            <form action="{{ url_for('add_recipe') }}" method="POST" class="card col-12 col-md-8 offset-md-2 mb-5" >
+                <div class="card-body">
+                    <div class="row g-2">
+                        <!-- category selection -->
+                        <div class="align-self-center col-md-1">
+                            <i class="bi-check2-circle bootstrap-icon btn btn-primary btn-floating m-1"></i>
+                            <select name="category_id" id="category_id" class="validate" required>
+                                <option value="" disabled selected>Choose Category</option>
+                                {% for category in categories %}
+                                    <option value="{{ category.id }}">{{ category.category_name }}</option>
+                                {% endfor %}
+                            </select>
+                            <label for="category_id">Category</label>
+                        </div>
+                        <!-- recipe name input -->
+                        <div class="align-self-center col-md-1">
+                            <i class="bi-tag bootstrap-icon btn btn-primary btn-floating m-1"></i>
+                        </div>
+                        <div class="col-md-10 col-lg-11 offset-md-1 offset-lg-0">
+                            <div class="form-floating mb-3">
+                                <!-- hidden input for image url, returned by the cloudinary upload widget -->
+                                <input type="hidden" id="image_url" name="image_url" class="form-control validate" required>
+                                <input type="text" name="recipe_name" id="recipe_name" class="form-control validate"
+                                    placeholder="recipe_name" required>
+                                <label for="recipe_name">Recipe Name</label>
+                            </div>
+                        </div>
+                        <!-- recipe description input -->
+                        <div class="align-self-center col-md-1">
+                            <i class="bi-blockquote-left bootstrap-icon btn btn-primary btn-floating m-1"></i>
+                        </div>
+                        <div class="col-md-10 col-lg-11 offset-md-1 offset-lg-0">
+                            <div class="form-floating mb-3">
+                                <textarea name="recipe_description" id="recipe_description" rows="2" class="form-control validate"
+                                    placeholder="recipe description" required></textarea>
+                                <label for="recipe_description">Description</label>
+                            </div>
+                        </div>
+                        <!-- prep time input -->
+                        <div class="align-self-center col-md-1">
+                            <i class="bi-hourglass-split bootstrap-icon btn btn-primary btn-floating m-1"></i>
+                        </div>
+                        <div class="col-md-10 col-lg-11 offset-md-1 offset-lg-0">
+                            <div class="form-floating mb-3">
+                                <input type="number" name="prep_time" id="prep_time" class="form-control validate"
+                                    placeholder="prep_time" required>
+                                <label for="prep_time">Preparation time (in minutes)</label>
+                            </div>
+                        </div>
+                        <!-- cook time input -->
+                        <div class="align-self-center col-md-1">
+                            <i class="bi-clock bootstrap-icon btn btn-primary btn-floating m-1"></i>
+                        </div>
+                        <div class="col-md-10 col-lg-11 offset-md-1 offset-lg-0">
+                            <div class="form-floating mb-3">
+                                <input type="number" name="cook_time" id="cook_time" class="form-control validate"
+                                    placeholder="cook_time" required>
+                                <label for="cook_time">Cooking time (in minutes)</label>
+                            </div>
+                        </div>
+                        <!-- servings input -->
+                        <div class="align-self-center col-md-1">
+                            <i class="bi-people-fill bootstrap-icon btn btn-primary btn-floating m-1"></i>
+                        </div>
+                        <div class="col-md-10 col-lg-11 offset-md-1 offset-lg-0">
+                            <div class="form-floating mb-3">
+                                <input type="number" name="servings" id="servings" class="form-control validate"
+                                    placeholder="servings" required>
+                                <label for="servings">Servings</label>
+                            </div>
+                        </div>
+                        <!-- ingredients input -->
+                        <div class="align-self-center col-md-1">
+                            <i class="bi-card-checklist bootstrap-icon btn btn-primary btn-floating m-1"></i>
+                        </div>
+                        <div class="col-md-10 col-lg-11 offset-md-1 offset-lg-0">
+                            <div class="form-floating mb-3">
+                                <textarea name="ingredients" id="ingredients" rows="20" class="form-control validate"
+                                    placeholder="recipe description" required></textarea>
+                                <label for="ingredients">Description</label>
+                            </div>
+                        </div>
+                        <!-- instructions input -->
+                        <div class="align-self-center col-md-1">
+                            <i class="bi-book-half bootstrap-icon btn btn-primary btn-floating m-1"></i>
+                        </div>
+                        <div class="col-md-10 col-lg-11 offset-md-1 offset-lg-0">
+                            <div class="form-floating mb-3">
+                                <textarea name="instructions" id="instructions" rows="20" class="form-control validate"
+                                    placeholder="cooking instructions" required></textarea>
+                                <label for="instructions">Preparation and Cooking Steps</label>
+                            </div>
+                        </div>
+                        <!-- notes -->
+                        <div class="align-self-center col-md-1">
+                            <i class="bi-sticky bootstrap-icon btn btn-primary btn-floating m-1"></i>
+                        </div>
+                        <div class="col-md-10 col-lg-11 offset-md-1 offset-lg-0">
+                            <div class="form-floating mb-3">
+                                <textarea name="notes" id="notes" rows="5" class="form-control validate"
+                                    placeholder="notes" required></textarea>
+                                <label for="notes">Additional Notes</label>
+                            </div>
+                        </div>
+                        <!-- nutrition -->
+                        <div class="align-self-center col-md-1">
+                            <i class="bi-file-medical btn btn-primary btn-floating m-1"></i>
+                        </div>
+                        <div class="col-md-10 col-lg-11 offset-md-1 offset-lg-0">
+                            <div class="form-floating mb-3">
+                                <input type="text" name="nutrition" id="nutrition" class="form-control validate"
+                                    placeholder="nutrition" required>
+                                <label for="nutrition">Nutrition</label>
+                            </div>
+                        </div>
+                        <!-- buttons -->
+                        <div class="row d-flex justify-content-center mt-2">
+                            <div class="text-center">
+                                <!-- button to trigger cloudinary upload image widget -->
+                                <button class="btn btn-solid border-0 px-3" type="button" id="upload_widget" href="#">
+                                    Upload Recipe Image
+                                </button>
+                                <!-- submit recipe button -->
+                                <button class="btn btn-alt border-0 px-3" type="submit">Submit Recipe
+                                    <i class="bi-box-arrow-in-right"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

@@ -165,6 +165,12 @@ a {
 }
 
 .category-container {
+    background-color: rgba(0, 0, 0, 0.4);
+    max-width: 80%;
+}
+
+.category-container,
+.recipe-container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -172,9 +178,11 @@ a {
     text-align: center;
     margin-left: 5rem;
     margin-right: 5rem;
-    background-color: rgba(0, 0, 0, 0.4);
     border-radius: 5px;
-    max-width: 80%;
+}
+
+.recipe-container {
+    max-width: 50%;
 }
 
 .wrapper-category {
@@ -287,6 +295,19 @@ a {
 }
 
 /* ADD RECIPE PAGE STYLING */
+.recipe-bg {
+    /* Use "linear-gradient" to add a darken background effect to the image. This will make the text easier to read */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/breakfast-2.webp");
+
+    /* Set a specific height */
+    height: 100%;
+    width: 100%;
+
+    /* Position and center the image to scale nicely on all screens */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 .input-text {
     color: var(--custom-color-primary);
     font-family: var(--ff-primary);
@@ -389,11 +410,34 @@ footer p {
         border-radius: 5px;
         max-width: 90%;
     }
+
+    .recipe-container {
+        max-width: 95%;
+    }
+
+    .input-text {
+        font-size: 0.75rem;
+    }
+}
+
+@media screen and (max-width: 43.75em) {
+    .recipe-container {
+        max-width: 80%;
+    }
 }
 
 @media screen and (max-width: 53.5em) {
-    .carousel-caption {
-        bottom: 0.5rem;
-        text-align: end;
+    .bootstrap-icon {
+        font-size: 0.75rem;
+    }
+
+    .input-text {
+        font-size: 0.75rem;
+    }
+}
+
+@media screen and (max-width: 62.1875em) {
+    .bootstrap-icon {
+        display: none;
     }
 }

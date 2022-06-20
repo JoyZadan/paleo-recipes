@@ -482,6 +482,14 @@ footer p {
     }
 }
 
+@media screen and (max-width: 48em) {
+    .recipe-card-group {
+        display: flex;
+        flex-flow: column;
+        flex-wrap: wrap;
+    }
+}
+
 @media screen and (max-width: 53.5em) {
     .bootstrap-icon {
         font-size: 0.75rem;

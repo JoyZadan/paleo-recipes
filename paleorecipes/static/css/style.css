@@ -337,7 +337,7 @@ a {
 /* RECIPES PAGE STYLING */
 .recipe-bg {
     /* Use "linear-gradient" to add a darken background effect to the image. This will make the text easier to read */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(252, 248, 248, 0.4));
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(191,107,4, 0.4));
 
     /* Set a specific height */
     height: 100%;
@@ -348,6 +348,11 @@ a {
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+.divider {
+    color: var(--custom-color-display);
+}
+
 
 /* ADD RECIPE PAGE STYLING */
 .add-recipe-bg {
@@ -401,7 +406,9 @@ a {
     background-color: var(--body-bg-color);
 }
 
-.profile-header {
+.profile-header,
+.recipe-title,
+.subtitle {
     color: var(--custom-color-secondary);
 }
 
@@ -482,6 +489,7 @@ footer p {
     }
 }
 
+/* using flex to display available recipes in 1 column for medium to small screens */
 @media screen and (max-width: 48em) {
     .recipe-card-group {
         display: flex;
@@ -490,6 +498,8 @@ footer p {
     }
 }
 
+/* using grid to display available recipes in 2 columns
+for just above medium breakpoint of 768px to larger screens  */
 @media screen and (min-width: 48.01em) {
     .recipe-card-group {
         display: grid;

@@ -35,84 +35,42 @@
                 <div class="card mx-4 mb-3">
                     <img src="{{ url_for('static', filename='images/steak-salad.webp') }}" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <div class="list-group-horizontal">
-                            <ul class="list-group list-group-horizontal">
-                                <li class="list-group-item">Prep Time</li>
-                                <li class="list-group-item">Cook Time</li>
-                                <li class="list-group-item">Servings</li>
+                        <div class="list-group small">
+                            <ul class="list-group list-group-horizontal-md">
+                                <li class="list-group-item mx-1 bg-light rounded text-muted">
+                                    <i class="bi bi-hourglass-split"></i> Prep: { 15 } mins
+                                </li>
+                                <li class="list-group-item mx-1 bg-light rounded text-muted">
+                                    <i class="bi-clock"></i> Cook: { 45 } mins
+                                </li>
+                                <li class="list-group-item mx-1 bg-light rounded text-muted">
+                                    <i class="bi bi-people-fill"></i> Serves: { 4 }
+                                </li>
                             </ul>
                         </div>
-                        <h5 class="card-title">Recipe Name</h5>
-                        <p class="card-text">(Recipe Description) This is a wider card with supporting text below as a natural lead-in to additional
+                        <h2 class="card-title mt-3 recipe-title">Recipe Name</h2>
+                        <p class="card-text text-muted">Category Name</p>
+                        <p class="card-text h6 fst-italic">This is a wider card with supporting text below as a natural lead-in to additional
                             content. This content is a little bit longer.</p>
-                        <p>Posted By (username)</p>
-                        <p class="card-text"><small class="text-muted">Notes: This is a wider card with supporting text below as a natural lead-in to additional
-                            content. This content is a little bit longer</small></p>
-                        <p class="card-text"><small class="text-muted">Nutrition: This is a wider card with supporting text below as a natural lead-in to additional
-                            content. This content is a little bit longer</small></p>
+                        <h3 class="h5 text-uppercase mt-4 subtitle">Posted by: { JOYCE}</h3>
+                        <hr class="hr divider">
+
+                        <h3 class="h5">Ingredients:</h3>
+                        <p class="text-muted small">Ingredients items</p>
+
+                        <h3 class="h5">Preparation and Cooking Instructions:</h3>
+                        <p class="text-muted small">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita, enim debitis placeat esse quibusdam molestiae sit, porro quos quia explicabo a ullam nobis suscipit! Iure similique id consequatur quidem! Illum.</p>
+
+                        <h3 class="h5">Notes:</h3>
+                        <p class="text-muted small">Notes content</p>
+
+                        <h3 class="h5">Nutrition:</h3>
+                        <p class="text-muted small">Nutrition content</p>
                     </div>
-                </div>
-                <div class="card mx-4 mb-3">
-                    <img src="{{ url_for('static', filename='images/green-foods.webp') }}" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <div class="list-group-horizontal">
-                            <ul class="list-group list-group-horizontal">
-                                <li class="list-group-item">Prep Time</li>
-                                <li class="list-group-item">Cook Time</li>
-                                <li class="list-group-item">Servings</li>
-                            </ul>
-                        </div>
-                        <h5 class="card-title">Recipe Name</h5>
-                        <p class="card-text">(Recipe Description) This is a wider card with supporting text below as a natural lead-in to additional
-                            content. This content is a little bit longer.</p>
-                        <p>Posted By (username)</p>
-                        <p class="card-text"><small class="text-muted">Notes: This is a wider card with supporting text below as a natural lead-in to additional
-                            content. This content is a little bit longer</small></p>
-                        <p class="card-text"><small class="text-muted">Nutrition: This is a wider card with supporting text below as a natural lead-in to additional
-                            content. This content is a little bit longer</small></p>
-                    </div>
+
                 </div>
 
-                <div class="card mx-4 mb-3">
-                    <img src="{{ url_for('static', filename='images/green-foods.webp') }}" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <div class="list-group-horizontal">
-                            <ul class="list-group list-group-horizontal">
-                                <li class="list-group-item">Prep Time</li>
-                                <li class="list-group-item">Cook Time</li>
-                                <li class="list-group-item">Servings</li>
-                            </ul>
-                        </div>
-                        <h5 class="card-title">Recipe Name</h5>
-                        <p class="card-text">(Recipe Description) This is a wider card with supporting text below as a natural lead-in to additional
-                            content. This content is a little bit longer.</p>
-                        <p>Posted By (username)</p>
-                        <p class="card-text"><small class="text-muted">Notes: This is a wider card with supporting text below as a natural lead-in to additional
-                            content. This content is a little bit longer</small></p>
-                        <p class="card-text"><small class="text-muted">Nutrition: This is a wider card with supporting text below as a natural lead-in to additional
-                            content. This content is a little bit longer</small></p>
-                    </div>
-                </div>
-                <div class="card mx-4 mb-3">
-                    <img src="{{ url_for('static', filename='images/green-foods.webp') }}" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <div class="list-group-horizontal">
-                            <ul class="list-group list-group-horizontal">
-                                <li class="list-group-item">Prep Time</li>
-                                <li class="list-group-item">Cook Time</li>
-                                <li class="list-group-item">Servings</li>
-                            </ul>
-                        </div>
-                        <h5 class="card-title">Recipe Name</h5>
-                        <p class="card-text">(Recipe Description) This is a wider card with supporting text below as a natural lead-in to additional
-                            content. This content is a little bit longer.</p>
-                        <p>Posted By (username)</p>
-                        <p class="card-text"><small class="text-muted">Notes: This is a wider card with supporting text below as a natural lead-in to additional
-                            content. This content is a little bit longer</small></p>
-                        <p class="card-text"><small class="text-muted">Nutrition: This is a wider card with supporting text below as a natural lead-in to additional
-                            content. This content is a little bit longer</small></p>
-                    </div>
-                </div>
+
 
             </div>
         </div>

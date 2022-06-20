@@ -15,6 +15,7 @@ cloudinary.config(cloud_name=os.getenv('CLOUD_NAME'),
                   api_key=os.getenv('API_KEY'),
                   api_secret=os.getenv('API_SECRET'))
 
+
 @app.route("/")
 def home():
     """ Renders Home page"""
@@ -280,6 +281,7 @@ def login():
     """
     if "user" in session:
         return redirect(url_for('profile'))
+
     if request.method == "POST":
         # check if username exists in db
         existing_user = Users.query.filter(Users.user_name ==
@@ -317,7 +319,7 @@ def logout():
     return redirect(url_for("login"))
 
 
-@app.route("/profile", methods=["GET", "POST"])
+@app.route("/profile/", methods=["GET", "POST"])
 @login_required
 def profile():
     """
@@ -328,6 +330,7 @@ def profile():
     if "user" in session:
         return render_template("profile.html", username=session["user"])
     return redirect(url_for("login"))
+
 
 
 

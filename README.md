@@ -225,7 +225,7 @@ All testing undertaken for this project can be found in the [Testing Document](/
 | 3 | New user id (Primary Key) is not being stored as a user_id in MongoDB | The solution was to query Postgres db for the new user's id, save the result in a new variable and pass it on to MongoDB as a string using dot notation |
 | 4 | The logged in user's chosen avatar won't render, despite three days of attempting to resolve the issue | Conscious of the development time remaining prior to submission due date, the remedy was to remove this feature.|
 | 5 | Including the parameter of **username** to profile view throws a build error when a logged in user clicks on the register link on the navbar, despite having on the register route a redirect to profile view when a user is logged. | The solution is to remove the **username** parameter on the profile view. The logged in user is then redirected back to the profile view when the register link on the navbar is clicked. |
-
+| 6 | Creating an index on mongodb via the CLI returned an error of "no module app found". Attempting to create said index using the create index form on mongo also resulted in "Index Build Failed. Error provided: Unknown error." | My solution: |
 
 
 # Deployment & Local Development

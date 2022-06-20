@@ -239,6 +239,8 @@ All testing undertaken for this project can be found in the [Testing Document](/
 ## Content
 Sample recipes posted on the Paleo Recipes App were sourced from:
 * [The Paleo Diet](https://thepaleodiet.com/)
+* [Ambitious Kitchen](https://www.ambitiouskitchen.com/)
+* [Paleo Running Momma](https://www.paleorunningmomma.com/)
 
 ## Media
 ## Resources

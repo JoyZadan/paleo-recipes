@@ -337,7 +337,7 @@ a {
 /* RECIPES PAGE STYLING */
 .recipe-bg {
     /* Use "linear-gradient" to add a darken background effect to the image. This will make the text easier to read */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)), url("../images/stew.webp");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(252, 248, 248, 0.4));
 
     /* Set a specific height */
     height: 100%;
@@ -489,6 +489,14 @@ footer p {
         flex-wrap: wrap;
     }
 }
+
+@media screen and (min-width: 48.01em) {
+    .recipe-card-group {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 
 @media screen and (max-width: 53.5em) {
     .bootstrap-icon {

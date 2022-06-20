@@ -235,7 +235,11 @@ All testing undertaken for this project can be found in the [Testing Document](/
 
 # Credits
 ## Code
+* The solution to implementing Cloudinary API to allow users to upload images was inspired by the Code Institute Slack Community and in partular, by [James Bennison's](https://github.com/JDBennison/playparkpubs) MS3 Project.
 ## Content
+Sample recipes posted on the Paleo Recipes App were sourced from:
+* [The Paleo Diet](https://thepaleodiet.com/)
+
 ## Media
 ## Resources
 README and Testing Inspirations from [Nick Lennon's](https://github.com/nlenno1/moviewiki-ms3) and [Naoise Gaffney's](https://github.com/NaoiseGaffney/Training) individual README documentation for MS3.

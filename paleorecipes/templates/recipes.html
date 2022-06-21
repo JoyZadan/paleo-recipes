@@ -4,7 +4,7 @@
     <section class="min-vh-100 bg-dark recipe-bg">
         <!-- SEARCH FOR RECIPES AREA -->
         <div class="recipe-container mx-auto">
-            <h1 class="text-center display-3 mt-4">Search for a Recipe</h1>
+            <h1 class="text-center display-3 mt-4">Search for Recipes</h1>
             <p class="paleo-font text-white h5">Find delicious and healthy recipes that everyone in your family will enjoy!</p>
         </div>
         <div class="bg-transparent mt-3">
@@ -13,21 +13,22 @@
                     <div class="row p-2 pt-3 d-flex align-items-center">
                         <div class="col-md-8 mx-auto">
                             <div class="d-flex form-inputs input-field">
-                                <input class="validate form-control" type="text" name="query" id="query" required
+                                <input class="validate form-control" type="text" name="query" id="query" minlength="3" required
                                     placeholder="Search for delicious and healthy recipes...">
                                 <label for="query" class="white-text"></label>
+                            </div>
+                            <div class="card-body text-center">
+                                <a href="{{ url_for('recipes') }}" class="btn btn-solid">Reset</a>
+                                <button class="btn btn-alt text-center mx-2" type="submit">
+                                    <i class="bi bi-search"></i> Search
+                                </button>
                             </div>
                         </div>
                     </div>
                 </div>
             </form>
         </div>
-        <div class="card-body text-center">
-            <a href="{{ url_for('recipes') }}" class="btn btn-solid">Reset</a>
-            <button class="btn btn-alt text-center mx-2" type="submit">
-                <i class="bi bi-search"></i> Search
-            </button>
-        </div>
+
 
         <!-- DISPLAYING ALL AVAILABLE RECIPES -->
         <div class="container-fluid">

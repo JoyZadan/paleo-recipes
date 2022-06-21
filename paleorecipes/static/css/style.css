@@ -98,7 +98,6 @@ a {
     background-color: var(--buttons-color-secondary);
 }
 
-
 /* BUTTONS STYLING */
 .btn-transparent {
     border: 1px solid var(--buttons-color);
@@ -290,7 +289,6 @@ a {
 /* INDEX PAGE STYLING   */
 /* hero section styling */
     /* credit: https://www.w3schools.com/howto/howto_css_hero_image.asp */
-
 .hero-image {
     /* Use "linear-gradient" to add a darken background effect to the image. This will make the text easier to read */
     background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../images/chicken.webp");

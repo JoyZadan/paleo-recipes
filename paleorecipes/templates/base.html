@@ -215,20 +215,6 @@
         crossorigin="anonymous">
     </script>
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
-    <script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>
 
-    <!-- Code to make the cloudinary widget work -->
-        <!-- Inspired by Kenan's Kitchen - https://github.com/Kdoggg666/MS3 -->
-    <!-- <script type="text/javascript">
-        var myWidget = cloudinary.createUploadWidget({
-            cloudName: 'joyzadan',
-            uploadPreset: 'efjhsjfdjrdnrhlk'}, (error, result) => {
-                if (!error && result && result.event === "success") {
-                    image_url = result.info['secure_url']
-                    document.getElementById("image_url").value = image_url;
-                }
-              }
-            )
-    </script> -->
 </body>
 </html>

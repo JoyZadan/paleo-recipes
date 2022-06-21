@@ -186,6 +186,7 @@ def add_category():
         category = Category(category_name=request.form.get("category_name"))
         db.session.add(category)
         db.session.commit()
+        flash("New Category successfully added!")
         return redirect(url_for("categories"))
     return render_template("add_category.html")
 
@@ -216,14 +217,14 @@ def delete_category(category_id):
         if not, user is redirected to recipes page
         delete category
     """
-    if "user" not in session or session["user"] != "superadmin":
+    if session["user"] != "superadmin":
         flash("You must be a superadmin to manage categories of recipes!")
         return redirect(url_for("get_recipes"))
 
     category = Category.query.get_or_404(category_id)
     db.session.delete(category)
     db.session.commit()
-    mongo.db.tasks.delete_many({"category_id": str(category_id)})
+    mongo.db.recipes.delete_many({"category_id": str(category_id)})
     flash("Category successfully deleted!")
     return redirect(url_for("categories"))
 

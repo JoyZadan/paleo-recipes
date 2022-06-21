@@ -198,7 +198,6 @@ a {
     margin-left: 5rem;
     margin-right: 5rem;
     border-radius: 5px;
-
 }
 
 .search-icon {
@@ -215,9 +214,6 @@ a {
 
 .form-inputs{
     position:relative;
-}
-.form-inputs .form-control{
-    height:2.8126rem;
 }
 
 .form-inputs .form-control:focus{
@@ -492,13 +488,6 @@ for just above medium breakpoint of 768px to larger screens */
     .recipe-card-group {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-    }
-
-    .btn-solid {
-        border-radius: 10px;
-        background-color: var(--buttons-color);
-        margin: 0.25rem;
-        text-shadow: var(--text-shadow);
     }
 
     .add-recipe-container {

@@ -34,10 +34,8 @@
                             <div class="col-md-10 col-lg-11 offset-md-1 offset-lg-0">
                                 <div class="form-floating input-field">
                                     <input name="recipe_name" id="recipe_name" value="{{ recipe.recipe_name }}"
-                                        type="text" class="form-control validate" required>
+                                        type="text" class="form-control form-control-sm validate" required>
                                     <label for="recipe_name">Recipe Name</label>
-                                    <!-- hidden input for image url, returned by the cloudinary upload widget -->
-                                    <!-- <input type="hidden" id="image_url" name="image_url" class="form-control validate" required> -->
                                 </div>
                             </div>
                             <!-- recipe description input -->
@@ -46,8 +44,8 @@
                             </div>
                             <div class="col-md-10 col-lg-11 offset-md-1 offset-lg-0">
                                 <div class="form-floating input-field">
-                                    <textarea name="recipe_description" id="recipe_description" rows="2" class="form-control validate"
-                                        placeholder="" required>{{- recipe.recipe_description -}}</textarea>
+                                    <textarea name="recipe_description" id="recipe_description" rows="5"
+                                        class="form-control form-control-sm validate" required>{{- recipe.recipe_description -}}</textarea>
                                     <label for="recipe_description">Description</label>
                                 </div>
                             </div>
@@ -57,8 +55,8 @@
                             </div>
                             <div class="col-md-10 col-lg-11 offset-md-1 offset-lg-0">
                                 <div class="form-floating input-field">
-                                    <textarea name="ingredients" id="ingredients" rows="20" class="form-control validate"
-                                        placeholder="" required>{{- recipe.ingredients -}}</textarea>
+                                    <textarea name="ingredients" id="ingredients" rows="20" class="form-control validate form-control-sm"
+                                        required>{{- recipe.ingredients -}}</textarea>
                                     <label for="ingredients">Ingredients</label>
                                 </div>
                             </div>
@@ -69,7 +67,7 @@
                             <div class="col-md-10 col-lg-11 offset-md-1 offset-lg-0">
                                 <div class="form-floating input-field">
                                     <input type="number" name="prep_time" id="prep_time" value="{{ recipe.prep_time }}"
-                                    placeholder="" class="form-control validate" required>
+                                    placeholder="" class="form-control form-control-sm validate" required>
                                     <label for="prep_time">Preparation time (in minutes)</label>
                                 </div>
                             </div>
@@ -80,7 +78,7 @@
                             <div class="col-md-10 col-lg-11 offset-md-1 offset-lg-0">
                                 <div class="form-floating input-field">
                                     <input type="number" name="cook_time" id="cook_time" value="{{ recipe.cook_time }}"
-                                    placeholder="" class="form-control validate" required>
+                                    placeholder="" class="form-control form-control-sm validate" required>
                                     <label for="cook_time">Cooking time (in minutes)</label>
                                 </div>
                             </div>
@@ -91,7 +89,7 @@
                             <div class="col-md-10 col-lg-11 offset-md-1 offset-lg-0">
                                 <div class="form-floating input-field">
                                     <input type="number" name="servings" id="servings" value="{{ recipe.servings }}"
-                                        placeholder="" class="form-control validate" required>
+                                        placeholder="" class="form-control form-control-sm validate" required>
                                     <label for="servings">Servings</label>
                                 </div>
                             </div>
@@ -101,7 +99,7 @@
                             </div>
                             <div class="col-md-10 col-lg-11 offset-md-1 offset-lg-0">
                                 <div class="form-floating input-field">
-                                    <textarea name="instructions" id="instructions" rows="20" class="form-control validate"
+                                    <textarea name="instructions" id="instructions" rows="20" class="form-control form-control-sm validate"
                                         placeholder="" required>{{- recipe.instructions -}}</textarea>
                                     <label for="instructions">Preparation and Cooking Steps</label>
                                 </div>
@@ -112,7 +110,7 @@
                             </div>
                             <div class="col-md-10 col-lg-11 offset-md-1 offset-lg-0">
                                 <div class="form-floating input-field">
-                                    <textarea name="notes" id="notes" rows="5" class="form-control validate"
+                                    <textarea name="notes" id="notes" rows="5" class="form-control form-control-sm validate"
                                         placeholder="">{{- recipe.notes -}}</textarea>
                                     <label for="notes">Additional Notes</label>
                                 </div>
@@ -124,15 +122,15 @@
                             <div class="col-md-10 col-lg-11 offset-md-1 offset-lg-0">
                                 <div class="form-floating input-field">
                                     <input type="text" name="nutrition" id="nutrition" value="{{ recipe.nutrition }}"
-                                        class="form-control validate" placeholder="">
+                                        class="form-control form-control-sm validate" placeholder="">
                                     <label for="nutrition">Nutrition</label>
                                 </div>
                             </div>
                             <!-- upload image button for users -->
+                            <p class="mt-3 mb-0 h6">REQUIRED: Pls Upload Image for Recipe</p>
                             <div class="file-field input-field">
-                                <div class="btn btn-solid border-0 px-3">
-                                    <span>REQUIRED: Upload Image</span>
-                                    <input type="file" accept="image/*" name="image_url" id="image_url">
+                                <div>
+                                    <input type="file" accept="image/*" name="image_url" id="image_url" class="mb-2 mt-2">
                                 </div>
                                 <div class="file-path-wrapper">
                                     <input type="file-path validate" type="text" name="image_url" id="image_url" value="{{ recipe.image_url }}"required>
@@ -141,8 +139,8 @@
                             <!-- submit button -->
                             <div class="row">
                                 <div class="col s12 center-align">
-                                    <button type="submit" class="btn btn-alt border-0 px-1">
-                                        Edit Recipe <i class="bi-box-arrow-in-right"></i>
+                                    <button type="submit" class="btn btn-solid">
+                                        Done Editing <i class="bi-box-arrow-in-right"></i>
                                     </button>
                                     <a href="{{ url_for('recipes') }}" type="button" class="btn btn-alt" data-bs-dismiss="modal" aria-label="Close">Cancel</a>
                                 </div>

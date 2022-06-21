@@ -2,7 +2,8 @@
 {% block content %}
 
     <section class="container mb-5 wrapper bg-dark">
-        <h1 class="text-center my-3">Add Category</h1>
+        <h1 class="text-center display-3 my-3 mt-4">Add Category</h1>
+        <p class="paleo-font text-white h5 text-center mb-5">SUPERADMIN USERS ONLY</p>
         <div class="row">
             <form action="{{ url_for('add_category') }}" method="POST" class="card col-12 col-md-8 offset-md-2 mb-5" >
                 <div class="card-body">
@@ -13,7 +14,7 @@
                         </div>
                         <div class="col-md-10 col-lg-11 offset-md-1 offset-lg-0">
                             <div class="form-floating mb-3">
-                                <input type="text" name="category_name" id="category_name" class="form-control validate"
+                                <input type="text" name="category_name" id="category_name" class="form-control form-control-sm validate"
                                         minlength="4" maxlength="15" placeholder="" required>
                                 <label for="category_name">Category Name</label>
                             </div>

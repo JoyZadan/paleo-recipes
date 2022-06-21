@@ -33,7 +33,7 @@
                                 <h3 class="modal-title mx-5 pt-3" id="modal-title">Are you sure you want to delete this category?</h3>
                                 <p class="text-danger mx-auto pt-3">WARNING: This will delete all recipes associated with this category. This cannot be undone.</p>
                                 <div class="modal-footer mx-auto">
-                                    <a href="{{ url_for('delete_category', category_id=category.id) }}" class="btn btn-delete">Delete</a>
+                                    <a href="{{ url_for('delete_category', category_id=category.id) }}" class="btn btn-delete">Delete Category</a>
                                     <a href="{{ url_for('categories') }}" type="button" class="btn btn-alt" data-bs-dismiss="modal" aria-label="Close">Cancel</a>
                                 </div>
                             </div>

@@ -135,12 +135,12 @@ def edit_recipe(recipe_id):
                            categories=categories)
 
 
-@app.route("/delete_recipe/<recipe_id>", methods=["GET", "POST"])
+@app.route("/delete_recipe/<recipe_id>")
 def delete_recipe(recipe_id):
     """
     checks if user is in session, if not, redirects them to login page
-    allows a user to delete their own recipes
-    updates the user's own recipe in mongodb
+    allows a user to delete their own recipes,
+    deletes the recipe from mongodb
     """
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
 
@@ -148,7 +148,7 @@ def delete_recipe(recipe_id):
         flash("You must be logged in to edit your own recipes!")
         return redirect(url_for("recipes"))
 
-    mongo.db.recipes.delete_one(filter)({"_id": ObjectId(recipe_id)})
+    mongo.db.recipes.delete_one({"_id": ObjectId(recipe_id)})
     flash("Recipe Successfully Deleted")
     return redirect(url_for("recipes"))
 
@@ -224,6 +224,7 @@ def delete_category(category_id):
     db.session.delete(category)
     db.session.commit()
     mongo.db.tasks.delete_many({"category_id": str(category_id)})
+    flash("Category successfully deleted!")
     return redirect(url_for("categories"))
 
 

@@ -71,23 +71,20 @@
             <!-- CONTENT AREA-->
             <section class="col-sm min-vh-100 content-area">
                 {% if session.user %}
-                    <h2 class="text-center mt-5 paleo-font profile-header">{{ username.capitalize() }}'s User Dashboard</h2>
+                    <h1 class="text-center mt-5 mb-4 paleo-font profile-header">{{ username.capitalize() }}'s User Dashboard</h1>
                 {% endif %}
 
                 <!-- TESTING USER DASHBOARD UI -->
-                <section class="bg-secondary">
-                    <!-- WIP -->
-                    <!-- SEARCH FOR RECIPES and TIPS AREA -->
+                <section class="bg-dark">
+                    <!-- WELCOME AREA -->
                     <div class="recipe-container mx-auto">
-                        <h1 class="text-center display-3 mt-5">What is the Paleo Diet?</h1>
-                        <p class="paleo-font text-white h5">
-                            Paleo Recipes provide a place for everyone to find and share paleo recipes, tips and advise.
-                        </p>
-                        <p>
-                            To help you (and us!) succeed in your journey to eating healthy, having more energy, and reaching your
-                            weight loss goals.
+                        <h2 class="text-center display-4 mt-5 display-font">Welcome to the Paleo Recipes Community!</h2>
+                        <p class="paleo-font text-white h5 mt-2">
+                            We are glad to have you on board!
                         </p>
                     </div>
+                    <!-- WIP -->
+                    <!-- SEARCH FOR RECIPES and TIPS AREA -->
                     <div class="bg-transparent mt-3">
                         <form action="{{ url_for('search_recipes') }}" method="POST">
                             <div class="container-fluid">
@@ -109,6 +106,70 @@
                             </div>
                         </form>
                     </div>
+                </section>
+                <section>
+
+                    <div class="dashboard-container mx-auto">
+                        <h3 class="text-center h2 mt-5 paleo-font subtitle">Finding your way around the App</h3>
+                        <p class="h5 mt-2">
+                            Here on your dashboard, you will be able to find the answers to the following:
+                        </p>
+                    </div>
+
+                    <div class="container-fluid mt-4">
+                        <div class="card-group col-12 mx-auto">
+                            <div class="card mx-4 mb-3" style="width: 16rem;">
+                                <img src="{{ url_for('static', filename='images/logo.svg') }}" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h4>FIND RECIPES</h4>
+
+                                </div>
+                            </div>
+                            <div class="card mx-4 mb-3" style="width: 16rem;">
+                                <img src="{{ url_for('static', filename='images/logo.svg') }}" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h4>PUBLIC API KEY</h4>
+                                    <p class="card-text">This allows you to upload an image to go with your recipe.</p>
+                                    <p class="card-text paleo-font"> 957879244943999 </p>
+                                </div>
+                            </div>
+                            <div class="card mx-4 mb-3" style="width: 16rem;">
+                                <img src="{{ url_for('static', filename='images/logo.svg') }}" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h4>POST RECIPES</h4>
+                                    <p class="card-text">To share your own recipes, simply use the add_recipe form.</p>
+                                    <p class="card-text">Copy & paste the PUBLIC API KEY to upload an image.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-group col-12 mx-auto">
+                            <div class="card mx-4 mb-3" style="width: 18rem;">
+                                <img src="{{ url_for('static', filename='images/logo.svg') }}" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h4>EDIT RECIPES</h4>
+                                    <p class="card-text">To edit your own recipes, simply use the edit_recipe link.</p>
+                                    <p class="card-text">Copy & paste the PUBLIC API KEY to re-upload an image.</p>
+                                </div>
+                            </div>
+                            <div class="card mx-4 mb-3" style="width: 18rem;">
+                                <img src="{{ url_for('static', filename='images/logo.svg') }}" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <p class="card-text">Some quick example text to build on the card title and make up
+                                        the bulk of the card's content.</p>
+                                </div>
+                            </div>
+                            <div class="card mx-4 mb-3" style="width: 18rem;">
+                                <img src="{{ url_for('static', filename='images/logo.svg') }}" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <p class="card-text">Some quick example text to build on the card title and make up
+                                        the bulk of the card's content.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
                 </section>
 
 

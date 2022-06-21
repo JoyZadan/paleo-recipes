@@ -70,6 +70,18 @@ a {
     text-shadow: var(--text-shadow);
 }
 
+.display-font {
+    font-family: var(--ff-display);
+    color: var(--custom-color-display);
+    text-shadow: var(--text-shadow);
+}
+
+.primary-font {
+    font-family: var(--ff-primary);
+    color: var(--custom-color-primary);
+    text-shadow: var(--text-shadow);
+}
+
 .paleo-link {
     color: var(--custom-color-primary);
 }
@@ -172,12 +184,14 @@ a {
     max-width: 90%;
 }
 
-.recipe-container {
+.recipe-container,
+.dashboard-container {
     max-width: 100%;
 }
 
 .category-container,
-.recipe-container {
+.recipe-container,
+.dashboard-container {
     display: flex;
     flex-direction: column;
     align-items: center;

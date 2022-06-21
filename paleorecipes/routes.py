@@ -28,6 +28,12 @@ def about():
     return render_template("about.html")
 
 
+@app.route("/blog")
+def blog():
+    """ Renders Blog page"""
+    return render_template("blog.html")
+
+
 def login_required(f):
     """
         Ensures page is only accessible to logged in users
@@ -109,7 +115,7 @@ def edit_recipe(recipe_id):
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
 
     if "user" not in session or session["user"] != recipe["created_by"]:
-        flash("You must be logged in to edit your own recipes!")
+        flash("You must be logged in to edit only your own recipes!")
         return redirect(url_for("recipes"))
 
     if request.method == "POST":

@@ -308,7 +308,7 @@ a {
 /* CATEGORIES AND CATEGORIES CARD STYLING */
 .categories-bg {
     /* Use "linear-gradient" to add a darken background effect to the image. This will make the text easier to read */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../images/placeholder-img1.webp");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(191,107,4, 0.2));
 
     /* Set a specific height */
     height: 100%;

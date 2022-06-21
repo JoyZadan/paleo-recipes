@@ -353,3 +353,8 @@ def profile():
     if "user" in session:
         return render_template("profile.html", username=session["user"])
     return redirect(url_for("login"))
+
+
+# HANDLE ERRORS
+# inspired by: https://www.digitalocean.com/community/tutorials/how-to-handle-errors-in-a-flask-application
+# @app.route("/messages")

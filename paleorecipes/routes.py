@@ -125,14 +125,32 @@ def edit_recipe(recipe_id):
             "notes": request.form.get("notes"),
             "nutrition": request.form.get("nutrition")
         }
-        # mongo.db.recipes.update_one({"_id": ObjectId(recipe_id)}, submit)
-        mongo.db.recipes.update_one({"_id": ObjectId(recipe_id)}, {"$set": submit })
+        mongo.db.recipes.update_one({"_id": ObjectId(recipe_id)},
+                                    {"$set": submit})
         flash("Recipe successfully updated!")
         return redirect(url_for("recipes"))
 
     categories = list(Category.query.order_by(Category.category_name).all())
     return render_template("edit_recipe.html", recipe=recipe,
                            categories=categories)
+
+
+@app.route("/delete_recipe/<recipe_id>", methods=["GET", "POST"])
+def delete_recipe(recipe_id):
+    """
+    checks if user is in session, if not, redirects them to login page
+    allows a user to delete their own recipes
+    updates the user's own recipe in mongodb
+    """
+    recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+
+    if "user" not in session or session["user"] != recipe["created_by"]:
+        flash("You must be logged in to edit your own recipes!")
+        return redirect(url_for("recipes"))
+
+    mongo.db.recipes.delete_one(filter)({"_id": ObjectId(recipe_id)})
+    flash("Recipe Successfully Deleted")
+    return redirect(url_for("recipes"))
 
 
 # HANDLE CREATE, READ, UPDATE AND DELETE CATEGORIES

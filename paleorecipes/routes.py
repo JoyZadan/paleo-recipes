@@ -22,6 +22,12 @@ def home():
     return render_template("index.html")
 
 
+@app.route("/about")
+def about():
+    """ Renders About page"""
+    return render_template("about.html")
+
+
 def login_required(f):
     """
         Ensures page is only accessible to logged in users
@@ -356,5 +362,6 @@ def profile():
 
 
 # HANDLE ERRORS
-# inspired by: https://www.digitalocean.com/community/tutorials/how-to-handle-errors-in-a-flask-application
+# inspired by:
+# https://www.digitalocean.com/community/tutorials/how-to-handle-errors-in-a-flask-application
 # @app.route("/messages")

@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <section class="min-vh-100 bg-dark recipe-bg">
+        <!-- WIP -->
+        <!-- SEARCH FOR RECIPES and TIPS AREA -->
+        <div class="recipe-container mx-auto">
+            <h1 class="text-center display-3 mt-5">What is the Paleo Diet?</h1>
+            <p class="paleo-font text-white h5">
+                Paleo Recipes provide a place for everyone to find and share paleo recipes, tips and advise.
+            </p>
+            <p>
+                To help you (and us!) succeed in your journey to eating healthy, having more energy, and reaching your
+                weight loss goals.
+            </p>
+        </div>
+        <div class="bg-transparent mt-3">
+            <form action="{{ url_for('search_recipes') }}" method="POST">
+                <div class="container-fluid">
+                    <div class="row p-2 pt-3 d-flex align-items-center">
+                        <div class="col-md-8 mx-auto">
+                            <div class="d-flex form-inputs input-field">
+                                <input class="validate form-control" type="text" name="query" id="query" minlength="3" required
+                                    placeholder="Search for delicious & healthy recipes...">
+                                <label for="query" class="white-text"></label>
+                            </div>
+                            <div class="card-body text-center">
+                                <a href="{{ url_for('recipes') }}" class="btn btn-solid">Reset</a>
+                                <button class="btn btn-alt text-center mx-2" type="submit">
+                                    <i class="bi bi-search"></i> Search
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+
+{% endblock %}

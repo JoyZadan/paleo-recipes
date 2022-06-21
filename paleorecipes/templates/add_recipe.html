@@ -4,6 +4,7 @@
     <section class="min-vh-100 bg-dark add-recipe-bg">
         <div class="add-recipe-container transparent">
             <h1 class="text-center display-3 mt-4">Add a Recipe</h1>
+            <p class="paleo-font text-white h5 mb-5">Share any of your favourite paleo recipes for everyone to enjoy!</p>
             <div class="row">
                 <form action="{{ url_for('add_recipe') }}" method="POST" class="input-text card col-12 mb-5" enctype="multipart/form-data">
                     <div class="card-body">
@@ -122,19 +123,19 @@
                                 </div>
                             </div>
                             <!-- upload image button for users -->
+                            <p class="mt-3 mb-0 h6">REQUIRED: Upload Image for Recipe</p>
                             <div class="file-field input-field">
-                                <div class="btn btn-solid border-0 px-3">
-                                    <span>Upload Image</span>
-                                    <input type="file" accept="image" name="image_url" id="image_url">
+                                <div>
+                                    <input type="file" accept="image" name="image_url" id="image_url" class="mb-2 mt-2">
                                 </div>
                                 <div class="file-path-wrapper">
-                                    <input type="file-path validate" type="text" required>
+                                    <input type="file-path validate" placeholder="Public API Key" type="text" required>
                                 </div>
                             </div>
                             <!-- submit button -->
                             <div class="row">
                                 <div class="col s12 center-align">
-                                    <button type="submit" class="btn btn-alt border-0 px-3">
+                                    <button type="submit" class="btn btn-solid border-0 px-3 mt-3">
                                         Add Recipe <i class="bi-box-arrow-in-right"></i>
                                     </button>
                                 </div>

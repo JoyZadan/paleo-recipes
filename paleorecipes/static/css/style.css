@@ -189,7 +189,7 @@ a {
 }
 
 .add-recipe-container {
-    max-width: 50%;
+    max-width: 80%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -198,6 +198,7 @@ a {
     margin-left: 5rem;
     margin-right: 5rem;
     border-radius: 5px;
+
 }
 
 .search-icon {
@@ -354,7 +355,7 @@ a {
 /* ADD RECIPE PAGE STYLING */
 .add-recipe-bg {
     /* Use "linear-gradient" to add a darken background effect to the image. This will make the text easier to read */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/breakfast-2.webp");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(191,107,4, 0.4));
 
     /* Set a specific height */
     height: 100%;
@@ -471,18 +472,8 @@ footer p {
         max-width: 90%;
     }
 
-    .add-recipe-container {
-        max-width: 95%;
-    }
-
     .input-text {
         font-size: 0.75rem;
-    }
-}
-
-@media screen and (max-width: 43.75em) {
-    .add-recipe-container {
-        max-width: 80%;
     }
 }
 
@@ -501,6 +492,17 @@ for just above medium breakpoint of 768px to larger screens */
     .recipe-card-group {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .btn-solid {
+        border-radius: 10px;
+        background-color: var(--buttons-color);
+        margin: 0.25rem;
+        text-shadow: var(--text-shadow);
+    }
+
+    .add-recipe-container {
+        max-width: 90%;
     }
 }
 

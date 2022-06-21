@@ -68,6 +68,7 @@ def search_recipes():
 
 
 @app.route("/add_recipe", methods=["GET", "POST"])
+@login_required
 def add_recipe():
     """
     checks if user is in session, if not, redirects them to login page
@@ -106,6 +107,7 @@ def add_recipe():
 
 
 @app.route("/edit_recipe/<recipe_id>", methods=["GET", "POST"])
+@login_required
 def edit_recipe(recipe_id):
     """
     checks if user is in session, if not, redirects them to login page
@@ -148,6 +150,7 @@ def edit_recipe(recipe_id):
 
 
 @app.route("/delete_recipe/<recipe_id>")
+@login_required
 def delete_recipe(recipe_id):
     """
     checks if user is in session, if not, redirects them to login page
@@ -170,6 +173,7 @@ def delete_recipe(recipe_id):
 # amended for my requirements
 # full CRUD functionalities for superadmin user
 @app.route("/categories")
+@login_required
 def categories():
     """
     checks if user is superadmin
@@ -184,6 +188,7 @@ def categories():
 
 
 @app.route("/add_category", methods=["GET", "POST"])
+@login_required
 def add_category():
     """
     checks if user is superadmin
@@ -204,6 +209,7 @@ def add_category():
 
 
 @app.route("/edit_category/<int:category_id>", methods=["GET", "POST"])
+@login_required
 def edit_category(category_id):
     """
         checks if user is superadmin
@@ -224,6 +230,7 @@ def edit_category(category_id):
 
 
 @app.route("/delete_category/<int:category_id>")
+@login_required
 def delete_category(category_id):
     """
         checks if user is superadmin

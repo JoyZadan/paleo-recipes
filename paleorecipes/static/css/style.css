@@ -310,7 +310,7 @@ a {
     border-radius: 5px;
 }
 
-/* ADD CATEGORIES CARD STYLING */
+/* CATEGORIES AND CATEGORIES CARD STYLING */
 .categories-bg {
     /* Use "linear-gradient" to add a darken background effect to the image. This will make the text easier to read */
     background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../images/placeholder-img1.webp");
@@ -352,7 +352,6 @@ a {
 .divider {
     color: var(--custom-color-display);
 }
-
 
 /* ADD RECIPE PAGE STYLING */
 .add-recipe-bg {
@@ -499,7 +498,7 @@ footer p {
 }
 
 /* using grid to display available recipes in 2 columns
-for just above medium breakpoint of 768px to larger screens  */
+for just above medium breakpoint of 768px to larger screens */
 @media screen and (min-width: 48.01em) {
     .recipe-card-group {
         display: grid;
@@ -507,6 +506,11 @@ for just above medium breakpoint of 768px to larger screens  */
     }
 }
 
+@media screen and (max-width: 52.75em) {
+    .card-title {
+        font-size: 1.25rem;
+    }
+}
 
 @media screen and (max-width: 53.5em) {
     .bootstrap-icon {

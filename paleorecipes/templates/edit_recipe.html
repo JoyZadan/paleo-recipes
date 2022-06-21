@@ -1,0 +1,174 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <section class="min-vh-100 bg-dark add-recipe-bg">
+        <div class="add-recipe-container transparent">
+            <h1 class="text-center display-3 mt-4">Edit Recipe</h1>
+            <div class="row">
+                <form action="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" method="POST" class="input-text card col-12 mb-5" enctype="multipart/form-data">
+                    <div class="card-body">
+                        <div class="row g-2">
+                            <!-- category selection -->
+                            <div class="align-self-center col-md-1">
+                                <i class="bi-check2-circle bootstrap-icon btn btn-primary btn-floating m-1"></i>
+                            </div>
+                            <div class="col-md-10 col-lg-11">
+                                <div class="form-floating mb-3 input-field">
+                                    <select name="category_id" id="category_id" class="validate d-flex mt-4" required>
+                                        <option value="" disabled selected>Choose Category</option>
+                                        {% for category in categories %}
+                                                {% if category.id == recipe.category_id | int %}
+                                                    <option value="{{ category.id }}" selected>{{ category.category_name }}</option>
+                                                {% else %}
+                                                    <option value="{{ category.id }}">{{ category.category_name }}</option>
+                                                {% endif %}
+                                        {% endfor %}
+                                    </select>
+                                    <label for="category_name"></label>
+                                </div>
+                            </div>
+                            <!-- recipe name input -->
+                            <div class="align-self-center col-md-1">
+                                <i class="bi-tag bootstrap-icon btn btn-primary btn-floating m-1"></i>
+                            </div>
+                            <div class="col-md-10 col-lg-11 offset-md-1 offset-lg-0">
+                                <div class="form-floating input-field">
+                                    <input name="recipe_name" id="recipe_name" value="{{ recipe.recipe_name }}"
+                                        type="text" class="form-control validate" required>
+                                    <label for="recipe_name">Recipe Name</label>
+                                    <!-- hidden input for image url, returned by the cloudinary upload widget -->
+                                    <!-- <input type="hidden" id="image_url" name="image_url" class="form-control validate" required> -->
+                                </div>
+                            </div>
+                            <!-- recipe description input -->
+                            <div class="align-self-center col-md-1">
+                                <i class="bi-blockquote-left bootstrap-icon btn btn-primary btn-floating m-1"></i>
+                            </div>
+                            <div class="col-md-10 col-lg-11 offset-md-1 offset-lg-0">
+                                <div class="form-floating input-field">
+                                    <textarea name="recipe_description" id="recipe_description" rows="2" class="form-control validate"
+                                        placeholder="" required>{{- recipe.recipe_description -}}</textarea>
+                                    <label for="recipe_description">Description</label>
+                                </div>
+                            </div>
+                            <!-- ingredients input -->
+                            <div class="align-self-center col-md-1">
+                                <i class="bi-card-checklist bootstrap-icon btn btn-primary btn-floating m-1"></i>
+                            </div>
+                            <div class="col-md-10 col-lg-11 offset-md-1 offset-lg-0">
+                                <div class="form-floating input-field">
+                                    <textarea name="ingredients" id="ingredients" rows="20" class="form-control validate"
+                                        placeholder="" required>{{- recipe.ingredients -}}</textarea>
+                                    <label for="ingredients">Ingredients</label>
+                                </div>
+                            </div>
+                            <!-- prep time input -->
+                            <div class="align-self-center col-md-1">
+                                <i class="bi-hourglass-split bootstrap-icon btn btn-primary btn-floating m-1"></i>
+                            </div>
+                            <div class="col-md-10 col-lg-11 offset-md-1 offset-lg-0">
+                                <div class="form-floating input-field">
+                                    <input type="number" name="prep_time" id="prep_time" value="{{ recipe.prep_time }}"
+                                    placeholder="" class="form-control validate" required>
+                                    <label for="prep_time">Preparation time (in minutes)</label>
+                                </div>
+                            </div>
+                            <!-- cook time input -->
+                            <div class="align-self-center col-md-1">
+                                <i class="bi-clock bootstrap-icon btn btn-primary btn-floating m-1"></i>
+                            </div>
+                            <div class="col-md-10 col-lg-11 offset-md-1 offset-lg-0">
+                                <div class="form-floating input-field">
+                                    <input type="number" name="cook_time" id="cook_time" value="{{ recipe.cook_time }}"
+                                    placeholder="" class="form-control validate" required>
+                                    <label for="cook_time">Cooking time (in minutes)</label>
+                                </div>
+                            </div>
+                            <!-- servings input -->
+                            <div class="align-self-center col-md-1">
+                                <i class="bi-people-fill bootstrap-icon btn btn-primary btn-floating m-1"></i>
+                            </div>
+                            <div class="col-md-10 col-lg-11 offset-md-1 offset-lg-0">
+                                <div class="form-floating input-field">
+                                    <input type="number" name="servings" id="servings" value="{{ recipe.servings }}"
+                                        placeholder="" class="form-control validate" required>
+                                    <label for="servings">Servings</label>
+                                </div>
+                            </div>
+                            <!-- instructions input -->
+                            <div class="align-self-center col-md-1">
+                                <i class="bi-book-half bootstrap-icon btn btn-primary btn-floating m-1"></i>
+                            </div>
+                            <div class="col-md-10 col-lg-11 offset-md-1 offset-lg-0">
+                                <div class="form-floating input-field">
+                                    <textarea name="instructions" id="instructions" rows="20" class="form-control validate"
+                                        placeholder="" required>{{- recipe.instructions -}}</textarea>
+                                    <label for="instructions">Preparation and Cooking Steps</label>
+                                </div>
+                            </div>
+                            <!-- notes -->
+                            <div class="align-self-center col-md-1">
+                                <i class="bi-sticky bootstrap-icon btn btn-primary btn-floating m-1"></i>
+                            </div>
+                            <div class="col-md-10 col-lg-11 offset-md-1 offset-lg-0">
+                                <div class="form-floating input-field">
+                                    <textarea name="notes" id="notes" rows="5" class="form-control validate"
+                                        placeholder="">{{- recipe.notes -}}</textarea>
+                                    <label for="notes">Additional Notes</label>
+                                </div>
+                            </div>
+                            <!-- nutrition -->
+                            <div class="align-self-center col-md-1">
+                                <i class="bi-file-medical bootstrap-icon btn btn-primary btn-floating m-1"></i>
+                            </div>
+                            <div class="col-md-10 col-lg-11 offset-md-1 offset-lg-0">
+                                <div class="form-floating input-field">
+                                    <input type="text" name="nutrition" id="nutrition" value="{{ recipe.nutrition }}"
+                                        class="form-control validate" placeholder="">
+                                    <label for="nutrition">Nutrition</label>
+                                </div>
+                            </div>
+                            <!-- buttons -->
+                            <!-- <div class="row d-flex justify-content-center mt-2 ">
+                                <div class="text-center">
+                                    button to trigger cloudinary upload image widget
+                                    <button class="btn btn-solid border-0 px-3" type="button" id="upload_widget" href="#">
+                                        Upload Recipe Image
+                                    </button>
+                                    submit recipe button
+                                    <button class="btn btn-alt border-0 px-3" type="submit">Submit Recipe
+                                        <i class="bi-box-arrow-in-right"></i>
+                                    </button>
+                                </div>
+                            </div> -->
+                            <!-- upload image button for users -->
+                            <div class="file-field input-field">
+                                <div class="btn btn-solid border-0 px-3">
+                                    <span>REQUIRED: Upload Image</span>
+                                    <input type="file" accept="image/*" name="image_url" id="image_url">
+                                </div>
+                                <div class="file-path-wrapper">
+                                    <input type="file-path validate" type="text" name="image_url" id="image_url" value="{{ recipe.image_url }}"required>
+                                </div>
+                            </div>
+                            <!-- submit button -->
+                            <div class="row">
+                                <div class="col s12 center-align">
+                                    <button type="submit" class="btn btn-alt border-0 px-3">
+                                        Edit Recipe <i class="bi-box-arrow-in-right"></i>
+                                    </button>
+                                    <a href="{{ url_for('recipes') }}" type="button" class="btn btn-alt" data-bs-dismiss="modal" aria-label="Close">Cancel</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Script to trigger the cloudinary widget on click of a button -->
+    <!-- <script src="{{ url_for('static', filename='js/script.js') }}"></script> -->
+
+{% endblock %}

@@ -125,11 +125,13 @@ def edit_recipe(recipe_id):
             "notes": request.form.get("notes"),
             "nutrition": request.form.get("nutrition")
         }
-        mongo.db.recipes.update({"_id": ObjectId(recipe_id)}, submit)
+        # mongo.db.recipes.update_one({"_id": ObjectId(recipe_id)}, submit)
+        mongo.db.recipes.update_one({"_id": ObjectId(recipe_id)}, {"$set": submit })
         flash("Recipe successfully updated!")
+        return redirect(url_for("recipes"))
 
     categories = list(Category.query.order_by(Category.category_name).all())
-    return render_template("add_recipe.html", recipes=recipes,
+    return render_template("edit_recipe.html", recipe=recipe,
                            categories=categories)
 
 

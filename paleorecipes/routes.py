@@ -206,7 +206,7 @@ def edit_category(category_id):
     if request.method == "POST":
         category.category_name = request.form.get("category_name")
         db.session.commit()
-        flash("Category successfully edited!")
+        flash("Category successfully edited!
         return redirect(url_for("categories"))
     return render_template("edit_category.html", category=category)
 

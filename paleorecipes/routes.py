@@ -262,6 +262,7 @@ def register():
         into session cookie and redirect to profile page.
     """
     if "user" in session:
+        flash("You're already logged in!")
         return redirect(url_for('profile'))
 
     if request.method == "POST":
@@ -322,6 +323,7 @@ def login():
         into session cookie and redirect to profile page.
     """
     if "user" in session:
+        flash("You're already logged in!")
         return redirect(url_for('profile'))
 
     if request.method == "POST":

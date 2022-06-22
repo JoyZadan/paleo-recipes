@@ -10,7 +10,7 @@ window.onscroll = function() {
   } else {
     scrollTopBtn.style.display = "none";
   }
-}
+};
 
 // event listener for the button
 scrollTopBtn.addEventListener("click", scrollUp);
@@ -20,4 +20,3 @@ function scrollUp() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
-

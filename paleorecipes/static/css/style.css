@@ -414,6 +414,10 @@ a {
     background-color: var(--body-bg-color);
 }
 
+.header-bg {
+    background-color: var(--custom-color-display);
+}
+
 .profile-header,
 .recipe-title,
 .subtitle {

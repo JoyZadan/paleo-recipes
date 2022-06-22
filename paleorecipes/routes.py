@@ -1,4 +1,4 @@
-# imports depencies
+""" imports dependencies """
 import os
 from functools import wraps
 import cloudinary

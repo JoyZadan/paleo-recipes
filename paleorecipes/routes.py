@@ -17,6 +17,7 @@ cloudinary.config(cloud_name=os.getenv('CLOUD_NAME'),
                   api_secret=os.getenv('API_SECRET'))
 
 
+# ------- all the app routes -------
 @app.route("/")
 def home():
     """ Renders Home page"""

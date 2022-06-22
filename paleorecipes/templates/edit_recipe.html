@@ -130,7 +130,7 @@
                             <!-- upload image button for users -->
                             <div class="col-md-8 mx-auto">
                                 <label for="formFileSm" class="form-label mt-2">REQUIRED: Re-upload Image to Edit Recipe</label>
-                                <input class="form-control form-control-sm" type="file" accept="image/*" name="image_url" id="image_url">
+                                <input class="form-control form-control-sm" type="file" accept="image/*" name="image_url" id="image_url" value="{{ recipe.image_url }}">
                             </div>
                             <div class="mb-0 col-md-8 mx-auto">
                                 <input class="form-control form-control-sm" type="text" name="image_url" id="image_url" value="{{ recipe.image_url }}" required>

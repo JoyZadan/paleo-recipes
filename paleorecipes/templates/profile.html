@@ -72,8 +72,8 @@
             <!-- USER DASHBOARD - CONTENT AREA-->
             <section class="col-sm min-vh-100 content-area">
                 {% if session.user %}
-                    {% session["user"] != "superadmin" %}
-                        <h1 class="text-center mt-5 mb-4 paleo-font profile-header">User's Dashboard</h1>
+                    {% session.user != superadmin %}
+                        <h1 class="text-center mt-5 mb-4 paleo-font profile-header">User Dashboard</h1>
                         <h2 class="text-center mt-3 mb-5 display-font profile-header">Hi {{ session.user }}, great to see you here!</h2>
                     {% endif %}
                 {% endif %}

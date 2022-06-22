@@ -152,12 +152,14 @@
                         <p>
                             <a class="text-white" href="{{ url_for('recipes') }}">Find Recipes</a>
                         </p>
-                        <p>
-                            <a class="text-white" href="{{ url_for('add_recipe') }}">Share Your Recipes</a>
-                        </p>
-                        <p>
-                            <a class="text-white" href="{{ url_for('edit_recipe') }}">Edit Your Recipes</a>
-                        </p>
+                        {% if session.user %}
+                            <p>
+                                <a class="text-white" href="{{ url_for('add_recipe') }}">Share Your Recipes</a>
+                            </p>
+                            <p>
+                                <a class="text-white" href="{{ url_for('edit_recipe') }}">Edit Your Recipes</a>
+                            </p>
+                        {% endif %}
                     </div>
                     <!-- Grid column -->
                     <hr class="w-100 clearfix d-md-none" />

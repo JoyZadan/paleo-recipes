@@ -73,7 +73,7 @@
             <section class="col-sm min-vh-100 content-area">
                 {% if session.user %}
                     {% if session.user|lower != 'superadmin' %}
-                        <h1 class="text-center mt-5 mb-4 paleo-font profile-header">User Dashboard</h1>
+                        <h1 class="text-center mt-5 mb-4 paleo-font profile-header">Paleo Recipes User Dashboard</h1>
                         <h2 class="text-center mt-3 mb-5 display-font profile-header">Hi {{ session.user }}, great to see you here!</h2>
                     {% endif %}
                     {% if session.user|lower == 'superadmin' %}

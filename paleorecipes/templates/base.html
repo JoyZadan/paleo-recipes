@@ -102,7 +102,7 @@
     </header>
 
     <main>
-        <section>
+
             <!-- flash messages -->
             {% with messages = get_flashed_messages() %}
                 {% if messages %}
@@ -114,7 +114,7 @@
                     {% endfor %}
                 {% endif %}
             {% endwith %}
-        </section>
+
 
         {% block content %}
 

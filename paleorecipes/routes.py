@@ -201,15 +201,6 @@ def add_category():
 
     if request.method == "POST":
         category = Category(category_name=request.form.get("category_name"))
-
-        existing_category = Category.query.filter(Category.category_name ==
-                                                  request.form.get
-                                                  ("category_name").lower()).all()
-
-        if existing_category:
-            flash("Category already exists")
-            return redirect(url_for("category"))
-
         db.session.add(category)
         db.session.commit()
         flash("New Category successfully added!")

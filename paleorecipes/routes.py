@@ -1,4 +1,4 @@
-""" imports """
+# imports depencies
 import os
 from functools import wraps
 import cloudinary
@@ -11,6 +11,7 @@ from paleorecipes import app, db, mongo
 from paleorecipes.models import Category, Users
 
 
+# retrieves the hidden env variable for cloudinary API
 cloudinary.config(cloud_name=os.getenv('CLOUD_NAME'),
                   api_key=os.getenv('API_KEY'),
                   api_secret=os.getenv('API_SECRET'))
@@ -380,5 +381,6 @@ def profile():
 # inspired by:
 # https://www.digitalocean.com/community/tutorials/how-to-handle-errors-in-a-flask-application
 # also from: https://flask.palletsprojects.com/en/2.1.x/errorhandling/
-# @app.route("/messages")
+@app.route("/messages")
+
 

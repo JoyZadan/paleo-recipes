@@ -191,7 +191,6 @@ a {
 
 .category-container,
 .recipe-container,
-.blog-container,
 .dashboard-container {
     display: flex;
     flex-direction: column;
@@ -200,6 +199,17 @@ a {
     text-align: center;
     margin-left: 5rem;
     margin-right: 5rem;
+    border-radius: 5px;
+}
+
+.blog-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-left: 1rem;
+    margin-right: 1rem;
     border-radius: 5px;
 }
 

@@ -139,6 +139,14 @@
                                     </button>
                                 </div>
                             </div>
+                            <!-- Public API Key shown if user is in session  -->
+                            {% if session.user %}
+                                <h2 class="text-center mt-5 mb-4 paleo-font profile-header">Logged In Member's Public API Key</h1>
+                                <h3 class="text-center mt-3 mb-5 display-font profile-header">
+                                    Hi {{ session.user }}, here's your Public API Key: <span>957879244943999</span>
+                                </h3>
+                                <p>To upload an image with your recipe, please cut & paste this above.</p>
+                            {% endif %}
                         </div>
                     </div>
                 </form>

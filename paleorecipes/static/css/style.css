@@ -168,6 +168,7 @@ a {
     color: var(--custom-color-tertiary);
 }
 
+/* scroll to top button */
 #btnScrollUp {
     display: none;
     position: fixed;

@@ -191,6 +191,7 @@ a {
 
 .category-container,
 .recipe-container,
+.blog-container,
 .dashboard-container {
     display: flex;
     flex-direction: column;
@@ -510,6 +511,17 @@ for just above medium breakpoint of 768px to larger screens */
 
     .add-recipe-container {
         max-width: 90%;
+    }
+
+    .blog-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        border-radius: 5px;
     }
 }
 

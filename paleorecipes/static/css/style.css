@@ -373,6 +373,10 @@ a {
     color: var(--custom-color-display);
 }
 
+.recipe-card-group {
+    border-radius: 10px;
+}
+
 /* ADD RECIPE PAGE STYLING */
 .add-recipe-bg {
     /* Use "linear-gradient" to add a darken background effect to the image. This will make the text easier to read */

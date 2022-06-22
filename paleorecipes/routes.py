@@ -381,6 +381,4 @@ def profile():
 # inspired by:
 # https://www.digitalocean.com/community/tutorials/how-to-handle-errors-in-a-flask-application
 # also from: https://flask.palletsprojects.com/en/2.1.x/errorhandling/
-@app.route("/messages")
-
-
+# @app.route("/messages")

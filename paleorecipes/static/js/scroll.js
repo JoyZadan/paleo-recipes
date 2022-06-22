@@ -5,7 +5,6 @@ const scrollTopBtn = document.getElementById("btnScrollUp");
 // shows the button when a user scrolls down 100px from top
 window.onscroll = function() {
   var top = window.scrollY;
-  console.log(top);
   if (top >= 100) {
     scrollTopBtn.style.display = "block";
   } else {

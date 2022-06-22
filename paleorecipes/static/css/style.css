@@ -168,6 +168,27 @@ a {
     color: var(--custom-color-tertiary);
 }
 
+#btnScrollUp {
+    display: none;
+    position: fixed;
+    background-color: var(--buttons-color);
+    bottom: 1.25rem;
+    right: 2.25rem;
+    font-size: 1rem;
+    color: white;
+    padding: 0.5rem;
+    border: 0;
+    border-radius: 10px;
+    text-shadow: var(--text-shadow);
+    z-index: 100;
+}
+
+#btnScrollUp:hover,
+#btnScrollUp:active {
+    background-color: var(--custom-color-tertiary);
+    color: white;
+}
+
 /* CONTAINERS STYLING */
 .custom-container {
     display: flex;

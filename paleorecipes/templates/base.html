@@ -150,13 +150,13 @@
                     <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
                         <h6 class="text-uppercase mb-4 font-weight-bold">Recipes</h6>
                         <p>
-                            <a class="text-white">Find Recipes</a>
+                            <a class="text-white" href="{{ url_for('recipes') }}">Find Recipes</a>
                         </p>
                         <p>
-                            <a class="text-white">Share Your Recipes</a>
+                            <a class="text-white" href="{{ url_for('add_recipe') }}">Share Your Recipes</a>
                         </p>
                         <p>
-                            <a class="text-white">Edit Your Recipes</a>
+                            <a class="text-white" href="{{ url_for('edit_recipe') }}">Edit Your Recipes</a>
                         </p>
                     </div>
                     <!-- Grid column -->
@@ -165,9 +165,14 @@
                     <!-- Grid column -->
                     <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
                         <h6 class="text-uppercase mb-4 font-weight-bold">Blog</h6>
-                        <p>Get Tips and Ideas</p>
+                        <p>
+                            <a class="text-white" href="{{ url_for('blog') }}">Get Tips and Ideas</a>
+                        </p>
+                        <!-- <p>
+                            <a class="text-white" href="{{ url_for('blog') }}">Share Your Thoughts</a>
+                        </p>
                         <p>Share Your Thoughts</p>
-                        <p>Find More Topics</p>
+                        <p>Find More Topics</p> -->
                     </div>
 
                     <!-- Grid column -->

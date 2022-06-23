@@ -80,6 +80,13 @@
                         {% endif %}
                         </div>
 
+                    </div>
+                    {% endfor %}
+                </div>
+                {% endif %}
+            </div>
+        </div>
+
     <div class="modal fade" id="modal-{{ recipe._id }}" tab-index="-1" aria-labelledby="modal-title" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content text-center">
@@ -92,12 +99,7 @@
             </div>
         </div>
     </div>
-                </div>
-                {% endfor %}
-            </div>
-            {% endif %}
-        </div>
-    </div>
+
 
 {% endblock %}
 

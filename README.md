@@ -2,7 +2,7 @@
 
 Paleo Recipes help users find delicious meal ideas, share their own recipes and tips on eating healthy, and manage their own activities within the App upon creating an account.
 
-Paleo Recipes is a recipe management and blog Application built using **Python**, **Flask+SQLAlchemy**, **Flask+PyMongo**, **Bootstrap 5**, **Jinja2** and **JavaScript**. It uses Cloudinary API to manager user-uploaded images. This Application is a **hybrid database project** using both **MongoDB** and **PostgreSQL**.
+Paleo Recipes is a recipe management and blog Application built using **Python**, **Flask+SQLAlchemy**, **Flask+PyMongo**, **Bootstrap 5**, **Jinja2** and **JavaScript**. It uses **Cloudinary API** to manager user-uploaded images. This Application is a **hybrid database project** using both **MongoDB** and **PostgreSQL**.
 - User Authentication is handled using **relational-backed database** (PostgreSQL using Flask+SQLAlchemy).
 - Standard CRUD data manipulation is handled using a **nonrelational-backed database** (MongoDB using Flask+PyMongo).
 

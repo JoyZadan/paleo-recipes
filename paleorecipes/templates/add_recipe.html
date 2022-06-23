@@ -13,6 +13,7 @@
                             <!-- category selection -->
                             <div class="align-self-center col-md-1">
                                 <i class="bi-check2-circle bootstrap-icon btn btn-primary btn-floating m-1"></i>
+                                <span class="material-symbols-outlined" aria-label="select-option-icon">task_alt</span>
                             </div>
                             <div class="col-md-10 col-lg-11">
                                 <div class="form-floating mb-3">
@@ -125,11 +126,14 @@
                             </div>
                             <!-- upload image button for users -->
                             <div class="col-md-8 mx-auto">
-                                <label for="formFileSm" class="form-label mt-2">REQUIRED: Upload Image for Recipe</label>
-                                <input class="form-control form-control-sm" accept="image" name="image_url" id="image_url" id="formFileSm" type="file">
+                                <label for="formFileSm" class="form-label mt-2" aria-labelledby="upload image">REQUIRED: Upload Image for Recipe</label>
+                                <input class="form-control form-control-sm" accept="image" name="image_url"
+                                    id="image_url" id="formFileSm" type="file" aria-label="image">
                             </div>
                             <div class="mb-0 col-md-8 mx-auto">
-                                <label for="formFileSm" class="form-label mt-0">Your Public API Key is available below</label>
+                                <label for="formFileSm" class="form-label mt-0" aria-describedly="API key help">
+                                    Your Public API Key is available below
+                                </label>
                                 <input class="form-control form-control-sm" type="file-path validate" placeholder="Public API Key" type="text" required>
                             </div>
                             <!-- submit button -->

@@ -201,11 +201,6 @@ a {
     border-radius: 5px;
 }
 
-/* .category-container {
-    background-color: rgba(0, 0, 0, 0.4);
-    max-width: 90%;
-} */
-
 .recipe-container,
 .dashboard-container {
     max-width: 100%;
@@ -369,7 +364,7 @@ a {
 
 /* -------------------- ALT CATEGORIES PAGE STYLING ----------------------- */
 .alt-bg {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(191,107,4, 0.2));
 }
 
 .container-categories {

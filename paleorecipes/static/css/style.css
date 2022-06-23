@@ -559,6 +559,10 @@ footer p {
         flex-flow: column;
         flex-wrap: wrap;
     }
+
+    .alt-categories-container {
+        margin: 1rem auto;
+    }
 }
 
 /* using grid to display available recipes in 2 columns
@@ -569,9 +573,6 @@ for just above medium breakpoint of 768px to larger screens */
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .alt-categories-container {
-        margin: 1rem auto;
-    }
 }
 
 @media screen and (max-width: 52.75em) {

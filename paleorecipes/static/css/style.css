@@ -364,7 +364,7 @@ a {
 
 /* -------------------- ALT CATEGORIES PAGE STYLING ----------------------- */
 .alt-bg {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(191,107,4, 0.2));
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(191,107,4, 0.4));
 }
 
 .container-categories {

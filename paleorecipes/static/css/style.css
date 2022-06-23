@@ -367,17 +367,19 @@ a {
     background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(191,107,4, 0.4));
 }
 
-.container-categories {
+.alt-categories-container {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     margin: 0 auto;
+    background-color: var(--custom-color-tertiary);
 }
 
 .each-category-card {
     width: 16.rem;
     height: 19..25rem;
     justify-content: space-between;
+    margin: 0 auto;
 }
 
 /* RECIPES PAGE STYLING */

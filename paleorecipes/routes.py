@@ -399,3 +399,12 @@ def page_not_found(e):
     message = "Sorry, we cannot find the page you are looking for!"
     return render_template("error.html", error=e, message=message), 404
 
+
+@app.errorhandler(500)
+def internal_server_error(e):
+    """
+        handles a 500 Internal Server Error
+        and displays an apology message to the user
+    """
+    message = "Sorry! We seem to have made a mistake. Please try again soon."
+    return render_template("error.html", error=e, message=message), 500

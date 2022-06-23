@@ -25,13 +25,13 @@
                             </a>
                             <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdown">
                                 <li><a class="dropdown-item" href="{{ url_for('recipes') }}">Search Recipes</a></li>
-                                <li><a class="dropdown-item" href="#">Add Recipes</a></li>
+                                <li><a class="dropdown-item" href="{{ url_for('add_recipe') }}">Add Recipes</a></li>
                                 <li><a class="dropdown-item" href="#">Update Recipes</a></li>
                                 <li><a class="dropdown-item" href="#">Delete Recipes</a></li>
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
-                                <li><a class="dropdown-item" href="{{ url_for('home') }}"> Back to Home Page</a></li>
+                                <li><a class="dropdown-item" href="{{ url_for('home') }}"> Home Page</a></li>
                             </ul>
                         </li>
                         <!-- Blog dropdown -->

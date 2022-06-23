@@ -372,8 +372,6 @@ a {
     justify-content: center;
     flex-wrap: wrap;
     margin: 0 auto;
-    border-radius: 10px;
-    border: 1px solid whitesmoke;
 }
 
 .each-category-card {
@@ -381,6 +379,8 @@ a {
     height: 19..25rem;
     justify-content: space-between;
     margin: 0 auto;
+    border-radius: 10px;
+    border: 1px solid whitesmoke;
 }
 
 /* RECIPES PAGE STYLING */

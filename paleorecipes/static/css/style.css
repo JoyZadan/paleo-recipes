@@ -372,7 +372,8 @@ a {
     justify-content: center;
     flex-wrap: wrap;
     margin: 0 auto;
-    background-color: var(--custom-color-tertiary);
+    border-radius: 10px;
+    border: 1px solid whitesmoke;
 }
 
 .each-category-card {

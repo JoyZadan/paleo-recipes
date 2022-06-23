@@ -509,7 +509,7 @@ footer p {
 /* ERROR PAGES STYLING */
 .error-bg {
     /* Use "linear-gradient" to add a darken background effect to the image. This will make the text easier to read */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2));
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9));
 
     /* Set a specific height */
     height: 100%;

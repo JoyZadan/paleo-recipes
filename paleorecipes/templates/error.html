@@ -3,14 +3,16 @@
 
     <section class="min-vh-100 error-bg">
         <div class="error-container col-xs-12 transparent">
-            <h1 class="text-center display-5 mt-5">Oops!</h1>
+            <h1 class="text-center display-1 mt-5">Oops!</h1>
         </div>
         <div class="text-center">
             <!-- displays error message -->
             <h2 class="mt-5 text-white">{{ message }}</h2>
             <i class="bi-exclamation-octagon display-1 text-danger"></i>
             <h3 class="my-3">{{ error_status }}</h3>
-            <a href="{{ url_for('home') }}" class="h3 mt-5 text-white">Go back to the Paleo Recipes homepage</a>
+            <a href="{{ url_for('home') }}" class="h3 mt-5 text-white btn" role="btn">
+                Click here to go back to the Paleo Recipes homepage
+            </a>
         </div>
     </section>
 

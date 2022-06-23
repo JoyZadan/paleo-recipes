@@ -24,7 +24,7 @@
                                 <span class="ms-1 d-none d-sm-inline">Recipes</span>
                             </a>
                             <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdown">
-                                <li><a class="dropdown-item" href="{{ urrl_for('recipes') }}">Search Recipes</a></li>
+                                <li><a class="dropdown-item" href="{{ url_for('recipes') }}">Search Recipes</a></li>
                                 <li><a class="dropdown-item" href="#">Add Recipes</a></li>
                                 <li><a class="dropdown-item" href="#">Update Recipes</a></li>
                                 <li><a class="dropdown-item" href="#">Delete Recipes</a></li>
@@ -76,7 +76,6 @@
                     <h1 class="text-center mt-5 mb-4 paleo-font profile-header">Paleo Recipes User Dashboard</h1>
                     <h2 class="text-center mt-3 mb-5 display-font profile-header">Hi {{ session.user|capitalize }}, great to see you here!</h2>
                 {% endif %}
-
                 <!-- SUPERADMIN DASHBOARD -->
                 {% if session.user|lower == 'superadmin' %}
                     <h1 class="text-center mt-5 mb-4 paleo-font profile-header">Admin Dashboard</h1>

@@ -251,25 +251,6 @@ def delete_category(category_id):
     return redirect(url_for("categories"))
 
 
-# HANDLE SEARCHES FOR RELATIONAL DATA
-@app.route("/search_categories", methods=["GET", "POST"])
-def search_categories():
-    """
-        checks if user is superadmin, if not redirect to index page
-        finds users from postgres db and
-        renders them on the admin dashboard page
-    """
-    if session["user"] != "superadmin":
-        flash("You must be a superadmin to manage categories of recipes!")
-        return redirect(url_for("recipes"))
-
-    query = request.args.get("query")
-    categories = Category.query.filter(Category.category_name.like(
-                                       "%"+query+"%")).all()
-    return render_template("profile.html", query=query,
-                           categories=categories)
-
-
 # HANDLE REGISTER, LOGIN, LOGOUT, AND CREATE PROFILE
 @app.route("/register/", methods=["GET", "POST"])
 def register():

@@ -2,10 +2,10 @@
 {% block content %}
 
     <section class="min-vh-100 bg-dark add-recipe-bg">
-        <div class="add-recipe-container transparent">
+        <div class="edit-recipe-container col-xs-12 transparent">
             <h1 class="text-center display-3 mt-5">Edit Recipe</h1>
             <button id="btnScrollUp" title="Go to top"><i class="bi bi-arrow-up-circle-fill"></i> Top</button>
-            <div class="row">
+            <div class="row col-12">
                 <form action="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" method="POST" class="input-text card col-12 mb-5" enctype="multipart/form-data">
                     <div class="card-body">
                         <div class="row g-2">

@@ -400,6 +400,17 @@ def page_not_found(e):
     return render_template("error.html", error_status=e, message=message), 404
 
 
+@app.errorhandler(408)
+def request_timeout(e):
+    """
+        handles a 408 Request Timeout Error
+        and displays an apology message to the user
+    """
+    message = "Sorry about this...Your request has exceeded the maximum time \
+                allowed. Please try again."
+    return render_template("error.html", error_status=e, message=message), 408
+
+
 @app.errorhandler(500)
 def internal_server_error(e):
     """

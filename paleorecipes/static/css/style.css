@@ -379,8 +379,11 @@ a {
     height: 19..25rem;
     justify-content: space-between;
     margin: 1rem auto;
+    padding: 5px;
     border-radius: 10px;
     border: 1px solid whitesmoke;
+    align-items: center;
+    text-align: center;
 }
 
 /* RECIPES PAGE STYLING */

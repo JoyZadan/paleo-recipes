@@ -79,6 +79,13 @@
                             <a href="#modal-{{ recipe._id }}" class="btn btn-delete text-center mx-5 text-center" type="button" data-bs-toggle="modal">Delete Recipe</a>
                         {% endif %}
                     </div>
+                </div>
+                {% endfor %}
+            </div>
+            {% endif %}
+        </div>
+    </div>
+
     <!-- Modal -->
     <div class="modal fade" id="modal-{{ recipe._id }}" tab-index="-1" aria-labelledby="modal-title" aria-hidden="true">
         <div class="modal-dialog">
@@ -90,19 +97,6 @@
                     <a href="{{ url_for('recipes') }}" type="button" class="btn btn-alt" data-bs-dismiss="modal" aria-label="Close">Cancel</a>
                 </div>
             </div>
-        </div>
-    </div>
-                    <!-- <div>
-                        <form action="" method="POST">
-                            <button class="btn btn-solid border-0 px-3" type="submit">Add to Favourites
-                                <i class="bi bi-emoji-heart-eyes"></i>
-                            </button>
-                        </form>
-                    </div> -->
-                </div>
-                {% endfor %}
-            </div>
-            {% endif %}
         </div>
     </div>
 

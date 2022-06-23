@@ -199,7 +199,7 @@ def add_category():
     """
     if "user" not in session or session["user"] != "superadmin":
         flash("You must be a superadmin to manage categories of recipes!")
-        return redirect(url_for("get_recipes"))
+        return redirect(url_for("recipes"))
 
     if request.method == "POST":
         category = Category(category_name=request.form.get("category_name"))
@@ -220,7 +220,7 @@ def edit_category(category_id):
     """
     if "user" not in session or session["user"] != "superadmin":
         flash("You must be a superadmin to manage categories of recipes!")
-        return redirect(url_for("get_recipes"))
+        return redirect(url_for("recipes"))
 
     category = Category.query.get_or_404(category_id)
     if request.method == "POST":
@@ -241,7 +241,7 @@ def delete_category(category_id):
     """
     if session["user"] != "superadmin":
         flash("You must be a superadmin to manage categories of recipes!")
-        return redirect(url_for("get_recipes"))
+        return redirect(url_for("recipes"))
 
     category = Category.query.get_or_404(category_id)
     db.session.delete(category)
@@ -249,6 +249,24 @@ def delete_category(category_id):
     mongo.db.recipes.delete_many({"category_id": str(category_id)})
     flash("Category successfully deleted!")
     return redirect(url_for("categories"))
+
+
+# HANDLE SEARCHES FOR RELATIONAL DATA
+@app.route("/search_categories", methods=["GET", "POST"])
+def search_categories():
+    """
+        checks if user is superadmin, if not redirect to index page
+        finds users from postgres db and
+        renders them on the admin dashboard page
+    """
+    if session["user"] != "superadmin":
+        flash("You must be a superadmin to manage categories of recipes!")
+        return redirect(url_for("recipes"))
+
+    query = request.args.get("query")
+    categories = Category.query.filter(Category.title.like("%"+query+"%")).all()
+    return render_template("categories.html", query=query,
+                           categories=categories)
 
 
 # HANDLE REGISTER, LOGIN, LOGOUT, AND CREATE PROFILE

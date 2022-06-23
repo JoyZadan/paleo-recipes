@@ -3,9 +3,9 @@
 
 <!-- 3rd rebuild -->
 
-<div class="min-vh-100 bg-dark recipe-bg">
+<!-- <div class="min-vh-100 bg-dark recipe-bg">
     <!-- SEARCH FOR RECIPES AREA -->
-    <div class="recipe-container mx-auto">
+    <!-- <div class="recipe-container mx-auto">
         <h1 class="text-center display-3 mt-5">Search for Recipes</h1>
         <p class="paleo-font text-white h5">Find delicious and healthy recipes that everyone in your family will enjoy!</p>
     </div>
@@ -29,9 +29,9 @@
                 </div>
             </div>
         </form>
-    </div>
+    </div> -->
     <!-- DISPLAYING ALL AVAILABLE RECIPES -->
-    <button id="btnScrollUp" title="Go to top"><i class="bi bi-arrow-up-circle-fill"></i> Top</button>
+    <!-- <button id="btnScrollUp" title="Go to top"><i class="bi bi-arrow-up-circle-fill"></i> Top</button>
     <div class="container-fluid">
         {% if recipes|length > 0 %}
         <div class="card-group recipe-card-group">
@@ -73,16 +73,16 @@
 
                     <h3 class="h5">Nutrition:</h3>
                     <p class="text-muted small">{{ recipe.nutrition }}</p>
-                </div>
+                </div> -->
                 <!-- EDIT AND DELETE BUTTONS, VISIBLE TO RECIPE OWNERS AND / OR SUPERADMIN -->
-                <div class="card-body text-center">
+                <!-- <div class="card-body text-center">
                     {% if session.user|lower == recipe.created_by|lower or session.user|lower == 'superadmin' %}
                         <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="btn btn-solid border-0 px-3">Edit Recipe</a>
                         <a href="#modal-{{ recipe._id }}" class="btn btn-delete text-center mx-5 text-center" type="button" data-bs-toggle="modal">Delete Recipe</a>
                     {% endif %}
-                </div>
+                </div> -->
 <!-- Modal -->
-<div class="modal fade" id="modal-{{ recipe._id }}" tab-index="-1" aria-labelledby="modal-title" aria-hidden="true">
+<!-- <div class="modal fade" id="modal-{{ recipe._id }}" tab-index="-1" aria-labelledby="modal-title" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content text-center">
             <h3 class="modal-title mx-5 pt-3" id="modal-title">Are you sure you want to delete this recipe?</h3>
@@ -93,7 +93,7 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
                 <!-- <div>
                     <form action="" method="POST">
                         <button class="btn btn-solid border-0 px-3" type="submit">Add to Favourites
@@ -101,12 +101,12 @@
                         </button>
                     </form>
                 </div> -->
-            </div>
+            <!-- </div>
             {% endfor %}
         </div>
         {% endif %}
     </div>
-</div>
+</div> -->
 
 
 
@@ -141,7 +141,7 @@
 
 
     <!-- SEARCH FOR RECIPES AREA -->
-    <!-- <div class="recipe-container mx-auto">
+  <!-- <div class="recipe-container mx-auto">
         <h1 class="text-center display-3 mt-5">Search for Recipes</h1>
         <p class="paleo-font text-white h5">Find delicious and healthy recipes that everyone in your family will enjoy!</p>
     </div>
@@ -192,9 +192,9 @@
 
 <!-- __________________ ABOVE REDO OF RECIPES PAGE________________ -->
 
-    <!-- <div class="min-vh-100 bg-dark recipe-bg">
-        SEARCH FOR RECIPES AREA -->
-        <!-- <div class="recipe-container mx-auto">
+    <div class="min-vh-100 bg-dark recipe-bg">
+        <!-- SEARCH FOR RECIPES AREA -->
+        <div class="recipe-container mx-auto">
             <h1 class="text-center display-3 mt-5">Search for Recipes</h1>
             <p class="paleo-font text-white h5">Find delicious and healthy recipes that everyone in your family will enjoy!</p>
         </div>
@@ -218,9 +218,9 @@
                     </div>
                 </div>
             </form>
-        </div> -->
+        </div>
         <!-- DISPLAYING ALL AVAILABLE RECIPES -->
-        <!-- <button id="btnScrollUp" title="Go to top"><i class="bi bi-arrow-up-circle-fill"></i> Top</button>
+        <button id="btnScrollUp" title="Go to top"><i class="bi bi-arrow-up-circle-fill"></i> Top</button>
         <div class="container-fluid">
             {% if recipes|length > 0 %}
             <div class="card-group recipe-card-group">
@@ -263,33 +263,19 @@
                         <h3 class="h5">Nutrition:</h3>
                         <p class="text-muted small">{{ recipe.nutrition }}</p>
                     </div> -->
-                    <!-- EDIT AND DELETE BUTTONS, VISIBLE TO RECIPE OWNERS AND / OR SUPERADMIN -->
-                    <!-- <div class="card-body text-center">
+                    EDIT AND DELETE BUTTONS, VISIBLE TO RECIPE OWNERS AND / OR SUPERADMIN
+                    <div class="card-body text-center">
                         {% if session.user|lower == recipe.created_by|lower or session.user|lower == 'superadmin' %}
                             <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="btn btn-solid border-0 px-3">Edit Recipe</a>
-                            <a href="#modal-{{ recipe._id }}" class="btn btn-delete text-center mx-5 text-center" type="button" data-bs-toggle="modal">Delete Recipe</a>
+                            <a href="" class="btn btn-delete text-center mx-5 text-center" type="button" data-bs-toggle="modal">Delete Recipe</a>
                         {% endif %}
-                    </div>
+                        </div>
                 </div>
                 {% endfor %}
             </div>
             {% endif %}
         </div>
-    </div> --> -->
-
-    <!-- Modal -->
-    <!-- <div class="modal fade" id="modal-{{ recipe._id }}" tab-index="-1" aria-labelledby="modal-title" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content text-center">
-                <h3 class="modal-title mx-5 pt-3" id="modal-title">Are you sure you want to delete this recipe?</h3>
-                <p class="text-danger mx-auto pt-3">WARNING: This action cannot be undone.</p>
-                <div class="modal-footer mx-auto">
-                    <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}" class="btn btn-delete">Delete Recipe</a>
-                    <a href="{{ url_for('recipes') }}" type="button" class="btn btn-alt" data-bs-dismiss="modal" aria-label="Close">Cancel</a>
-                </div>
-            </div>
-        </div>
-    </div> -->
+    </div>
 
 {% endblock %}
 

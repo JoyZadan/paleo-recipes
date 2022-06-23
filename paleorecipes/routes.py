@@ -66,8 +66,7 @@ def search_recipes():
     """ finds recipes from db and renders them on recipes page """
     query = request.form.get("query")
     recipes = list(mongo.db.recipes.find({"$text": {"$search": query}}))
-    results = recipes
-    if  results|length > 0:
+    if recipes == 0:
         flash("Sorry, there are no results!")
     return render_template("recipes.html", recipes=recipes)
 

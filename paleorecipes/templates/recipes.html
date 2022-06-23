@@ -71,7 +71,7 @@
 
                         <h3 class="h5">Nutrition:</h3>
                         <p class="text-muted small">{{ recipe.nutrition }}</p>
-                    </div> -->
+                    </div>
                     <!-- EDIT AND DELETE BUTTONS, VISIBLE TO RECIPE OWNERS AND / OR SUPERADMIN -->
                     <div class="card-body text-center">
                         {% if session.user|lower == recipe.created_by|lower or session.user|lower == 'superadmin' %}

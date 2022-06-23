@@ -550,7 +550,7 @@ for just above medium breakpoint of 768px to larger screens */
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .add-recipe-container,
+    /* .add-recipe-container,
     .edit-recipe-container,
     .blog-container,
     .error-container {
@@ -562,6 +562,11 @@ for just above medium breakpoint of 768px to larger screens */
         margin-left: 1rem;
         margin-right: 1rem;
         border-radius: 5px;
+    } */
+
+    .add-recipe-container,
+    .edit-recipe-container {
+        margin: 2rem auto;
     }
 }
 

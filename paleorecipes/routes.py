@@ -387,7 +387,7 @@ def profile():
 def handle_bad_request(e):
     """ handles a 400 Bad Request error and returns an error message to the user """
     message = "A Bad Request was made"
-    return render_template("error.html", error=e, message=message), 400
+    return render_template("error.html", error_status=e, message=message), 400
 
 
 @app.errorhandler(404)
@@ -397,7 +397,7 @@ def page_not_found(e):
         and returns an error message to the user
     """
     message = "Sorry, we cannot find the page you are looking for!"
-    return render_template("error.html", error=e, message=message), 404
+    return render_template("error.html", error_status=e, message=message), 404
 
 
 @app.errorhandler(500)
@@ -407,4 +407,4 @@ def internal_server_error(e):
         and displays an apology message to the user
     """
     message = "Sorry! We seem to have made a mistake. Please try again soon."
-    return render_template("error.html", error=e, message=message), 500
+    return render_template("error.html", error_status=e, message=message), 500

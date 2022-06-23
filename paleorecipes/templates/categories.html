@@ -6,9 +6,7 @@
         <!-- MANAGE CATEGORIES -->
         <div class="recipe-container mx-auto">
             <h1 class="text-center display-3 mt-5">Manage Categories of Recipes</h1>
-            <p class="paleo-font text-white h5 mt-4">
-                SUPERADMIN USERS ONLY
-            </p>
+            <p class="paleo-font text-white h5 mt-4">SUPERADMIN USERS ONLY</p>
             <div class="text-center">
                 <a href="{{ url_for('add_category') }}" class="btn btn-alt border-0 px-3 h3" role="button">Add Category
                     <i class="bi-plus-circle"></i>
@@ -19,7 +17,7 @@
         <!-- LIST OF CATEGORIES -->
         <div class="alt-categories-container mt-5">
             {% for category in categories %}
-            <div class="each-category-card">
+            <div class="each-category-card bg-dark">
                 <h3 class="text-white px-3 mt-2">{{ category.category_name }}</h3>
                 <div class="card-body text-center p-0">
                     <a href="{{ url_for('edit_category', category_id=category.id) }}" class="btn btn-solid" alt="edit button">Edit</a>

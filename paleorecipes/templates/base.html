@@ -104,7 +104,7 @@
         </nav>
     </header>
 
-    <section>
+    <div>
         <!-- flash messages -->
         {% with messages = get_flashed_messages() %}
             {% if messages %}
@@ -117,7 +117,7 @@
             {% endif %}
         {% endwith %}
 
-    </section>
+    </div>
 
     <main>
         {% block content %}

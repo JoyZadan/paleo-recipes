@@ -45,7 +45,7 @@
 <body>
 
     <header>
-    <!-- TOP NAVBAR -->
+        <!-- TOP NAVBAR -->
         <nav class="navbar navbar-expand-lg bg-dark shadow-5-strong">
             <div class="container-fluid">
                 <a class="navbar-brand" href="{{ url_for('home') }}">
@@ -106,10 +106,25 @@
         </nav>
     </header>
 
+    <section>
+        <!-- flash messages -->
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="alert text-center h4 flash bg-dark" role="alert">
+                        {{ message }}
+                        <button class="btn-close flash-btn" data-bs-dismiss="alert"></button>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+
+    </section>
+
     <main>
 
             <!-- flash messages -->
-            {% with messages = get_flashed_messages() %}
+            <!-- {% with messages = get_flashed_messages() %}
                 {% if messages %}
                     {% for message in messages %}
                         <div class="alert text-center h4 flash bg-dark" role="alert">
@@ -118,7 +133,7 @@
                         </div>
                     {% endfor %}
                 {% endif %}
-            {% endwith %}
+            {% endwith %} -->
 
 
         {% block content %}

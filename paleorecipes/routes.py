@@ -377,6 +377,7 @@ def profile():
         return render_template("profile.html", username=session["user"])
     return redirect(url_for("login"))
 
+
 # HANDLE ERRORS
 # inspired by:
 # https://www.digitalocean.com/community/tutorials/how-to-handle-errors-in-a-flask-application
@@ -384,7 +385,17 @@ def profile():
 # and from: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status#client_error_responses
 @app.errorhandler(400)
 def handle_bad_request(e):
-    """ handles a 400 Bad Request and returns an error message to the user """
+    """ handles a 400 Bad Request error and returns an error message to the user """
     message = "A Bad Request was made"
     return render_template("error.html", error=e, message=message), 400
+
+
+@app.errorhandler(404)
+def page_not_found(e):
+    """
+        handles a 404 Not Found error
+        and returns an error message to the user
+    """
+    message = "Sorry, we cannot find the page you are looking for!"
+    return render_template("error.html", error=e, message=message), 404
 

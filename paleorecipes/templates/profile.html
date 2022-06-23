@@ -109,10 +109,10 @@
                     </div>
                     <!-- DISPLAYING ALL REGISTERED USERS -->
                     <div class="container-fluid">
-                        {% if users|length > 0 %}
+                        {% if categories|length > 0 %}
                             <div class="card col-12">
                                 <div class="card-body">
-                                    <h2 class="card-title">{{ user.user_name }}</h2>
+                                    <h2 class="card-title">{{ category.category_name }}</h2>
                                 </div>
                             </div>
                         {% endif %}

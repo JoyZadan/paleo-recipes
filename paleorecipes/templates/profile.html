@@ -13,7 +13,8 @@
                         id="menu">
                         <li class="nav-item">
                             <a href="#" class="nav-link px-sm-0 px-2">
-                                <i class="fs-5 bi-person-circle"></i>
+                                <img src="{{ url_for('static', filename='images/logo-icon.webp') }}" class="logo-icon"
+                                    alt="Paleo Recipes logo icon">
                                 <span class="ms-1 d-none d-sm-inline">{{ session.user|capitalize }}</span>
                             </a>
                         </li>

@@ -4,11 +4,16 @@
 
 ## Validation Results
 ### HTML: W3C Markup Validator Test Results
-* [INSERT SCREENSHOT Home page]()
-* [INSERT SCREENSHOT other page]()
+* [INSERT SCREENSHOT Home page](/documentation/validation/nu-html-index.webp)
+* [INSERT SCREENSHOT other page](/documentation/validation/paleo-recipes.webp)
+* [INSERT SCREENSHOT other page](/documentation/validation/nu-html-add-recipe.webp)
+* [INSERT SCREENSHOT other page](/documentation/validation/nu-html-categories.webp)
+* [INSERT SCREENSHOT other page](/documentation/validation/nu-html-register.webp)
+* [INSERT SCREENSHOT other page](/documentation/validation//nu-html-login.webp)
+* [INSERT SCREENSHOT other page](/documentation/validation/nu-html-profile.webp)
 ### CSS: W3C CSS Validator Test Results
-* [INSERT SCREENSHOT Results]()
-* [INSERT SCREENSHOT Warnings]()
+* [INSERT SCREENSHOT Results](/documentation/validation/css-validation.webp)
+* [INSERT SCREENSHOT Warnings](/documentation/validation/css-warnings.webp/)
 ### JavaScript: JSHint Linting Results
 * [INSERT SCREENSHOT .js]()
 ### Python: PEP8 online Test Results

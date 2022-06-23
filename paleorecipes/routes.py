@@ -252,8 +252,8 @@ def delete_category(category_id):
 
 
 # HANDLE SEARCHES FOR RELATIONAL DATA
-@app.route("/search_categories", methods=["GET", "POST"])
-def search_categories():
+@app.route("/search_users", methods=["GET", "POST"])
+def search_users():
     """
         checks if user is superadmin, if not redirect to index page
         finds users from postgres db and
@@ -264,9 +264,10 @@ def search_categories():
         return redirect(url_for("recipes"))
 
     query = request.args.get("query")
-    categories = Category.query.filter(Category.title.like("%"+query+"%")).all()
-    return render_template("categories.html", query=query,
-                           categories=categories)
+    users = Users.query.filter(Users.user_name.like(
+                                       "%"+query+"%")).all()
+    return render_template("profile.html", query=query,
+                           users=users)
 
 
 # HANDLE REGISTER, LOGIN, LOGOUT, AND CREATE PROFILE
@@ -394,7 +395,6 @@ def profile():
     if "user" in session:
         return render_template("profile.html", username=session["user"])
     return redirect(url_for("login"))
-
 
 # HANDLE ERRORS
 # inspired by:

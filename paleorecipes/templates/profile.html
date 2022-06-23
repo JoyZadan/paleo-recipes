@@ -82,7 +82,41 @@
                     <h1 class="text-center mt-5 mb-4 paleo-font profile-header">Admin Dashboard</h1>
                     <h2 class="text-center mt-3 mb-5 display-font profile-header">Hi {{ session.user|capitalize }}!</h2>
 
-
+                    <!-- SEARCH FOR USERS AREA -->
+                    <div class="recipe-container mx-auto">
+                        <h2 class="text-center display-3 mt-5">Search for Users</h2>
+                    </div>
+                    <div class="bg-transparent mt-3">
+                        <form action="{{ url_for('search_users') }}" method="POST">
+                            <div class="container-fluid">
+                                <div class="row p-2 pt-3 d-flex align-items-center">
+                                    <div class="col-md-8 mx-auto">
+                                        <div class="d-flex form-inputs input-field">
+                                            <input class="validate form-control" type="text" name="query" id="query" minlength="3" required
+                                                placeholder="Search for registered users...">
+                                            <label for="query" class="white-text"></label>
+                                        </div>
+                                        <div class="card-body text-center">
+                                            <a href="{{ url_for('profile') }}" class="btn btn-solid">Reset</a>
+                                            <button class="btn btn-alt text-center mx-2" type="submit">
+                                                <i class="bi bi-search"></i> Search
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- DISPLAYING ALL REGISTERED USERS -->
+                    <div class="container-fluid">
+                        {% if users|length > 0 %}
+                            <div class="card col-12">
+                                <div class="card-body">
+                                    <h2 class="card-title">{{ user.user_name }}</h2>
+                                </div>
+                            </div>
+                        {% endif %}
+                    </div>
 
 
 

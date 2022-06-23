@@ -1,8 +1,147 @@
 {% extends "base.html" %}
 {% block content %}
 
+<!-- 3rd rebuild -->
+
+<div class="min-vh-100 bg-dark recipe-bg">
     <!-- SEARCH FOR RECIPES AREA -->
     <div class="recipe-container mx-auto">
+        <h1 class="text-center display-3 mt-5">Search for Recipes</h1>
+        <p class="paleo-font text-white h5">Find delicious and healthy recipes that everyone in your family will enjoy!</p>
+    </div>
+    <div class="bg-transparent mt-3">
+        <form action="{{ url_for('search_recipes') }}" method="POST">
+            <div class="container-fluid">
+                <div class="row p-2 pt-3 d-flex align-items-center">
+                    <div class="col-md-8 mx-auto">
+                        <div class="d-flex form-inputs input-field">
+                            <input class="validate form-control" type="text" name="query" id="query" minlength="3" required
+                                placeholder="Search for delicious & healthy recipes...">
+                            <label for="query" class="white-text"></label>
+                        </div>
+                        <div class="card-body text-center">
+                            <a href="{{ url_for('recipes') }}" class="btn btn-solid">Reset</a>
+                            <button class="btn btn-alt text-center mx-2" type="submit">
+                                <i class="bi bi-search"></i> Search
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <!-- DISPLAYING ALL AVAILABLE RECIPES -->
+    <button id="btnScrollUp" title="Go to top"><i class="bi bi-arrow-up-circle-fill"></i> Top</button>
+    <div class="container-fluid">
+        {% if recipes|length > 0 %}
+        <div class="card-group recipe-card-group">
+            {% for recipe in recipes %}
+            <div class="card mx-2 mb-3">
+                <img src="{{ recipe.image_url }}" class="card-img-top" alt="{{ recipe.recipe_name }}">
+                <div class="card-body">
+                    <div class="list-group small">
+                        <ul class="list-group list-group-horizontal-md">
+                            <li class="list-group-item mx-1 bg-light rounded text-muted">
+                                <i class="bi bi-hourglass-split"></i> Prep: {{ recipe.prep_time }} mins
+                            </li>
+                            <li class="list-group-item mx-1 bg-light rounded text-muted">
+                                <i class="bi-clock"></i> Cook: {{ recipe.cook_time }} mins
+                            </li>
+                            <li class="list-group-item mx-1 bg-light rounded text-muted">
+                                <i class="bi bi-people-fill"></i> Serves: {{ recipe.servings }}
+                            </li>
+                        </ul>
+                    </div>
+                    <h2 class="card-title mt-3 recipe-title">{{ recipe.recipe_name }}</h2>
+                    {% for category in categories %}
+                        {% if category.id == recipe.category_id |int %}
+                            <p class="card-text text-muted">{{ category.category_name }}</p>
+                        {% endif %}
+                    {% endfor %}
+                    <p class="card-text h6 fst-italic">{{ recipe.recipe_description }}</p>
+                    <h3 class="h5 text-uppercase mt-4 subtitle">Posted by: {{ recipe.created_by }}</h3>
+                    <hr class="hr divider">
+
+                    <h3 class="h5">Ingredients:</h3>
+                    <p class="text-muted small">{{ recipe.ingredients }}</p>
+
+                    <h3 class="h5">Preparation and Cooking Instructions:</h3>
+                    <p class="text-muted small">{{ recipe.instructions }}</p>
+
+                    <h3 class="h5">Notes:</h3>
+                    <p class="text-muted small">{{ recipe.notes }}</p>
+
+                    <h3 class="h5">Nutrition:</h3>
+                    <p class="text-muted small">{{ recipe.nutrition }}</p>
+                </div>
+                <!-- EDIT AND DELETE BUTTONS, VISIBLE TO RECIPE OWNERS AND / OR SUPERADMIN -->
+                <div class="card-body text-center">
+                    {% if session.user|lower == recipe.created_by|lower or session.user|lower == 'superadmin' %}
+                        <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="btn btn-solid border-0 px-3">Edit Recipe</a>
+                        <a href="#modal-{{ recipe._id }}" class="btn btn-delete text-center mx-5 text-center" type="button" data-bs-toggle="modal">Delete Recipe</a>
+                    {% endif %}
+                </div>
+<!-- Modal -->
+<div class="modal fade" id="modal-{{ recipe._id }}" tab-index="-1" aria-labelledby="modal-title" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content text-center">
+            <h3 class="modal-title mx-5 pt-3" id="modal-title">Are you sure you want to delete this recipe?</h3>
+            <p class="text-danger mx-auto pt-3">WARNING: This action cannot be undone.</p>
+            <div class="modal-footer mx-auto">
+                <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}" class="btn btn-delete">Delete Recipe</a>
+                <a href="{{ url_for('recipes') }}" type="button" class="btn btn-alt" data-bs-dismiss="modal" aria-label="Close">Cancel</a>
+            </div>
+        </div>
+    </div>
+</div>
+                <!-- <div>
+                    <form action="" method="POST">
+                        <button class="btn btn-solid border-0 px-3" type="submit">Add to Favourites
+                            <i class="bi bi-emoji-heart-eyes"></i>
+                        </button>
+                    </form>
+                </div> -->
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- SEARCH FOR RECIPES AREA -->
+    <!-- <div class="recipe-container mx-auto">
         <h1 class="text-center display-3 mt-5">Search for Recipes</h1>
         <p class="paleo-font text-white h5">Find delicious and healthy recipes that everyone in your family will enjoy!</p>
     </div>
@@ -25,10 +164,10 @@
                 </div>
             </div>
         </div>
-    </form>
+    </form> -->
 
     <!-- SCROLL TO TOP BUTTON -->
-    <button id="btnScrollUp" title="Go to top"><i class="bi bi-arrow-up-circle-fill"></i> Top</button>
+    <!-- <button id="btnScrollUp" title="Go to top"><i class="bi bi-arrow-up-circle-fill"></i> Top</button> -->
 
     <!-- DISPLAYING ALL AVAILABLE RECIPES -->
 
@@ -54,7 +193,7 @@
 <!-- __________________ ABOVE REDO OF RECIPES PAGE________________ -->
 
     <!-- <div class="min-vh-100 bg-dark recipe-bg">
-        <!-- SEARCH FOR RECIPES AREA -->
+        SEARCH FOR RECIPES AREA -->
         <!-- <div class="recipe-container mx-auto">
             <h1 class="text-center display-3 mt-5">Search for Recipes</h1>
             <p class="paleo-font text-white h5">Find delicious and healthy recipes that everyone in your family will enjoy!</p>

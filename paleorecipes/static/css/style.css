@@ -550,25 +550,6 @@ for just above medium breakpoint of 768px to larger screens */
         grid-template-columns: repeat(2, 1fr);
     }
 
-    /* .add-recipe-container,
-    .edit-recipe-container,
-    .blog-container,
-    .error-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        margin-left: 1rem;
-        margin-right: 1rem;
-        border-radius: 5px;
-    } */
-
-    .add-recipe-container,
-    .edit-recipe-container {
-        margin-left: 3rem;
-        margin-right: 3rem;
-    }
 }
 
 @media screen and (max-width: 52.75em) {

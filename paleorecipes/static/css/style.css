@@ -566,7 +566,8 @@ for just above medium breakpoint of 768px to larger screens */
 
     .add-recipe-container,
     .edit-recipe-container {
-        margin: 2rem auto;
+        margin-left: 3rem;
+        margin-right: 3rem;
     }
 }
 

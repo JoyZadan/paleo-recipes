@@ -243,9 +243,16 @@ This shows what CRUD functionality is available from each page
     * [CSS3](https://en.wikipedia.org/wiki/CSS#CSS_3) was used for the styling of the site.
     * [JavaScript](https://en.wikipedia.org/wiki/JavaScript) was used for the interactivity of the site.
     * [Python](https://www.python.org/) was used for the back end programming of the site.
+    * [Cloudinary API](https://cloudinary.com/) was used to enable users to upload images for their recipes whilst keeping the App safe and secure
 
 * [Flask](https://flask.palletsprojects.com/en/2.0.x/)
     * Flask was used to handle the templating for the site.
+
+* [Postgres](https://www.postgresql.org/)
+    * Postgres was the relational database used to store user registration, login and authentication. Postgres was also used to store the Categories.
+
+* [MongoDB](https://www.mongodb.com/)
+    * MongoDB was the nonrelational database used to store less structured data such as the recipes. MongoDB is where we host our NoSQL database.
 
 * [Flask-PyMongo](https://pypi.org/project/Flask-PyMongo/)
     * Flask-PyMongo provides MongoDB support for Flask applications.
@@ -277,9 +284,6 @@ This shows what CRUD functionality is available from each page
 * [Heroku](https://devcenter.heroku.com/)
     * Heroku is where we deploy this live site. Throughout, we have ensured the version being deployed to Heroku matches the development version by checking features and screen layouts on both versions.
 
-* [MongoDB](https://www.mongodb.com/)
-    * MongoDB is where we host our NoSQL database.
-
 * [GitHub](https://github.com/)
     * GitHub is where we host our site.
 
@@ -297,7 +301,8 @@ This shows what CRUD functionality is available from each page
 | 3 | New user id (Primary Key) is not being stored as a user_id in MongoDB | The solution was to query Postgres db for the new user's id, save the result in a new variable and pass it on to MongoDB as a string using dot notation |
 | 4 | The logged in user's chosen avatar won't render, despite three days of attempting to resolve the issue | Conscious of the development time remaining prior to submission due date, the remedy was to remove this feature.|
 | 5 | Including the parameter of **username** to profile view throws a build error when a logged in user clicks on the register link on the navbar, despite having on the register route a redirect to profile view when a user is logged. | The solution is to remove the **username** parameter on the profile view. The logged in user is then redirected back to the profile view when the register link on the navbar is clicked. |
-| 6 | Creating an index on mongodb via the CLI returned an error of "no module app found". Attempting to create said index using the create index form on mongo also resulted in "Index Build Failed. Error provided: Unknown error." | My solution: |
+| 6 | Creating an index on mongodb via the CLI returned an error of "no module app found". Attempting to create said index using the create index form on mongo also resulted in "Index Build Failed. Error provided: Unknown error." | My solution: was to used the name of our app (paleorecipes) in place of "app"|
+
 
 
 # Deployment & Local Development

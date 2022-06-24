@@ -78,10 +78,14 @@ Table of Contents - Click to Expand
 * Register/ create a user account
 
 #### Registered User Goals - As a registered user, I want to be able to:
-* Add, edit, retrieve and delete my own Paleo recipe(s)
+* Learn more about what I can do on the Paleo Recipes App
+* Add, edit, retrieve and delete my own paleo recipe(s)
 * Add my own Paleo recipe(s), based on Categories
 * Upload an image with my recipes
+* Be able to add additional information about my recipe
+* Have access to tools I may need in order to add, update or delete my recipes
 * Search and view specific recipes (if already available on the App)
+* Be forewarned of the consequences of what I am about to do on the App, such as deleting my recipes
 * Have my own member user dashboard (read functionality)
 
 #### Site Admin Goals - As an administrator, I want to be able to:
@@ -97,27 +101,28 @@ When planning the App features and scope, I drew up an Importance Viability anal
 | # | Feature | Importance | Viability |
 | --- | --- | --- | --- |
 | 1 | View, Create, Edit and Delete Recipes | 5 | 5 |
-| 2 | View, Create, Edit and Delete Recipe Reviews | 5 | 5 |
+| 2 | View, Create, Edit and Delete Images with Recipes | 5 | 5 |
 | 3 | View, Create, Edit and Delete Recipe Category | 5 | 5 |
-| 4 | Create, Edit and Delete Account | 5 | 5 |
+| 4 | Create, Edit and Delete Account | 5 | 3 |
 | 5 | Login and Logout to Account | 5 | 5 |
 | 6 | Moderate Content Submitted by Registered Users | 5 | 1 |
-| 7 | Send message and/ or feedback to Admin | 5 | 5 |
+| 7 | Send message and/ or feedback to Admin | 5 | 2 |
 | 8 | Receive Notifications on users activities | 2 | 2 |
 | 9 | Search for Recipes | 5 | 5 |
 | 10 | Search Recipes by Ingredients | 3 | 1 |
-| 11 | Search Recipes by Category | 5 | 3 |
+| 11 | Search Recipes by Category | 5 | 2 |
 | 12 | Share Recipes on Social Media | 3 | 3 |
 | 13 | Display Suggested Recipes | 3 | 2 |
-| 14 | User Input Validation | 5 | 5 |
+| 14 | Access to Custom User Dashboard (Read Functionality) | 4 | 5 |
+| 15 | User Action Validation | 5 | 5 |
 
-Based on the results of the Feature Ideas Planning, I have decided to attempt to implement Features numbers 1, 2, 3, 4, 5, 7, 9, 14 for this production release and park the remaining features due to time limitations.
+Based on the results of the Feature Ideas Planning, I have decided to attempt to implement Features numbers 1, 2, 3, 5, 9, 14 and 15 for this production release and park the remaining features due to time limitations.
 
 ### Functionality Requirements
 * Clean and themed presentation of recipe details
 * Intuitive App navigation
 * Fresh-looking, appetising and themed use of images across the App
-* Contact the developer for feedback and bug reports
+* Use off Defensive Programming to Safeguard Logged In Users (Members and Superadmin) about any unintended result of their actions
 
 ## Structure
 ### Topology Diagrams

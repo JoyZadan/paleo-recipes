@@ -4,24 +4,31 @@
 
 ## Validation Results
 ### HTML: W3C Markup Validator Test Results
-* [INSERT SCREENSHOT Home page](/documentation/validation/nu-html-index.webp)
-* [INSERT SCREENSHOT other page](/documentation/validation/paleo-recipes.webp)
-* [INSERT SCREENSHOT other page](/documentation/validation/nu-html-add-recipe.webp)
-* [INSERT SCREENSHOT other page](/documentation/validation/nu-html-categories.webp)
-* [INSERT SCREENSHOT other page](/documentation/validation/nu-html-register.webp)
-* [INSERT SCREENSHOT other page](/documentation/validation//nu-html-login.webp)
-* [INSERT SCREENSHOT other page](/documentation/validation/nu-html-about.webp)
-* [INSERT SCREENSHOT other page](/documentation/validation/nu-html-profile.webp)
+* ![INSERT SCREENSHOT Home page](/documentation/validation/nu-html-index.webp)
+* ![INSERT SCREENSHOT other page](/documentation/validation/paleo-recipes.webp)
+* ![INSERT SCREENSHOT other page](/documentation/validation/nu-html-add-recipe.webp)
+* ![INSERT SCREENSHOT other page](/documentation/validation/nu-html-categories.webp)
+* ![INSERT SCREENSHOT other page](/documentation/validation/nu-html-register.webp)
+* ![INSERT SCREENSHOT other page](/documentation/validation//nu-html-login.webp)
+* ![INSERT SCREENSHOT other page](/documentation/validation/nu-html-about.webp)
+* ![INSERT SCREENSHOT other page](/documentation/validation/nu-html-profile.webp)
 ### CSS: W3C CSS Validator Test Results
-* [INSERT SCREENSHOT Results](/documentation/validation/css-validation.webp)
-* [INSERT SCREENSHOT Warnings](/documentation/validation/css-warnings.webp/)
+* ![INSERT SCREENSHOT Results](/documentation/validation/css-validation.webp)
+* ![INSERT SCREENSHOT Warnings](/documentation/validation/css-warnings.webp/)
 ### JavaScript: JSHint Linting Results
-* [INSERT SCREENSHOT scroll.js](/documentation/validation/jshint-validation.webp)
+* ![INSERT SCREENSHOT scroll.js](/documentation/validation/jshint-validation.webp)
 ### Python: PEP8 online Test Results
 * [INSERT SCREENSHOT]()
 ### Lighthouse Test Results
-* [INSERT SCREENSHOT Home page]()
-* [INSERT SCREENSHOT other page]()
+* ![INSERT SCREENSHOT Home page](/documentation/testing/lighthouse-desktop-top.webp)
+* ![INSERT SCREENSHOT other page](/documentation/testing/lighthouse-recipes.webp)
+* ![INSERT SCREENSHOT other page](/documentation/testing/lighthouse-desktop-categories.webp)
+* ![INSERT SCREENSHOT other page](/documentation/testing/lighthouse-add-recipe.webp)
+* ![INSERT SCREENSHOT other page](/documentation/testing/lighthouse-profile.webp)
+* ![INSERT SCREENSHOT other page](/documentation/testing/lighthouse-recipes.webp)
+* ![INSERT SCREENSHOT other page](/documentation/testing/lighthouse-categories.webp)
+* ![INSERT SCREENSHOT other page](/documentation/testing/lighthouse-recipes.webp)
+* ![INSERT SCREENSHOT other page](/documentation/testing/lighthouse-recipes.webp)
 ### a11y Color Contrast Accessibility for the Visually Impaired Test Results
 * [INSERT SCREENSHOT Home page]()
 * [INSERT SCREENSHOT other page]()

@@ -16,7 +16,7 @@
 * [INSERT SCREENSHOT Results](/documentation/validation/css-validation.webp)
 * [INSERT SCREENSHOT Warnings](/documentation/validation/css-warnings.webp/)
 ### JavaScript: JSHint Linting Results
-* [INSERT SCREENSHOT .js]()
+* [INSERT SCREENSHOT scroll.js](/documentation/validation/jshint-validation.webp)
 ### Python: PEP8 online Test Results
 * [INSERT SCREENSHOT]()
 ### Lighthouse Test Results

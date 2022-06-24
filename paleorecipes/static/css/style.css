@@ -379,7 +379,7 @@ a {
 
 .each-category-card {
     width: 16rem;
-    justify-content: space-between;
+    justify-content: center;
     margin: 1rem auto;
     padding: 5px;
     border-radius: 10px;

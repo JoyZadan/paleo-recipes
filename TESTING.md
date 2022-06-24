@@ -18,7 +18,7 @@
 ### JavaScript: JSHint Linting Results
 * ![INSERT SCREENSHOT scroll.js](/documentation/validation/jshint-validation.webp)
 ### Python: PEP8 online Test Results
-* [INSERT SCREENSHOT]()
+* [INSERT SCREENSHOT](/documentation/testing/pep8online.png)
 ### Lighthouse Test Results
 * ![INSERT SCREENSHOT Home page](/documentation/testing/lighthouse-desktop-top.webp)
 * ![INSERT SCREENSHOT other page](/documentation/testing/lighthouse-recipes.webp)
@@ -30,8 +30,8 @@
 * ![INSERT SCREENSHOT other page](/documentation/testing/lighthouse-recipes.webp)
 * ![INSERT SCREENSHOT other page](/documentation/testing/lighthouse-recipes.webp)
 ### a11y Color Contrast Accessibility for the Visually Impaired Test Results
-* [INSERT SCREENSHOT Home page]()
-* [INSERT SCREENSHOT other page]()
+* ![INSERT SCREENSHOT Home page](/documentation/testing/a11y-color-contrast-index.png)
+* [INSERT SCREENSHOT other page](/documentation/testing/a11y-color-contrast-recipes.png)
 ### WAVE Web Accessibility Evaluation Tool
 * [INSERT SCREENSHOT Home page]()
 * [INSERT SCREENSHOT other page]()

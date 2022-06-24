@@ -127,7 +127,7 @@ Based on the results of the Feature Ideas Planning, I have decided to attempt to
 ## Structure
 ### Topology Diagrams
 The green elements in these diagrams illustrate the pages that are always accessible from the Navbar for all visitors.
-The non-highlighted elements in these diagrams will return the use to the same page or to the home page. Add, edit and delete elements are only available to logged in users. The delete functions will return to:
+The non-highlighted elements in these diagrams will return the user to the same page or to the home page. Add, edit and delete elements are only available to logged in users. The delete functions will return to:
 - [INSERT]
 - [INSERT]
 

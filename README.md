@@ -129,12 +129,12 @@ Based on the results of the Feature Ideas Planning, I have decided to attempt to
 ## Structure
 ### Topology Diagrams
 The green elements in these diagrams illustrate the pages that are always accessible from the Navbar for all visitors.
-The non-highlighted elements in these diagrams will return the user to the same page or to the home page. Add, edit and delete elements are only available to logged in users. The delete functions will return to:
+The grey elements in these diagrams will return the user to the same page or to the home page. Add, edit and delete elements are only available to logged in users. The delete functions will return to:
 - [INSERT]
 - [INSERT]
 
 #### Guest User
-- [INSERT DIAGRAM]()
+- ![GUEST USER JOURNEY ACROSS THE PALEO RECIPES APP](/documentation/user-stories/guest-user.png)
 
 #### Registered User
 - [INSERT DIAGRAM]()

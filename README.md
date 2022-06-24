@@ -139,7 +139,7 @@ The grey elements in these diagrams will return the user to the same page or to 
 #### Registered User
 - [INSERT DIAGRAM]()
 
-#### Admin User
+#### Superadmin User
 - [INSERT DIAGRAM]()
 
 #### Jinja Template Structure and Relationships

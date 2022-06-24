@@ -112,21 +112,6 @@
                 </div>
                     {% endif %}
                 {% endif %}
-            <!-- ATTEMPTING TO LOAD THE RECIPES UPLOAD BY THE USER -->
-            <!-- {% if recipe_list %} -->
-                <div class="ms-5">
-                    <h3> Hi {{ session.user }}, here are the recipes you shared:</h3>
-                </div>
-
-
-
-
-            <!-- {% endif %} -->
-
-
-
-
-
 
         </div>
 
@@ -136,6 +121,5 @@
 
 {% block scripts %}
 
-    <script src="{{ url_for('static', filename='js/scroll.js') }}"></script>
 
 {% endblock %}

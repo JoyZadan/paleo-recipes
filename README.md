@@ -234,8 +234,20 @@ This shows what CRUD functionality is available from each page
 
 
 ### Defensive Programming
+To keep the application secure and protected against any brute force attack, defensive programming was at the forefront of the development and implementation of every feature included.
+- I implemented logged_required functionality across relevant pages
+- I also implemented Jinja templating language to ensure that a user without authorization cannot access the protected pages
+- The routes functionalities also checks if a user is:
+    * logged in
+    * has access to specific pages (based on permissions)
+    * a superadmin
 
 ### Error Handling
+The following error handlers were added to the Application to handle possible scenarios requiring specific HTTP Response:
+* errorhandler(400) for a Bad Request error
+* errorhandler(404) for a 404 Not Found error
+* errorhandler(408) for a 408 Request Timeout error
+* errorhandler(500) for a 500 Internal Server error
 
 # Technologies Used
 * Languages:

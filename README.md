@@ -1,16 +1,10 @@
 # **PALEO RECIPES**
 
-Paleo Recipes help users find delicious meal ideas, share their own recipes and tips on eating healthy, and manage their own activities within the App upon creating an account.
-
-Paleo Recipes is a recipe sharing and management Application built using **Python**, **Flask+SQLAlchemy**, **Flask+PyMongo**, **Bootstrap 5**, **Jinja2** and **JavaScript**. It uses **Cloudinary API** to manage user-uploaded images. This Application is a **hybrid database project** using both **MongoDB** and **PostgreSQL**.
-- User Authentication is handled using **relational-backed database** (PostgreSQL using Flask+SQLAlchemy).
-- Standard CRUD data manipulation is handled using a **nonrelational-backed database** (MongoDB using Flask+PyMongo).
-
-Paleo Recipes is my third milestone project for **Code Institute's** Level 5 Diploma in Web Application Development (Full Stack Software Development).
+Paleo Recipes help users find paleo recipes and delicious meal ideas. Registered users can also share their own recipes and tips on eating healthy. Additionally the users can manage their own activities within the App upon creating an account.
 
 ![amiresponsive mock-ups of Paleo Recipes App](documentation/testing/paleo-recipes.png)
 
-## [Link to the Deployed App](https://paleo-recipes.herokuapp.com/)
+### [Link to the Deployed App](https://paleo-recipes.herokuapp.com/)
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/JoyZadan/paleo-recipes?color=blue&style=for-the-badge)
 ![GitHub contributors](https://img.shields.io/github/contributors/JoyZadan/paleo-recipes?color=green&style=for-the-badge)
@@ -18,11 +12,18 @@ Paleo Recipes is my third milestone project for **Code Institute's** Level 5 Dip
 ![GitHub top language](https://img.shields.io/github/languages/top/JoyZadan/paleo-recipes?color=brown&style=for-the-badge)
 
 # Project Overview
-Paleo Recipes App help users find delicious meal ideas, share their own recipes and tips on eating healthy, and manage their own activities within the App upon creating an account.
 
-(INSERT HERE longer overview incl the what, why, who, where, how)
+Paleo Recipes is a recipe sharing and management Application built using **Python**, **Flask+SQLAlchemy**, **Flask+PyMongo**, **Bootstrap 5**, **Jinja2** and **JavaScript**. It uses **Cloudinary API** to manage user-uploaded images. This Application is a **hybrid database project** using both **MongoDB** and **PostgreSQL**.
 
----
+- User Authentication is handled using **relational-backed database** (PostgreSQL using Flask+SQLAlchemy).
+- Standard CRUD data manipulation is handled using a **nonrelational-backed database** (MongoDB using Flask+PyMongo).
+
+Paleo Recipes is my third milestone project for **Code Institute's** Level 5 Diploma in Web Application Development (Full Stack Software Development).
+
+It was an easy choice to decide on building this App as I have tried and enjoyed the paleo-eating lifestyle and know that I have enough background information to make the job of building a hybrid database application a little less daunting! Plus paleo dishes almost always look great in photos, though that may mean a few extra trips to the kitchen to raid the fridge!
+
+
+
 
 <details>
 <summary>

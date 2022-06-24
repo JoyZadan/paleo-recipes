@@ -61,12 +61,12 @@
                 <!-- SUPERADMIN DASHBOARD -->
                 {% if session.user|lower == 'superadmin' %}
                     <h1 class="text-center mt-5 mb-4 paleo-font profile-header">Admin Dashboard</h1>
-                    <h2 class="text-center mt-3 mb-5 display-font">Hi {{ session.user|capitalize }}!</h2>
+                    <h2 class="text-center mt-3 mb-5 display-font profile-header">Hi {{ session.user|capitalize }}!</h2>
                     <div>
-                        <p class="text-center mt-3 mb-5 display-font profile-header">
-                            Let's soon build your custom admin dashboard!
+                        <p class="text-center mt-3 mb-5 h2 profile-header">
+                            Let's soon build your own custom admin dashboard!
                         </p>
-                        <div>
+                        <div class="text-center">
                             <iframe src="https://embed.lottiefiles.com/animation/109272"></iframe>
                         </div>
                     </div>

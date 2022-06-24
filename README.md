@@ -1,6 +1,7 @@
 # **PALEO RECIPES**
 
-Paleo Recipes help users find paleo recipes and delicious meal ideas. Registered users can also share their own recipes and tips on eating healthy. Additionally the users can manage their own activities within the App upon creating an account.
+
+Paleo Recipes is a place for visitors to find recipes and delicious meal ideas. Users are able to register a free account, share and dish out *(no pun intended!)* their own paleo recipes for eating healthy.
 
 ![amiresponsive mock-ups of Paleo Recipes App](documentation/testing/paleo-recipes.png)
 

@@ -161,13 +161,12 @@ The wireframes created for this project:
 - [DESKTOP - ADD RECIPE PAGE](/documentation/wireframes/add-recipe.png)
 - [DESKTOP - EDIT RECIPE PAGE](/documentation/wireframes/edit%20-recipe.png)
 - [DESKTOP - EDIT CATEGORY PAGE](/documentation/wireframes/edit-category.png)
-
 - [TABLET - INDEX PAGE](/documentation/wireframes/tablet-index.png)
 - [TABLET - RECIPES PAGE](/documentation/wireframes/tablet-recipes.png)
-
+- [TABLET - CATEGORIES PAGE](/documentation/wireframes/tablet-category.png)
 - [MOBILE - INDEX PAGE](/documentation/wireframes/mobile-index.png)
 - [MOBILE - RECIPES PAGE](/documentation/wireframes/mobile-recipes.png)
-
+- [MOBILE - CATEGORIES PAGE](/documentation/wireframes/mobile-category.png)
 
 ### Design
 [Bootstrap5](https://getbootstrap.com/docs/5.0/getting-started/introduction/) was used and customised for the front-end development.
@@ -176,15 +175,13 @@ The wireframes created for this project:
 ![COLOURS](/documentation/user-stories/colours.webp)
 
 #### Typography
-
 I used Google Fonts to import the fonts I used across the application.
-
 ![DANCING SCRIPT](/documentation/user-stories/dancing-script.png)
 ![POPPINS](/documentation/user-stories/poppins.png)
 
 #### Imagery
-[INSERT HERE]()
-The background image for the home page inspired the colour scheme and typography used for the App.
+![INSERT HERE](/documentation/user-stories/veggie.png)
+The colour scheme and typography used for the Paleo Recipes App was inspired by Rui Sousa's veggie portfolio project found on [Behance](https://www.behance.net/gallery/138692061/Veggie-Branding-%28Personal-Project%29).
 
 ## Features
 Breakdown of the features and elements implemented for the App.

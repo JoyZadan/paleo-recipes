@@ -302,14 +302,19 @@ The following error handlers were added to the Application to handle possible sc
 * [Online-Convert](https://www.online-convert.com/)
     * Online-Convert was used to convert the png images to webp.
 
+## Future Implementation
+* Include Blog Functionality
+* Allow registered users to delete their own account
+* Render all recipes shared by the registered user to be available on his/ her User Dashboard
+
 # Testing
 ## All testing undertaken for this project can be found in the [Testing Document](/TESTING.md)
 
 # Bugs, Issues and Solutions
 | # | Bugs, Errors and Issues | Solutions |
 | :--- | :--- | :--- |
-| 1 | NoneType error of object has no attribute 'startswith' when attempting to run the application | With the assistance of tutor team, the solution was to add ![this extra line of code]() to the init file and the Application successfully started running locally |
-| 2 | NoneType error object has no attribute 'drivername' when attempting to generate and migrate the models into a new database in Postgres | With the assistance of tutor team, the solution was to remove the extra line of code (see error 1), if uri: , and replace it with ![this code block](). According to James from Tutor Support: This new code block "checks if you are in development/ local and if true, assigns the sql database uri to DB_URL from env.py. (DB_URL is the local database.) Otherwise, it assigns it to the Heroku one,  DATABASE_URL." The db.create_all() was then ![successfully executed](). |
+| 1 | NoneType error of object has no attribute 'startswith' when attempting to run the application | With the assistance of tutor team, the solution was to add another "if URI to" statement to the init file and the Application successfully started running locally |
+| 2 | NoneType error object has no attribute 'drivername' when attempting to generate and migrate the models into a new database in Postgres | With the assistance of tutor team, the solution was to remove the extra line of code (see error 1), if uri: , and replace it with ![this code block](/documentation/testing/error2_solution.png). According to James from Tutor Support: This new code block "checks if you are in development/ local and if true, assigns the sql database uri to DB_URL from env.py. (DB_URL is the local database.) Otherwise, it assigns it to the Heroku one,  DATABASE_URL." The db.create_all() was then successfully executed. |
 | 3 | New user id (Primary Key) is not being stored as a user_id in MongoDB | The solution was to query Postgres db for the new user's id, save the result in a new variable and pass it on to MongoDB as a string using dot notation |
 | 4 | The logged in user's chosen avatar won't render, despite three days of attempting to resolve the issue | Conscious of the development time remaining prior to submission due date, the remedy was to remove this feature.|
 | 5 | Including the parameter of **username** to profile view throws a build error when a logged in user clicks on the register link on the navbar, despite having on the register route a redirect to profile view when a user is logged. | The solution is to remove the **username** parameter on the profile view. The logged in user is then redirected back to the profile view when the register link on the navbar is clicked. |
@@ -374,6 +379,12 @@ Sample recipes posted on the Paleo Recipes App were sourced from:
 README and Testing Inspirations from [Nick Lennon's](https://github.com/nlenno1/moviewiki-ms3) and [Naoise Gaffney's](https://github.com/NaoiseGaffney/Training) individual README documentation for MS3.
 
 # Acknowledgements
+A very, very special thanks to [James Gregory](https://github.com/asdfractal) from Tutor Support at Code Institute. James, you have been a lifesaver! I appreciate your development and tutoring skills!
+
+Special mention and thanks to my mentor, Dario Carrasquel, for his support, invaluable insights and his belief that I can do this well. I am so grateful to have you as my mentor.
+
+A special mention to my MS3 cohorts, glad to have you guys around! Kera, Nazia, Tom and Jack. Thanks! Thanks also to Jo Bowden at SDC.
+
 
 # Copyrights
 

@@ -2,6 +2,23 @@
 
 ![amiresponsive mock-ups of Paleo Recipes App](documentation/testing/paleo-recipes.png)
 
+
+## MANUAL TESTING
+| Test| Goal | Result |
+| :--- | :--- | :--- |
+| paleorecipe logo renders across all possible device | with the font not changing | Pass |
+| Responsiveness | Paleo Recipe app to be responsivess across all device | Pass |
+| Flash Messages | Messages to successfully display and provide  users option to close the message | Pass |
+| User search for recipe if == 0 | Provide Users feedback about their search query by adding if statement on search route function | Pass |
+| Choose Category from dropdown | Categories should be available to choose from | Pass |
+| Main Navlinks | Navlinks to work and not hiding a 500 internal server error | Pass |
+| Profile Page User Dashboard secondary navlinks | Links work as expected, no broken link | Pass |
+| Category ID | From Postgres, this gets stored in MongoDB as category_id for every recipe added | Pass |
+| Associated Recipes | These get deleted when a category relevant to them is deleted by superadmin | Pass |
+| Scroll to Top button | Works as expected without causing conflict with Jinja templating and or JavaScript | Pass |
+| Modal is semantically correct | All HTML Validation to Pass and modal works with out causing a 500 Internal Server Error | Pass |
+
+
 ## Validation Results
 ### HTML: W3C Markup Validator Test Results
 * ![INSERT SCREENSHOT Home page](/documentation/validation/nu-html-index.webp)
@@ -59,7 +76,6 @@
 * Register/ create a user account
     * ![INSERT SCREENSHOT other page](/documentation/user-stories/user-story-3.png)
      * On the register page, the first visitor is able to register and create an account with Paleo Recipes
-
 
 ### Registered User Goals - As a registered user, I want to be able to:
 * Add, edit, retrieve and delete my own Paleo recipe(s)

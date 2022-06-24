@@ -122,7 +122,7 @@ Based on the results of the Feature Ideas Planning, I have decided to attempt to
 * Clean and themed presentation of recipe details
 * Intuitive App navigation
 * Fresh-looking, appetising and themed use of images across the App
-* Use off Defensive Programming to Safeguard Logged In Users (Members and Superadmin) about any unintended result of their actions
+* Use of Defensive Programming to Safeguard Logged In Users (Members and Superadmin) about any unintended result of their actions
 
 ## Structure
 ### Topology Diagrams
@@ -152,13 +152,17 @@ The non-highlighted elements in these diagrams will return the user to the same 
 To view the wireframe created for this project, [click here]().
 
 ### Design
-[FINALISE: Bootstrap5]() was used and customised for the front-end development.
+[Bootstrap5](https://getbootstrap.com/docs/5.0/getting-started/introduction/) was used and customised for the front-end development.
 
 #### Colour Scheme
 ![COLOURS](/documentation/user-stories/colours.webp)
 
 #### Typography
-![COLOURS]()
+
+I used Google Fonts to import the fonts I used across the application.
+
+![DANCING SCRIPT](/documentation/user-stories/dancing-script.png)
+![POPPINS](/documentation/user-stories/poppins.png)
 
 #### Imagery
 [INSERT HERE]()

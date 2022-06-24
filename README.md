@@ -145,12 +145,8 @@ The add, edit and delete elements are only available to logged in users. The del
 #### Superadmin User
 - ![SUPERADMIN'S PERMISSION AND ACCESS ACROSS THE PALEO RECIPES APP](/documentation/user-stories/superadmin-user.png)
 
-#### Jinja Template Structure and Relationships
-- [INSERT DIAGRAM]()
-
 ### Database Schema and Structure
 - ![COMBINED RELATIONAL(POSTGRES) AND NONRELATIONAL (MONGO )DATABASES SCHEMA](/documentation/testing/combined-postgres-mongo-db.png)
-
 
 ## Skeleton
 ### Wireframes
@@ -179,7 +175,7 @@ I used Google Fonts to import the fonts I used across the application.
 ![DANCING SCRIPT](/documentation/user-stories/dancing-script.png)
 ![POPPINS](/documentation/user-stories/poppins.png)
 
-#### Imagery
+#### Imagery & UI
 ![INSERT HERE](/documentation/user-stories/veggie.png)
 The colour scheme and typography used for the Paleo Recipes App was inspired by Rui Sousa's veggie portfolio project found on [Behance](https://www.behance.net/gallery/138692061/Veggie-Branding-%28Personal-Project%29).
 
@@ -196,13 +192,24 @@ Breakdown of the features and elements implemented for the App.
 #### /recipes
 #### /search
 
-### CRUD TABLE
+### **CRUD TABLE**
+This shows what CRUD functionality is available from each page
 | Page | Create | Read | Update | Delete |
 | --- | --- | --- | --- | --- |
-| home | | | | |
-| recipes | | | | |
+| home |  | read intro about the app |  |  |
+| recipes |  | search for recipes | edit and update recipe (requires log in & only if owner of the recipe) | delete recipe (requires log in) & only if owner of the recipe |
+| add_recipe | choose a category, create a new recipe, upload an image |  |  |  |
+| about |  | about what is Paleo diet |  |  |
+| register | user profile |  |  |  |
+| login |  | username for password check |   |  |  |
+| edit_recipe |  | all information incl with recipe and image | all information incl with the recipe & image |  |
+| categories, requires log in and user is superadmin | categories | all available categories | all available categories | all available categories plus all recipes associated with the deleted category |
+| profile |  | user dashboard, custom information for registered users |  |  |  |
+
 
 ### Defensive Programming
+
+### Error Handling
 
 # Technologies Used
 * Languages:

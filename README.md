@@ -184,13 +184,39 @@ Breakdown of the features and elements implemented for the App.
 ### Multi Page Elements
 #### Navbar
 - Logo
-- Home
+- Recipes
 - About
+- Register
+- Login
 
 #### Footer
-#### /home
-#### /recipes
-#### /search
+- Brief reminder of what's possible do to across the Paleo Recipes application
+- Links to different pages
+
+#### Home/ Index Page
+- Link to finding recipes
+- Link to creating an account
+
+#### Recipes
+- Search for recipes
+- Manage own recipes
+
+#### Add Recipes
+- Choose category
+- Input required information about the new recipe
+- Upload an image for the recipe using the Public API Key made available to logged in user viewing the add_recipe page
+
+#### Categories (Superadmin Only)
+- Add a new category
+- Edit/ Update a category
+- Delete a category and all associated recipes
+
+#### User and Superadmin Dashboard
+- Custom message, depending on if user or if superadmin
+- Responsive sidebar for users to access links to search recipes, add recipe and log out
+- Username prominently displayed on top left hand side of sidebar (for desktops)
+- Sidebar dynamically moves below navbar on small and medium device
+
 
 ### **CRUD TABLE**
 This shows what CRUD functionality is available from each page

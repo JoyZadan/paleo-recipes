@@ -1,11 +1,11 @@
 # Paleo Recipes Testing Documentation
 
-
+![amiresponsive mock-ups of Paleo Recipes App](documentation/testing/paleo-recipes.png)
 
 ## Validation Results
 ### HTML: W3C Markup Validator Test Results
 * ![INSERT SCREENSHOT Home page](/documentation/validation/nu-html-index.webp)
-* ![INSERT SCREENSHOT other page](/documentation/validation/paleo-recipes.webp)
+* ![INSERT SCREENSHOT other page](/documentation/validation/nu-html-recipes.webp)
 * ![INSERT SCREENSHOT other page](/documentation/validation/nu-html-add-recipe.webp)
 * ![INSERT SCREENSHOT other page](/documentation/validation/nu-html-categories.webp)
 * ![INSERT SCREENSHOT other page](/documentation/validation/nu-html-register.webp)
@@ -18,7 +18,7 @@
 ### JavaScript: JSHint Linting Results
 * ![INSERT SCREENSHOT scroll.js](/documentation/validation/jshint-validation.webp)
 ### Python: PEP8 online Test Results
-* [INSERT SCREENSHOT](/documentation/testing/pep8online.png)
+* ![INSERT SCREENSHOT](/documentation/testing/pep8online.png)
 ### Lighthouse Test Results
 * ![INSERT SCREENSHOT Home page](/documentation/testing/lighthouse-desktop-top.webp)
 * ![INSERT SCREENSHOT other page](/documentation/testing/lighthouse-recipes.webp)

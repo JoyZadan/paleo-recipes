@@ -53,7 +53,7 @@ Table of Contents - Click to Expand
 ## Strategy
 ### Project Goals
 * To develop an App where users can easily find Paleo recipes.
-* Gues users will be able to view and find recipes, even without having their own account.
+* Guest users will be able to view and find recipes, even without having their own account.
 * Registered users will also be able to share and manage their own Paleo recipes.
 * Use Mobile First design principle in building a responsive App
 * Present the available information in a user friendly way
@@ -122,7 +122,9 @@ Based on the results of the Feature Ideas Planning, I have decided to attempt to
 * Clean and themed presentation of recipe details
 * Intuitive App navigation
 * Fresh-looking, appetising and themed use of images across the App
+* Full CRUD functionality
 * Use of Defensive Programming to Safeguard Logged In Users (Members and Superadmin) about any unintended result of their actions
+* Robust error handling provide information as well as a much better user experience for any user who may encounter errors when using the Application
 
 ## Structure
 ### Topology Diagrams

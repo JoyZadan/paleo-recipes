@@ -137,7 +137,7 @@ The grey elements in these diagrams will return the user to the same page or to 
 - ![GUEST USER JOURNEY ACROSS THE PALEO RECIPES APP](/documentation/user-stories/guest-user.png)
 
 #### Registered User
-- ![REGISTERED USER'S JOURNEY ACROSS THE PALEO RECIPES APP](/documentation/user-stories/guest-user.png)
+- ![REGISTERED USER'S JOURNEY ACROSS THE PALEO RECIPES APP](/documentation/user-stories/registered-user.png)
 
 #### Superadmin User
 - ![SUPERADMIN'S PERMISSION AND ACCESS ACROSS THE PALEO RECIPES APP](/documentation/user-stories/superadmin-user.png)

@@ -10,7 +10,7 @@
 * [INSERT SCREENSHOT other page](/documentation/validation/nu-html-categories.webp)
 * [INSERT SCREENSHOT other page](/documentation/validation/nu-html-register.webp)
 * [INSERT SCREENSHOT other page](/documentation/validation//nu-html-login.webp)
-* [INSERT SCREENSHOT other page](/documentation/validation/nu-html-profile.webp)
+* [INSERT SCREENSHOT other page](/documentation/validation/nu-html-about.webp)
 * [INSERT SCREENSHOT other page](/documentation/validation/nu-html-profile.webp)
 ### CSS: W3C CSS Validator Test Results
 * [INSERT SCREENSHOT Results](/documentation/validation/css-validation.webp)

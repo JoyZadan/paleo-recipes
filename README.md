@@ -137,10 +137,10 @@ The grey elements in these diagrams will return the user to the same page or to 
 - ![GUEST USER JOURNEY ACROSS THE PALEO RECIPES APP](/documentation/user-stories/guest-user.png)
 
 #### Registered User
-- [INSERT DIAGRAM]()
+- ![REGISTERED USER'S JOURNEY ACROSS THE PALEO RECIPES APP](/documentation/user-stories/guest-user.png)
 
 #### Superadmin User
-- [INSERT DIAGRAM]()
+- [SUPERADMIN'S PERMISSION AND ACCESS ACROSS THE PALEO RECIPES APP](/documentation/user-stories/superadmin-user.png)
 
 #### Jinja Template Structure and Relationships
 - [INSERT DIAGRAM]()

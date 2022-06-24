@@ -221,7 +221,6 @@ a {
 
 .add-recipe-container,
 .edit-recipe-container,
-.blog-container,
 .error-container {
     display: flex;
     flex-direction: column;

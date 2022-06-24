@@ -30,12 +30,6 @@ def about():
     return render_template("about.html")
 
 
-@app.route("/blog")
-def blog():
-    """ Renders Blog page"""
-    return render_template("blog.html")
-
-
 def login_required(f):
     """
         Ensures page is only accessible to logged in users
@@ -302,7 +296,6 @@ def register():
             "user_id": str(new_user.id),
             "fave_recipes": [],
             "my_recipes": [],
-            "my_blog": []
         }
 
         mongo.db.users.insert_one(user_profile)

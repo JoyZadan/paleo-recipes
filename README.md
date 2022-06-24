@@ -162,6 +162,13 @@ The wireframes created for this project:
 - [DESKTOP - EDIT RECIPE PAGE](/documentation/wireframes/edit%20-recipe.png)
 - [DESKTOP - EDIT CATEGORY PAGE](/documentation/wireframes/edit-category.png)
 
+- [TABLET - INDEX PAGE](/documentation/wireframes/tablet-index.png)
+- [TABLET - RECIPES PAGE](/documentation/wireframes/tablet-recipes.png)
+
+- [MOBILE - INDEX PAGE](/documentation/wireframes/mobile-index.png)
+- [MOBILE - RECIPES PAGE](/documentation/wireframes/mobile-recipes.png)
+
+
 ### Design
 [Bootstrap5](https://getbootstrap.com/docs/5.0/getting-started/introduction/) was used and customised for the front-end development.
 

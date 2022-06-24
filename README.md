@@ -138,8 +138,7 @@ The non-highlighted elements in these diagrams will return the use to the same p
 - [INSERT DIAGRAM]()
 
 ### Database Schema and Structure
-- [INSERT SCHEMA FOR RELATIONAL DB]()
-- [INSERT DB STRUCTURE FOR MONGODB]()
+- [COMBINED RELATIONAL(POSTGRES) AND NONRELATIONAL (MONGO )DATABASES SCHEMA](/documentation/testing/combined-postgres-mongo-db.png)
 
 
 ## Skeleton
@@ -150,7 +149,7 @@ To view the wireframe created for this project, [click here]().
 [FINALISE: Bootstrap5 | Materialize]() was used and customised for the front-end development.
 
 #### Colour Scheme
-![INSERT HERE](../paleo-recipes/paleorecipes/static/images/colours.webp)
+![COLOURS](/doentcumation/user-stories/colours.webp)
 
 #### Typography
 ![COLOURS]()

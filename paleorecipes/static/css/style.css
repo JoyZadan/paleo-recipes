@@ -146,7 +146,7 @@ a {
 .btn-alt{
     border-radius: 10px;
     background-color: var(--buttons-color-secondary);
-    color: var(--custom-color-white);
+    color: var(--custom-color-tertiary);
     margin: 1rem;
     text-shadow: var(--text-shadow);
 }

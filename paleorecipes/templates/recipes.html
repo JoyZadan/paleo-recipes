@@ -15,7 +15,7 @@
                             <div class="d-flex form-inputs input-field">
                                 <input class="validate form-control" type="text" name="query" id="query" minlength="3" required
                                     placeholder="Search for delicious & healthy recipes...">
-                                <label for="query" class="white-text"></label>
+                                <label for="query" class="white-text">Search</label>
                             </div>
                             <div class="card-body text-center">
                                 <a href="{{ url_for('recipes') }}" class="btn btn-solid">Reset</a>
@@ -39,13 +39,13 @@
                     <div class="card-body">
                         <div class="list-group small">
                             <ul class="list-group list-group-horizontal-md">
-                                <li class="list-group-item mx-1 bg-light rounded text-muted">
+                                <li class="list-group-item mx-1 bg-light rounded">
                                     <i class="bi bi-hourglass-split"></i> Prep: {{ recipe.prep_time }} mins
                                 </li>
-                                <li class="list-group-item mx-1 bg-light rounded text-muted">
+                                <li class="list-group-item mx-1 bg-light rounded">
                                     <i class="bi-clock"></i> Cook: {{ recipe.cook_time }} mins
                                 </li>
-                                <li class="list-group-item mx-1 bg-light rounded text-muted">
+                                <li class="list-group-item mx-1 bg-light rounded">
                                     <i class="bi bi-people-fill"></i> Serves: {{ recipe.servings }}
                                 </li>
                             </ul>

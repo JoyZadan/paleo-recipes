@@ -39,8 +39,14 @@
 * ![INSERT SCREENSHOT other page](/documentation/validation/search-recipes-web-accessibility-summary.png)
 
 ## Responsive Design Testing
-* [INSERT SCREENSHOT Home page]()
-* [INSERT SCREENSHOT other page]()
+* ![INSERT SCREENSHOT Home page](/documentation/testing/responsiveness-1.png)
+* ![INSERT SCREENSHOT other page](/documentation/testing/responsiveness-2.png)
+* ![INSERT SCREENSHOT other page](/documentation/testing/responsiveness-3.png)
+* ![INSERT SCREENSHOT other page](/documentation/testing/responsiveness-4.png)
+* ![INSERT SCREENSHOT other page](/documentation/testing/responsiveness-5.png)
+* ![INSERT SCREENSHOT other page](/documentation/testing/responsiveness-6.png)
+* ![INSERT SCREENSHOT other page](/documentation/testing/responsiveness-7.png)
+* ![INSERT SCREENSHOT other page](/documentation/testing/responsiveness-8.png)
 
 ## Testing User Stories from UX Development Section
 ### First Time Visitor Goals - As a first time user who has not created an account, I want to be able to:

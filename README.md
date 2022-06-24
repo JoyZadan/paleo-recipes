@@ -387,7 +387,7 @@ A special mention to my MS3 cohorts, glad to have you guys around! Kera, Nazia, 
 
 
 # Copyrights
-
+&copy; 2022 Paleo Recipes App by Joy Zadan (a combined Postgres & MongoDB Full Stack Developer Project)
 
 
 

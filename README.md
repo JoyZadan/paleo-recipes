@@ -129,9 +129,12 @@ Based on the results of the Feature Ideas Planning, I have decided to attempt to
 ## Structure
 ### Topology Diagrams
 The green elements in these diagrams illustrate the pages that are always accessible from the Navbar for all visitors.
-The grey elements in these diagrams will return the user to the same page or to the home page. Add, edit and delete elements are only available to logged in users. The delete functions will return to:
-- [INSERT]
-- [INSERT]
+The grey elements in these diagrams are the pages not accessible to a particular user.
+The view recipes function is available to all visitors.
+The search recipes function is available all visitors.
+The add, edit and delete elements are only available to logged in users. The delete functions will return to:
+ - A REGISTERED USER DELETING A HIS OR HER OWN RECIPE WILL RETURN TO THE RECIPES PAGE
+ - A SUPERADMIN DELETING A CATEGORY WILL DELETE ALL RECIPES ASSOCIATE WITH THE DELETED CATEGORY AND WILL RETURN TO THE CATEGORIES PAGE
 
 #### Guest User
 - ![GUEST USER JOURNEY ACROSS THE PALEO RECIPES APP](/documentation/user-stories/guest-user.png)
@@ -151,7 +154,13 @@ The grey elements in these diagrams will return the user to the same page or to 
 
 ## Skeleton
 ### Wireframes
-To view the wireframe created for this project, [click here]().
+The wireframes created for this project:
+- [DESKTOP - INDEX PAGE](/documentation/wireframes/desktop-homepage.png)
+- [DESKTOP - RECIPES PAGE](/documentation/wireframes/desktop-recipes.png)
+- [DESKTOP - CATEGORIES PAGE](/documentation/wireframes/categories.png)
+- [DESKTOP - ADD RECIPE PAGE](/documentation/wireframes/add-recipe.png)
+- [DESKTOP - EDIT RECIPE PAGE](/documentation/wireframes/edit%20-recipe.png)
+- [DESKTOP - EDIT CATEGORY PAGE](/documentation/wireframes/edit-category.png)
 
 ### Design
 [Bootstrap5](https://getbootstrap.com/docs/5.0/getting-started/introduction/) was used and customised for the front-end development.

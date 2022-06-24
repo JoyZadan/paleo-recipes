@@ -9,10 +9,6 @@
             <p class="paleo-font text-white h5">
                 Why is it so popular?
             </p>
-            <h2>
-                Here at Paleo Recipe, we hope you'll find benefits in having access to varied paleo meal plans and enjoy
-                sharing your own favourite recipes too!
-            </h2>
         </div>
         <div class="bg-transparent mt-3">
             <form action="{{ url_for('search_recipes') }}" method="POST">
@@ -33,6 +29,14 @@
                 </div>
             </form>
         </div>
+
+        <div class="text-center my-5 mx-5 mb-4">
+            <h2>
+                Here at <span class="text-center display-4 mt-5">Paleo Recipes</span>, we hope you'll find benefits in having access to varied paleo meal plans and enjoy
+                sharing your own favourite recipes too!
+            </h2>
+        </div>
+
         <div class="text-center my-5 mx-5 mb-4">
             <h2 class="text-white mb-4">Is the Paleo diet, an eating plan modeled on prehistoric human diets, right for modern humans?</h2>
             <p class="text-white">
@@ -59,14 +63,14 @@
                 <li class="text-white">Want help planning meals</li>
             </ul>
         </div>
-        <div>
+        <div class="text-center my-5 mx-5 mb-4">
             <h2 class="text-white display-font mb-4">Details of a paleo diet</h2>
             <p class="text-white">
                 Recommendations vary among commercial paleo diets, and some diet plans have
                 stricter guidelines than others. In general, paleo diets follow these guidelines.
             </p>
         </div>
-        <div>
+        <div class="text-center my-5 mx-5 mb-4">
             <h2 class="text-white display-font mb-4">What to eat</h2>
             <ul>
                 <li class="text-white">Fruits</li>
@@ -77,7 +81,7 @@
                 <li class="text-white">Oils from fruits and nuts, such as olive oil or walnut oil</li>
             </ul>
         </div>
-        <div>
+        <div class="text-center my-5 mx-5 mb-4">
             <h2 class="text-white display-font mb-4">What to avoid</h2>
             <ul>
                 <li class="text-white">Grains, such as wheat, oats and barley</li>
@@ -89,8 +93,10 @@
                 <li class="text-white">Highly processed foods in general</li>
             </ul>
         </div>
-        <p>Source: The Mayo Clinic, Nutrition and Healthy Eating</p>
+        <div class="text-center my-5 mx-5 mb-4">
+        <p class="h3 display-font">Source: The Mayo Clinic, Nutrition and Healthy Eating</p>
         <a href="https://www.mayoclinic.org/healthy-lifestyle/nutrition-and-healthy-eating/in-depth/paleo-diet/art-20111182" target="_blank"></a>
+        </div>
     </div>
 
 {% endblock %}

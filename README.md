@@ -138,7 +138,7 @@ The non-highlighted elements in these diagrams will return the use to the same p
 - [INSERT DIAGRAM]()
 
 ### Database Schema and Structure
-- [COMBINED RELATIONAL(POSTGRES) AND NONRELATIONAL (MONGO )DATABASES SCHEMA](/documentation/testing/combined-postgres-mongo-db.png)
+- ![COMBINED RELATIONAL(POSTGRES) AND NONRELATIONAL (MONGO )DATABASES SCHEMA](/documentation/testing/combined-postgres-mongo-db.png)
 
 
 ## Skeleton
@@ -146,10 +146,10 @@ The non-highlighted elements in these diagrams will return the use to the same p
 To view the wireframe created for this project, [click here]().
 
 ### Design
-[FINALISE: Bootstrap5 | Materialize]() was used and customised for the front-end development.
+[FINALISE: Bootstrap5]() was used and customised for the front-end development.
 
 #### Colour Scheme
-![COLOURS](/doentcumation/user-stories/colours.webp)
+![COLOURS](/documentation/user-stories/colours.webp)
 
 #### Typography
 ![COLOURS]()

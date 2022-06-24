@@ -31,7 +31,7 @@
 * ![INSERT SCREENSHOT other page](/documentation/testing/lighthouse-recipes.webp)
 ### a11y Color Contrast Accessibility for the Visually Impaired Test Results
 * ![INSERT SCREENSHOT Home page](/documentation/testing/a11y-color-contrast-index.png)
-* [INSERT SCREENSHOT other page](/documentation/testing/a11y-color-contrast-recipes.png)
+* ![INSERT SCREENSHOT other page](/documentation/testing/a11y-color-contrast-recipes.png)
 ### WAVE Web Accessibility Evaluation Tool
 * ![INSERT SCREENSHOT Home page](/documentation/validation/homepage-web-accessibility-test-summary.png)
 * ![INSERT SCREENSHOT other page](/documentation/validation/homepage-web-accessibility-test.png)

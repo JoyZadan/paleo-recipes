@@ -83,9 +83,6 @@
                                 <li><a class="dropdown-item" href="{{ url_for('login') }}">Login</a></li>
                             </ul>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Feedback</a>
-                        </li>
                         {% if session.user %}
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ url_for('profile', username=session['user']) }}">Profile</a>

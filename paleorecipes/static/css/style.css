@@ -65,6 +65,10 @@ a {
     text-decoration: none;
 }
 
+.list {
+    list-style-type: none;
+}
+
 .paleo-font {
     font-family: var(--ff-primary);
     text-shadow: var(--text-shadow);

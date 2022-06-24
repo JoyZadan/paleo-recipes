@@ -80,6 +80,12 @@ a {
     text-shadow: var(--text-shadow);
 }
 
+.alt-display-font {
+    font-family: var(--custom-color-secondary);
+    color: var(--custom-color-display);
+    text-shadow: var(--text-shadow);
+}
+
 .primary-font {
     font-family: var(--ff-primary);
     color: var(--custom-color-primary);

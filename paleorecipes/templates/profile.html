@@ -66,18 +66,21 @@
             {% endif %}
 
             <!-- TESTING USER DASHBOARD UI -->
-            <div class="header-bg">
-                <h3 class="text-center mx-auto subtitle">All the information you need to find your way around the App</h3>
-                <button id="btnScrollUp" title="Go to top"><i class="bi bi-arrow-up-circle-fill"></i> Top</button>
-            </div>
+            {% if session.user %}
+                {% if session.user|lower != 'superadmin' %}
+                <div class="header-bg">
+                    <h3 class="text-center mx-auto subtitle">All the information you need to find your way around the App</h3>
+                    <button id="btnScrollUp" title="Go to top"><i class="bi bi-arrow-up-circle-fill"></i> Top</button>
+                </div>
 
-            <div class="dashboard-container text-center">
-                <p class="h5 mt-2 col-md-8 text-center">
-                    Here on your dashboard, you will have access to your activities (recipes you have shared) and any other info
-                    you may need to manage your files, such as our logged in members' Public API Key.
-                </p>
-            </div>
-
+                <div class="dashboard-container text-center">
+                    <p class="h5 mt-2 col-md-8 text-center">
+                        Here on your dashboard, you will have access to your activities (recipes you have shared) and any other info
+                        you may need to manage your files, such as our logged in members' Public API Key.
+                    </p>
+                </div>
+                {% endif %}
+            {% endif %}
             <!-- ATTEMPTING TO LOAD THE RECIPES UPLOAD BY THE USER -->
             <!-- {% if recipe_list %} -->
                 <div class="ms-5">

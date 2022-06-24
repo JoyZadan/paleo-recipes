@@ -21,14 +21,13 @@
                         <!-- Recipes dropdown -->
                         <li class="dropdown">
                             <a href="#" class="nav-link dropdown-toggle px-sm-0 px-1" id="dropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                                <i class="fs-5 bi-card-checklist"></i>
+                                <img src="{{ url_for('static', filename='images/logo-icon.webp') }}" class="logo-icon"
+                                    alt="Paleo Recipes logo icon">
                                 <span class="ms-1 d-none d-sm-inline">Recipes</span>
                             </a>
                             <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdown">
                                 <li><a class="dropdown-item" href="{{ url_for('recipes') }}">Search Recipes</a></li>
                                 <li><a class="dropdown-item" href="{{ url_for('add_recipe') }}">Add Recipes</a></li>
-                                <li><a class="dropdown-item" href="#">Update Recipes</a></li>
-                                <li><a class="dropdown-item" href="#">Delete Recipes</a></li>
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>

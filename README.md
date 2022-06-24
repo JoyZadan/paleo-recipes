@@ -304,7 +304,6 @@ This shows what CRUD functionality is available from each page
 | 6 | Creating an index on mongodb via the CLI returned an error of "no module app found". Attempting to create said index using the create index form on mongo also resulted in "Index Build Failed. Error provided: Unknown error." | My solution: was to used the name of our app (paleorecipes) in place of "app"|
 
 
-
 # Deployment & Local Development
 ## Deployment to Heroku
 ## Local Development

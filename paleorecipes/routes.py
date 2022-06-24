@@ -378,11 +378,14 @@ def profile():
 # HANDLE ERRORS
 # inspired by:
 # https://www.digitalocean.com/community/tutorials/how-to-handle-errors-in-a-flask-application
-# also from: https://flask.palletsprojects.com/en/2.1.x/errorhandling/
-# and from: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status#client_error_responses
+# https://flask.palletsprojects.com/en/2.1.x/errorhandling/
+# https://developer.mozilla.org/en-US/docs/Web/HTTP/Status#client_error_responses
 @app.errorhandler(400)
 def handle_bad_request(e):
-    """ handles a 400 Bad Request error and returns an error message to the user """
+    """
+        handles a 400 Bad Request error
+        and returns an error message to the user
+    """
     message = "A Bad Request was made"
     return render_template("error.html", error_status=e, message=message), 400
 

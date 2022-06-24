@@ -317,9 +317,48 @@ The following error handlers were added to the Application to handle possible sc
 
 
 # Deployment & Local Development
+
 ## Deployment to Heroku
+To deploy this project, I used Heroku.
+The deployed version is the same as in the repository.
+These are the steps used for deployment to Heroku:
+1. In GitPod CLI, the the root directoy of the project, run:
+    pip3 free --local > requirements.txt
+    to create a requirements.txt file containing project dependencies.
+2. In the Gitpod project workspace root directory, create a new file called Procfile, with capital 'P'.
+    Open the Procfile. Inside the file, check that web: python3 app.py has been added when creating the file
+    Save the file.
+3.  Login to Heroku, select Create new app, add the desired name for your app, make sure not to have any spaes, choose your closest region.
+4. Navigate to the Deploy tab on Heroku dashboard and select Github, search for your repository and click 'connect'.
+5. Navigate to the settings tab, click reveal config vars and input the the following:
+
+| Key | Value |
+| :--- | :--- |
+| CLOUD_NAME | mycloudinaryname  |
+| API_KEY | myapikey |
+| API_SECRET | myapisecret |
+| IP | 0.0.0.0 |
+| MONGO_DBNAME | mongoname |
+| MONGO_URI |  | mongodb+srv://root:<myrootpassword>@cluster0.sgi7e.mongodb.net/<mydatabasename>?retryWrites=true&w=majority |
+| PORT | 5000 |
+| SECRET_KEY | mysecretkey |
+| DATABASE_URL | postgresl URL  |
+
+6. Go back to the Deploy tab and select enable automatic deploys
+7. Click deploy branch
+8. Click Open app once the build is complete
+
 ## Local Development
+* How to Fork To fork the repository, use the following steps:
+Login or signup to Github and locate the repository.
+Click the Fork button in the top right corner
 ## Making Local Clone
+Login or signup to GitHub and locate the GitHub Repository GitHub Repository.
+Under the repository name, click "clone" or "download".
+To clone the repository using HTTPS, under "Clone with HTTPS", copy the link.
+Open the terminal in your preferred code editor and change the current working directory to the location you want to use for the cloned directory.
+Type git clone, and then paste the URL you copied in Step 3.
+Press Enter. Your clone will be created.
 
 # Credits
 ## Code

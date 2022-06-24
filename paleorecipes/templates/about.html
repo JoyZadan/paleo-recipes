@@ -1,112 +1,84 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <!-- <div class="min-vh-100 bg-dark recipe-bg"> -->
-        <!-- SEARCH FOR RECIPES and TIPS AREA -->
-        <!-- <div class="recipe-container mx-auto">
-            <h1 class="text-center display-3 mt-5">What is the Paleo Diet?</h1>
-            <p class="paleo-font text-white h5">
-                Why is it so popular?
-            </p>
-        </div>
-        <div class="bg-transparent mt-3">
-            <form action="{{ url_for('search_recipes') }}" method="POST">
-                <div class="container-fluid">
-                    <div class="row p-2 pt-3 d-flex align-items-center">
-                        <div class="col-md-8 mx-auto">
-                            <div class="d-flex form-inputs input-field">
-                                <input class="validate form-control" type="text" name="query" id="query" minlength="3" required
-                                    aria-label="Search" placeholder="Search for delicious & healthy recipes...">
-                                <label for="query" class="white-text visuallyhidden">Search</label>
-                            </div>
-                            <div class="card-body text-center">
-                                <a href="{{ url_for('recipes') }}" class="btn btn-solid">Reset</a>
-                                <button class="btn btn-alt text-center mx-2" type="submit">Search</button>
-                            </div>
-                        </div>
+    <!-- ABOUT PALEO DIET CONTENT AREA -->
+    <div class="container-fluid bg-dark">
+        <div class="card">
+            <div class="card col-12">
+                <img src="{{ url_for('static', filename='images/about-paleo-img.webp') }}" class="h-50" alt="paleo diet">
+                <div class="card-body">
+                    <h1 class="text-center text-dark mt-2">What is the Paleo Diet?</h1>
+                    <p class=" text-center mt-3 h4 mb-3">Why is it so popular?</p>
+                    <div class="max-vw-80">
+                        <h2 class="h4 mt-4">Is the Paleo diet, an eating plan modeled on prehistoric human diets,
+                            right for modern humans?</h2>
+                        <p class="mt-2">
+                            A paleo diet is a dietary plan based on foods similar to what might have been eaten during
+                            the
+                            Paleolithic era,
+                            which dates from approximately 2.5 million to 10,000 years ago.
+                        </p>
+                        <p>
+                            A paleo diet typically includes lean meats, fish, fruits, vegetables, nuts and seeds — foods
+                            that in the past could be
+                            obtained by hunting and gathering. A paleo diet limits foods that became common when farming
+                            emerged about 10,000 years ago.
+                            These foods include dairy products, legumes and grains.
+                        </p>
+                        <p>
+                            Other names for a paleo diet include Paleolithic diet, Stone Age diet, hunter-gatherer diet
+                            and
+                            caveman diet.
+                        </p>
+                    </div>
+                    <div>
+                        <h3>Why you might follow a paleo diet</h3>
+                        <p>
+                            You might choose to follow a paleo diet because you:
+                        </p>
+                        <ul>
+                            <li class="list">Want to lose weight or maintain a healthy weight</li>
+                            <li class="list">Want help planning meals</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Details of a paleo diet</h3>
+                        <p>
+                            Recommendations vary among commercial paleo diets, and some diet plans have
+                            stricter guidelines than others. In general, paleo diets follow these guidelines.
+                        </p>
+                    </div>
+                    <div>
+                        <h3>What to eat</h3>
+                        <ul>
+                            <li class="list">Fruits</li>
+                            <li class="list">Vegetable</li>
+                            <li class="list">Nuts and seeds</li>
+                            <li class="list">Lean meats, especially grass-fed animals or wild game</li>
+                            <li class="list">Fish, especially those rich in omega-3 fatty acids, such as
+                                salmon, mackerel and albacore tuna</li>
+                            <li class="list">Oils from fruits and nuts, such as olive oil or walnut oil</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>What to avoid</h3>
+                        <ul>
+                            <li class="list">Grains, such as wheat, oats and barley</li>
+                            <li class="list">Legumes, such as beans, lentils, peanuts and peas</li>
+                            <li class="list">Dairy products</li>
+                            <li class="list">Refined sugar</li>
+                            <li class="list">Salt</li>
+                            <li class="list">Potatoes</li>
+                            <li class="list">Highly processed foods in general</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p class="h4">Source: The Mayo Clinic</p>
                     </div>
                 </div>
-            </form>
-        </div> -->
 
-        <!-- ABOUT PALEO DIET CONTENT AREA -->
-        <div class="container-fluid bg-dark">
-            <div class="card">
-                <div class="card col-12">
-                    <img src="{{ url_for('static', filename='images/about-paleo-img.webp') }}" class="h-50" alt="paleo diet">
-                    <div class="card-body">
-                        <h1 class="text-center text-dark mt-2">What is the Paleo Diet?</h1>
-                        <p class=" text-center mt-3 h4 mb-3">Why is it so popular?</p>
-                        <div class="max-vw-80">
-                            <h2 class="h4 mt-4">Is the Paleo diet, an eating plan modeled on prehistoric human diets,
-                                right for modern humans?</h2>
-                            <p class="mt-2">
-                                A paleo diet is a dietary plan based on foods similar to what might have been eaten during
-                                the
-                                Paleolithic era,
-                                which dates from approximately 2.5 million to 10,000 years ago.
-                            </p>
-                            <p>
-                                A paleo diet typically includes lean meats, fish, fruits, vegetables, nuts and seeds — foods
-                                that in the past could be
-                                obtained by hunting and gathering. A paleo diet limits foods that became common when farming
-                                emerged about 10,000 years ago.
-                                These foods include dairy products, legumes and grains.
-                            </p>
-                            <p>
-                                Other names for a paleo diet include Paleolithic diet, Stone Age diet, hunter-gatherer diet
-                                and
-                                caveman diet.
-                            </p>
-                        </div>
-                        <div>
-                            <h3>Why you might follow a paleo diet</h3>
-                            <p>
-                                You might choose to follow a paleo diet because you:
-                            </p>
-                            <ul>
-                                <li class="list">Want to lose weight or maintain a healthy weight</li>
-                                <li class="list">Want help planning meals</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h3>Details of a paleo diet</h3>
-                            <p>
-                                Recommendations vary among commercial paleo diets, and some diet plans have
-                                stricter guidelines than others. In general, paleo diets follow these guidelines.
-                            </p>
-                        </div>
-                        <div>
-                            <h3>What to eat</h3>
-                            <ul>
-                                <li class="list">Fruits</li>
-                                <li class="list">Vegetable</li>
-                                <li class="list">Nuts and seeds</li>
-                                <li class="list">Lean meats, especially grass-fed animals or wild game</li>
-                                <li class="list">Fish, especially those rich in omega-3 fatty acids, such as
-                                    salmon, mackerel and albacore tuna</li>
-                                <li class="list">Oils from fruits and nuts, such as olive oil or walnut oil</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h3>What to avoid</h3>
-                            <ul>
-                                <li class="list">Grains, such as wheat, oats and barley</li>
-                                <li class="list">Legumes, such as beans, lentils, peanuts and peas</li>
-                                <li class="list">Dairy products</li>
-                                <li class="list">Refined sugar</li>
-                                <li class="list">Salt</li>
-                                <li class="list">Potatoes</li>
-                                <li class="list">Highly processed foods in general</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <p class="h4">Source: The Mayo Clinic</p>
-                        </div>
-                    </div>
-
-                </div>
             </div>
-    <!-- </div> -->
+        </div>
+    </div>
 
 {% endblock %}

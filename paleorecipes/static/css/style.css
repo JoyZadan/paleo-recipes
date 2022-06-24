@@ -81,8 +81,8 @@ a {
 }
 
 .alt-display-font {
-    font-family: var(--custom-color-secondary);
-    color: var(--custom-color-display);
+    font-family: var(--ff-display);
+    color: var(--custom-color-secondary);
     text-shadow: var(--text-shadow);
 }
 

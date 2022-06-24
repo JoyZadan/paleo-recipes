@@ -1,7 +1,7 @@
 # **PALEO RECIPES**
 
 
-Paleo Recipes is a place for visitors to find recipes and delicious meal ideas. Users are able to register a free account, share and dish out *(no pun intended!)* their own paleo recipes for eating healthy.
+Paleo Recipes is a place for visitors to find recipes and delicious meal ideas. Users are able to register a free account, share, manage and dish out *(no pun intended!)* their own paleo recipes for eating healthy.
 
 ![amiresponsive mock-ups of Paleo Recipes App](documentation/testing/paleo-recipes.png)
 
@@ -24,9 +24,6 @@ Paleo Recipes is my third milestone project for **Code Institute's** Level 5 Dip
 It was an easy choice to decide on building this App as I have tried and enjoyed the paleo-eating lifestyle and know that I have enough background information to make the job of building a hybrid database application a little less daunting! Plus paleo dishes almost always look great in photos, though that may mean a few extra trips to the kitchen to raid the fridge!
 
 But what is the Paleo diet? According to the [Mayo Clinic](https://www.mayoclinic.org/healthy-lifestyle/nutrition-and-healthy-eating/in-depth/paleo-diet/art-20111182), *"a paleo diet is a dietary plan based on foods similar to what might have been eaten during the Paleolithic era, which dates from approximately 2.5 million to 10,000 years ago. A paleo diet typically includes lean meats, fish, fruits, vegetables, nuts and seeds — foods that in the past could be obtained by hunting and gathering. A paleo diet limits foods that became common when farming emerged about 10,000 years ago. These foods include dairy products, legumes and grains."*
-
-
-
 
 
 <details>
@@ -56,39 +53,42 @@ Table of Contents - Click to Expand
 ## Strategy
 ### Project Goals
 * To develop an App where users can easily find Paleo recipes.
+* Gues users will be able to view and find recipes, even without having their own account.
 * Registered users will also be able to share and manage their own Paleo recipes.
 * Use Mobile First design principle in building a responsive App
 * Present the available information in a user friendly way
 * Provide users the option to register and create an account.
-* Provide registered users access to a full CRUD functionality
+* Provide registered users (members) access to a full CRUD functionality
+* Provide registered users (superadmin) access to a full CRUD functionality
+* Provide registered users (members and superadmin) access to a custom user dashboard with read functionality.
 * Include defensive programming to enable users to make an informed decision when deleting recipes
 * Handle any errors to help the users understand the issue
-### Business Goals
-* Potentially include referral links to specialist sellers of Paleo-friendly ingredients
+
 ### User Demographic
 * Ages 16 and above for viewing, registering and contributing to recipes
 * Visitors who are interested in Paleo diet or who already follow the Paleo lifestyle
-* Visitors are keen to learn how to eat better and healthier
-* Registered users who want to an easy to way find Paleo recipes and meal plants
-* Registered users who want share their favourite recipes for others to also enjoy
+* Visitors who are looking for healthier dishes (paleo)
+* Registered users who want to an easy to way find Paleo recipes and meal plans
+* Registered users who want to share their favourite recipes for others to also enjoy
+
 ### User Stories
 #### First Time Visitor Goals - As a first time user who has not created an account, I want to be able to:
 * Immediately understand the main purpose and use of the application, Paleo Recipes, and how to use it
 * Search for specific recipes or view all recipes
 * Register/ create a user account
+
 #### Registered User Goals - As a registered user, I want to be able to:
 * Add, edit, retrieve and delete my own Paleo recipe(s)
 * Add my own Paleo recipe(s), based on Categories
 * Upload an image with my recipes
-
-* Edit my account information (further development plan)
-* Delete my account (further development plan)
+* Search and view specific recipes (if already available on the App)
+* Have my own member user dashboard (read functionality)
 
 #### Site Admin Goals - As an administrator, I want to be able to:
-* Have the ability to maintain the Paleo Recipe App and its content
-* Edit and delete any recipe
+* Have the ability to maintain the Paleo Recipe App, in particular the categories
+* Add, edit and delete my own recipes
 * Add, edit, retrieve and delete any recipe by category
-* Add, edit, retrieve and delete any reviews
+* Search and view specific recipes (if already available on the App)
 
 ## Scope
 ### Feature Ideas Planning

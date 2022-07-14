@@ -560,6 +560,14 @@ footer p {
     }
 }
 
+/* media query to ensure responsiveness on profile page sidebar */
+@media screen and (max-width: 42em) {
+    .logo-icon {
+        width: 2rem;
+        height: 2rem;
+    }
+}
+
 /* using flex to display available recipes in 1 column for medium to small screens */
 @media screen and (max-width: 48em) {
     .recipe-card-group {

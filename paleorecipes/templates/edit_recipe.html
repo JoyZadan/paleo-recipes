@@ -127,9 +127,22 @@
                                 </div>
                             </div>
                             <!-- upload image button for users -->
+                            <!-- <div class="col-md-8 mx-auto">
+                                <span>Upload Photo</span>
+                                <input type="file" accept="image/*" name="image_url" id="image_url">
+                            </div>
                             <div class="col-md-8 mx-auto">
-                                <label for="image_url" class="form-label mt-2">REQUIRED: Please upload image to edit recipe</label>
-                                <input class="form-control form-control-sm file-path" type="text" name="file_name" id="file_name" value="{{ recipe.image_url }}">
+                                <input class="file-path" type="text" name="file_name" id="file_name" value="{{ recipe.image_url }}" required>
+                            </div> -->
+                            <div class="col-md-8 mx-auto">
+                                <label for="image_url" class="form-label mt-2">REQUIRED: Upload Image for Recipe</label>
+                                <input class="form-control form-control-sm formFileSm" accept="image/*" name="image_url" id="image_url" type="file" aria-label="image">
+                            </div>
+                            <div class="mb-0 col-md-8 mx-auto">
+                                <label for="formFileSm" class="form-label mt-0">
+                                    Your Public API Key is available below
+                                </label>
+                                <input class="form-control form-control-sm" id="formFileSm" type="text" required>
                             </div>
                             <!-- submit button -->
                             <div class="row">
@@ -140,6 +153,14 @@
                                     <a href="{{ url_for('recipes') }}" class="btn btn-alt" data-bs-dismiss="modal" aria-label="Close">Cancel</a>
                                 </div>
                             </div>
+                            <!-- Public API Key shown if user is in session  -->
+                            {% if session.user %}
+                                <h2 class="text-center mt-2 mb-4 paleo-font profile-header">Logged In Member's Public API Key</h2>
+                                <h3 class="text-center mt-1 display-font profile-header">
+                                    Hi {{ session.user }}, here's your Public API Key: <span>957879244943999</span>
+                                </h3>
+                                <p>To upload an image with your recipe, please cut & paste this above.</p>
+                            {% endif %}
                         </div>
                     </div>
                 </form>

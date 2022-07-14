@@ -122,11 +122,9 @@ def edit_recipe(recipe_id):
 
     if request.method == "POST":
         request.form.get("recipe_name")
-        if request.form.get('file_name') != mongo.db.recipes.find_one(
-                {'_id': ObjectId(recipe_id)})['image_url']:
-            image = request.files["image_url"]
-            image_upload = cloudinary.uploader.upload(image,
-                                                      upload_preset="efjhsj")
+        image = request.files["image_url"]
+        image_upload = cloudinary.uploader.upload(image,
+                                                  upload_preset="efjhsj")
         submit = {
             "category_id": request.form.get("category_id"),
             "recipe_name": request.form.get("recipe_name"),

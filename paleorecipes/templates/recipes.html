@@ -76,7 +76,7 @@
                     <div class="card-body text-center">
                         {% if session.user|lower == recipe.created_by|lower or session.user|lower == 'superadmin' %}
                             <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="btn btn-solid border-0 px-3">Edit Recipe</a>
-                            <a href="#modal-{{ recipe._id }}" class="btn btn-delete text-center mx-5 text-center" type="button" data-bs-toggle="modal">Delete Recipe</a>
+                            <a href="#modal-{{ recipe._id }}" class="btn btn-delete text-center mx-5 text-center" data-bs-toggle="modal">Delete Recipe</a>
                         {% endif %}
                         </div>
 

@@ -64,70 +64,70 @@
                     </div> -->
                 </div>
             </div>
-        <!-- DASHBOARD - CONTENT AREA-->
-        <div class="col-sm min-vh-100 content-area">
-            {% if session.user %}
-                {% if session.user|lower != 'superadmin' %}
-                    <h1 class="text-center mt-5 mb-4 paleo-font profile-header">Paleo Recipes User Dashboard</h1>
-                    <h2 class="text-center mt-3 mb-5 display-font profile-header">Hi {{ session.user|capitalize }}, great to see you here!</h2>
-                {% endif %}
-                <!-- SUPERADMIN DASHBOARD -->
-                {% if session.user|lower == 'superadmin' %}
-                    <h1 class="text-center mt-5 mb-4 paleo-font profile-header">Admin Dashboard</h1>
-                    <h2 class="text-center mt-3 mb-5 display-font profile-header">Hi {{ session.user|capitalize }}!</h2>
-                    <div>
-                        <p class="text-center mt-3 mb-5 h2 profile-header">
-                            Let's soon build your own custom admin dashboard!
-                        </p>
-                    </div>
-                {% endif %}
-            {% endif %}
 
-            <!-- CUSTOM INFO FOR REGISTERED USERS/ MEMBERS -->
-            {% if session.user %}
-                {% if session.user|lower != 'superadmin' %}
-                <div class="header-bg">
-                    <h3 class="text-center mx-auto subtitle">All the information you need to find your way around the App</h3>
-                    <button id="btnScrollUp" title="Go to top"><i class="bi bi-arrow-up-circle-fill"></i> Top</button>
-                </div>
-
-                <div class="dashboard-container text-center">
-                    <p class="h5 mt-2 col-md-8 text-center">
-                        Here on your dashboard, you will have access to your activities (recipes you have shared) and any other info
-                        you may need to manage your files, such as our logged in members' Public API Key.
-                    </p>
-                </div>
-                <div>
-                    <h3 class="mt-4 alt-display-font">As a Paleo Recipes registered user, you will be able to:</h3>
-                    <ol>
-                        <li>View all the recipes added by ourselves and by all the registered users of the application</li>
-                        <li>All the recipes you post are set to public, meaning every visitor to the site will be able to view them as well</li>
-                        <li>You will be able to upload your recipe, including the image you want to go along with that particular recipe</li>
-                        <li>Uploading a image requires a Public API Key. For your convenience, this Public API Key is dynamically made available
-                            to you and to all our registered and logged in members, whenever they post a recipe. You will find this right below
-                            the blank space you need to paste the Public API Key into.
-                        </li>
-                        <li>You will also be able to edit your recipe, and this requires a re-upload of a image for the recipe you are editing</li>
-                        <li>You will also be able to delete any recipe you posted. Please be warned that this action cannot be undone
-                            and we will not be able to retrieve a record of the recipe you decide to delete.
-                        </li>
-                        <li>You will be able to search for other recipes via the search bar on the recipes page</li>
-                        <li>When uploading or editing a recipe, you will have access to the list of categories of recipes</li>
-                        <li>You can choose a category from this list.</li>
-                        <li>You will be able to edit which category to add with your own recipe. But you will not be able to delete any category.
-                            This action is only available to our superadmin users.
-                        </li>
-                        <li>Finally, one of our future development plans is to include a blog functionality to the App.
-                            You can however, already include some tips and insights about a particular recipe. Just add your tips inside the "Notes"
-                            section of the form.
-                        </li>
-                    </ol>
-                </div>
+            <!-- DASHBOARD - CONTENT AREA-->
+            <div class="col-sm min-vh-100 content-area">
+                {% if session.user %}
+                    {% if session.user|lower != 'superadmin' %}
+                        <h1 class="text-center mt-5 mb-4 paleo-font profile-header">Paleo Recipes User Dashboard</h1>
+                        <h2 class="text-center mt-3 mb-5 display-font profile-header">Hi {{ session.user|capitalize }}, great to see you here!</h2>
+                    {% endif %}
+                    <!-- SUPERADMIN DASHBOARD -->
+                    {% if session.user|lower == 'superadmin' %}
+                        <h1 class="text-center mt-5 mb-4 paleo-font profile-header">Admin Dashboard</h1>
+                        <h2 class="text-center mt-3 mb-5 display-font profile-header">Hi {{ session.user|capitalize }}!</h2>
+                        <div>
+                            <p class="text-center mt-3 mb-5 h2 profile-header">
+                                Let's soon build your own custom admin dashboard!
+                            </p>
+                        </div>
                     {% endif %}
                 {% endif %}
 
-        </div>
+                <!-- CUSTOM INFO FOR REGISTERED USERS/ MEMBERS -->
+                {% if session.user %}
+                    {% if session.user|lower != 'superadmin' %}
+                    <div class="header-bg">
+                        <h3 class="text-center mx-auto subtitle">All the information you need to find your way around the App</h3>
+                        <button id="btnScrollUp" title="Go to top"><i class="bi bi-arrow-up-circle-fill"></i> Top</button>
+                    </div>
 
+                    <div class="dashboard-container text-center">
+                        <p class="h5 mt-2 col-md-8 text-center">
+                            Here on your dashboard, you will have access to your activities (recipes you have shared) and any other info
+                            you may need to manage your files, such as our logged in members' Public API Key.
+                        </p>
+                    </div>
+                    <div>
+                        <h3 class="mt-4 alt-display-font">As a Paleo Recipes registered user, you will be able to:</h3>
+                        <ol>
+                            <li>View all the recipes added by ourselves and by all the registered users of the application</li>
+                            <li>All the recipes you post are set to public, meaning every visitor to the site will be able to view them as well</li>
+                            <li>You will be able to upload your recipe, including the image you want to go along with that particular recipe</li>
+                            <li>Uploading a image requires a Public API Key. For your convenience, this Public API Key is dynamically made available
+                                to you and to all our registered and logged in members, whenever they post a recipe. You will find this right below
+                                the blank space you need to paste the Public API Key into.
+                            </li>
+                            <li>You will also be able to edit your recipe, and this requires a re-upload of a image for the recipe you are editing</li>
+                            <li>You will also be able to delete any recipe you posted. Please be warned that this action cannot be undone
+                                and we will not be able to retrieve a record of the recipe you decide to delete.
+                            </li>
+                            <li>You will be able to search for other recipes via the search bar on the recipes page</li>
+                            <li>When uploading or editing a recipe, you will have access to the list of categories of recipes</li>
+                            <li>You can choose a category from this list.</li>
+                            <li>You will be able to edit which category to add with your own recipe. But you will not be able to delete any category.
+                                This action is only available to our superadmin users.
+                            </li>
+                            <li>Finally, one of our future development plans is to include a blog functionality to the App.
+                                You can however, already include some tips and insights about a particular recipe. Just add your tips inside the "Notes"
+                                section of the form.
+                            </li>
+                        </ol>
+                    </div>
+                        {% endif %}
+                    {% endif %}
+            </div>
+        </div>
     </div>
 
 {% endblock %}

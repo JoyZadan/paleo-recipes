@@ -413,11 +413,11 @@ def request_timeout(e):
     return render_template("error.html", error_status=e, message=message), 408
 
 
-@app.errorhandler(500)
-def internal_server_error(e):
+# @app.errorhandler(500)
+# def internal_server_error(e):
     """
         handles a 500 Internal Server Error
         and displays an apology message to the user
     """
-    message = "Sorry! We seem to have made a mistake. Please try again soon."
-    return render_template("error.html", error_status=e, message=message), 500
+    # message = "Sorry! We seem to have made a mistake. Please try again soon."
+    # return render_template("error.html", error_status=e, message=message), 500

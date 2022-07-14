@@ -20,11 +20,10 @@
             <div class="each-category-card bg-dark">
                 <h3 class="text-white px-3 mt-2">{{ category.category_name }}</h3>
                 <div class="card-body text-center p-0 mx-2">
-
-                    <a href="{{ url_for('edit_category', category_id=category.id) }}" class="btn btn-solid" alt="edit button">Edit</a>
-                    <a href="#modal-{{ category.id }}" class="btn btn-alt text-center mx-2" alt="delete button"
-                        type="button" data-bs-toggle="modal">Delete Category</a>
-
+                    <a href="{{ url_for('edit_category', category_id=category.id) }}" class="btn btn-solid">Edit</a>
+                    <a href="#modal-{{ category.id }}" class="btn btn-alt text-center mx-2" type="button"
+                        data-bs-toggle="modal">Delete Category
+                    </a>
                 </div>
             </div>
 
@@ -38,12 +37,13 @@
                     </p>
                     <div class="modal-footer mx-auto">
                         <a href="{{ url_for('delete_category', category_id=category.id) }}" class="btn btn-delete">Delete Category</a>
-                        <a href="{{ url_for('categories') }}" role="button" class="btn btn-alt" data-bs-dismiss="modal" aria-label="Close">Cancel</a>
+                        <a href="{{ url_for('categories') }}" role="button" class="btn btn-alt" data-bs-dismiss="modal"
+                            aria-label="Close">Cancel
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
-
             {% endfor %}
         </div>
 

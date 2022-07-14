@@ -32,10 +32,7 @@
                                 <li><a class="dropdown-item" href="{{ url_for('home') }}"> Home Page</a></li>
                             </ul>
                         </li>
-                    </ul>
-                    <!-- Sign Out dropdown -->
-                    <div class="dropdown py-sm-5 mt-sm-auto ms-auto ms-sm-0 flex-shrink-1">
-                        <!-- Paleo Recipes logo icon -->
+                        <!-- Sign Out dropdown -->
                         <li class="dropdown">
                             <a href="{{ url_for('home') }}"
                                 class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
@@ -48,7 +45,23 @@
                                 <li><a class="dropdown-item" href="{{ url_for('logout') }}">Log Out</a></li>
                             </ul>
                         </li>
-                    </div>
+                    </ul>
+                    <!-- Sign Out dropdown -->
+                    <!-- <div class="dropdown py-sm-5 mt-sm-auto ms-auto ms-sm-0 flex-shrink-1"> -->
+                        <!-- Paleo Recipes logo icon -->
+                        <!-- <li class="dropdown">
+                            <a href="{{ url_for('home') }}"
+                                class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
+                                id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="{{ url_for('static', filename='images/logo-icon.webp') }}" class="logo-icon"
+                                    alt="Paleo Recipes logo icon">
+                                <span class="d-none d-sm-inline mx-1 signout-item fs-6 text">Logged In</span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdown">
+                                <li><a class="dropdown-item" href="{{ url_for('logout') }}">Log Out</a></li>
+                            </ul>
+                        </li>
+                    </div> -->
                 </div>
             </div>
         <!-- DASHBOARD - CONTENT AREA-->

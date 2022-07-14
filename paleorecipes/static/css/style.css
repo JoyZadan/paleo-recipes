@@ -563,8 +563,8 @@ footer p {
 /* media query to ensure responsiveness on profile page sidebar */
 @media screen and (max-width: 42em) {
     .logo-icon {
-        width: 2rem;
-        height: 2rem;
+        width: 1.8rem;
+        height: 1.8rem;
     }
 }
 

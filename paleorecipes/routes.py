@@ -122,14 +122,14 @@ def edit_recipe(recipe_id):
 
     if request.method == "POST":
         request.form.get("recipe_name")
-        image = request.files["image_url"]
-        image_upload = cloudinary.uploader.upload(image,
-                                                  upload_preset="efjhsj")
+        # image = request.files["image_url"]
+        # image_upload = cloudinary.uploader.upload(image,
+        #                                           upload_preset="efjhsj")
         submit = {
             "category_id": request.form.get("category_id"),
             "recipe_name": request.form.get("recipe_name"),
             "recipe_description": request.form.get("recipe_description"),
-            "image_url": image_upload["secure_url"],
+            # "image_url": image_upload["secure_url"],
             "created_by": session["user"],
             "ingredients": request.form.get("ingredients"),
             "instructions": request.form.get("instructions"),

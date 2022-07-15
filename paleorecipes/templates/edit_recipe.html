@@ -126,8 +126,13 @@
                                     <label for="nutrition">Nutrition</label>
                                 </div>
                             </div>
+                            <!-- Checks for uploaded image from db -->
+                            {% if recipe.img_url %}
+                            <img class="recipe-image" src="{{ recipe.image_url }}"
+                                alt="Image of {{ recipe.recipe_name }}">
+                            {% endif %}
                             <!-- upload image button for users -->
-                            <div class="col-md-8 mx-auto">
+                            <!-- <div class="col-md-8 mx-auto">
                                 <label for="image_url" class="form-label mt-2">REQUIRED: Upload Image for Recipe</label>
                                 <input class="form-control form-control-sm formFileSm" accept="image/*" name="image_url" id="image_url" type="file" aria-label="image">
                             </div>
@@ -136,7 +141,7 @@
                                     Your Public API Key is available below
                                 </label>
                                 <input class="form-control form-control-sm" id="formFileSm" type="text" required>
-                            </div>
+                            </div> -->
                             <!-- submit button -->
                             <div class="row">
                                 <div class="col s12 center-align">

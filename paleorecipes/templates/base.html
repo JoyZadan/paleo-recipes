@@ -101,6 +101,7 @@
         {% endwith %}
     </div>
     <main>
+        <!-- Jinja content block -->
         {% block content %}
 
         {% endblock %}
@@ -133,12 +134,12 @@
                         <p>
                             <a class="text-white" href="{{ url_for('recipes') }}">Find Recipes</a>
                         </p>
-                            <p>
-                                <a class="text-white" href="{{ url_for('register') }}">Register to Share Recipes</a>
-                            </p>
-                            <p>
-                                <a class="text-white" href="{{ url_for('login') }}">Log In to Edit Your Recipes</a>
-                            </p>
+                        <p>
+                            <a class="text-white" href="{{ url_for('register') }}">Register to Share Recipes</a>
+                        </p>
+                        <p>
+                            <a class="text-white" href="{{ url_for('login') }}">Log In to Edit Your Recipes</a>
+                        </p>
                     </div>
                     <!-- Grid column -->
                     <hr class="w-100 clearfix d-md-none" />
@@ -156,6 +157,7 @@
     </footer>
 
     <!-- Import JavaScript files -->
+    <!-- Bootstrap 5 JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous">

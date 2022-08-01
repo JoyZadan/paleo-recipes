@@ -14,7 +14,7 @@ app.config["SECRET_KEY"] = os.environ.get("SECRET_KEY")
 app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
 app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 
-# retrieves hidden env postgre variable
+# retrieves hidden env postgres variable
 # solves discrepancy between sqlalchemy requirement of using postgresql
 # from with heroku's use of postgres in the config vars
 uri = os.environ.get("DATABASE_URL")

@@ -45,8 +45,8 @@
                             <div class="col-md-10 col-lg-11 offset-md-1 offset-lg-0">
                                 <div class="form-floating input-field">
                                     <textarea name="recipe_description" id="recipe_description" rows="5"
-                                        class="form-control form-control-sm validate"
-                                        placeholder="recipe_description" required>{{- recipe.recipe_description -}}</textarea>
+                                        class="form-control form-control-sm validate" required>{{- recipe.recipe_description -}}
+                                    </textarea>
                                     <label for="recipe_description">Description</label>
                                 </div>
                             </div>
@@ -57,7 +57,8 @@
                             <div class="col-md-10 col-lg-11 offset-md-1 offset-lg-0">
                                 <div class="form-floating input-field">
                                     <textarea name="ingredients" id="ingredients" rows="20" class="form-control validate form-control-sm"
-                                        placeholder="ingredients" required>{{ recipe.ingredients }}</textarea>
+                                        required>{{ recipe.ingredients }}
+                                    </textarea>
                                     <label for="ingredients">Ingredients</label>
                                 </div>
                             </div>
@@ -68,7 +69,7 @@
                             <div class="col-md-10 col-lg-11 offset-md-1 offset-lg-0">
                                 <div class="form-floating input-field">
                                     <input type="number" name="prep_time" id="prep_time" value="{{ recipe.prep_time }}"
-                                    placeholder="" class="form-control form-control-sm validate" required>
+                                        class="form-control form-control-sm validate" required>
                                     <label for="prep_time">Preparation time (in minutes)</label>
                                 </div>
                             </div>
@@ -79,7 +80,7 @@
                             <div class="col-md-10 col-lg-11 offset-md-1 offset-lg-0">
                                 <div class="form-floating input-field">
                                     <input type="number" name="cook_time" id="cook_time" value="{{ recipe.cook_time }}"
-                                    placeholder="" class="form-control form-control-sm validate" required>
+                                        class="form-control form-control-sm validate" required>
                                     <label for="cook_time">Cooking time (in minutes)</label>
                                 </div>
                             </div>
@@ -90,7 +91,7 @@
                             <div class="col-md-10 col-lg-11 offset-md-1 offset-lg-0">
                                 <div class="form-floating input-field">
                                     <input type="number" name="servings" id="servings" value="{{ recipe.servings }}"
-                                        placeholder="" class="form-control form-control-sm validate" required>
+                                        class="form-control form-control-sm validate" required>
                                     <label for="servings">Servings</label>
                                 </div>
                             </div>
@@ -101,7 +102,8 @@
                             <div class="col-md-10 col-lg-11 offset-md-1 offset-lg-0">
                                 <div class="form-floating input-field">
                                     <textarea name="instructions" id="instructions" rows="20" class="form-control form-control-sm validate"
-                                        placeholder="" required>{{- recipe.instructions -}}</textarea>
+                                        required>{{- recipe.instructions -}}
+                                    </textarea>
                                     <label for="instructions">Preparation and Cooking Steps</label>
                                 </div>
                             </div>
@@ -111,8 +113,9 @@
                             </div>
                             <div class="col-md-10 col-lg-11 offset-md-1 offset-lg-0">
                                 <div class="form-floating input-field">
-                                    <textarea name="notes" id="notes" rows="5" class="form-control form-control-sm validate"
-                                        placeholder="">{{- recipe.notes -}}</textarea>
+                                    <textarea name="notes" id="notes" rows="5"
+                                        class="form-control form-control-sm validate">{{- recipe.notes -}}
+                                    </textarea>
                                     <label for="notes">Additional Notes</label>
                                 </div>
                             </div>
@@ -123,7 +126,7 @@
                             <div class="col-md-10 col-lg-11 offset-md-1 offset-lg-0">
                                 <div class="form-floating input-field">
                                     <input type="text" name="nutrition" id="nutrition" value="{{ recipe.nutrition }}"
-                                        class="form-control form-control-sm validate" placeholder="">
+                                        class="form-control form-control-sm validate">
                                     <label for="nutrition">Nutrition</label>
                                 </div>
                             </div>

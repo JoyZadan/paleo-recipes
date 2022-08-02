@@ -108,6 +108,14 @@
                         </div>
                     {% endif %}
                 {% endif %}
+                <!-- LOGGED IN USER'S OWN RECIPES -->
+                {% if recipe_list %}
+                    <div class="container-fluid">
+                        <h3 class="mt-4 alt-display-font">The recipes you shared:</h3>
+                    </div>
+                {% else %}
+                    <p>No recipes found.</p>
+                {% endif %}
             </div>
         </div>
     </div>

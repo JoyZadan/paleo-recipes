@@ -500,7 +500,6 @@ footer p {
     font-size: 0.8rem;
 }
 
-.social-icon,
 .bootstrap-icon {
     background-color: var(--buttons-color);
     border: 1px solid rgba(255,255,255,0.1);
@@ -508,16 +507,16 @@ footer p {
     border-radius: 10px;
 }
 
-.social-icon:hover,
+/* .social-icon:hover,
 .bootstrap-icon:hover {
     background-color: var(--buttons-color-secondary);
     border: none;
-}
+} */
 
-.social-icon:active,
+/* .social-icon:active,
 .bootstrap-icon:active {
     background-color: var(--custom-color-secondary);
-}
+} */
 
 .copyright-bg {
     background-color: var(--custom-color-secondary);

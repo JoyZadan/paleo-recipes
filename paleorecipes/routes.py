@@ -367,7 +367,12 @@ def profile():
         Get user's input for all fields and render on profile page
     """
     if "user" in session:
-        return render_template("profile.html", username=session["user"])
+        recipe_list = mongo.db.recipes.find(
+            {"created_by": {'$eq': session['user']}})
+        categories = list(
+                          Category.query.order_by(Category.category_name).all())
+        return render_template("profile.html", username=session["user"],
+                               recipe_list=recipe_list, categories=categories)
     return redirect(url_for("login"))
 
 

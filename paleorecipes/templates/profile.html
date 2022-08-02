@@ -50,7 +50,6 @@
                 </div>
             </div>
             <!-- DASHBOARD - CONTENT AREA-->
-            <button id="btnScrollUp" title="Go to top"><i class="bi bi-arrow-up-circle-fill"></i> Top</button>
             <div class="col-sm min-vh-100 content-area">
                 {% if session.user %}
                     {% if session.user|lower != 'superadmin' %}
@@ -195,7 +194,5 @@
 {% endblock %}
 
 {% block scripts %}
-
-    <script src="{{ url_for('static', filename='js/scroll.js') }}"></script>
 
 {% endblock %}

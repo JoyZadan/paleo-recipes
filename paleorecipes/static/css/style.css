@@ -508,17 +508,6 @@ footer p {
     pointer-events: none;
 }
 
-/* .social-icon:hover,
-.bootstrap-icon:hover {
-    background-color: var(--buttons-color-secondary);
-    border: none;
-} */
-
-/* .social-icon:active,
-.bootstrap-icon:active {
-    background-color: var(--custom-color-secondary);
-} */
-
 .copyright-bg {
     background-color: var(--custom-color-secondary);
 }

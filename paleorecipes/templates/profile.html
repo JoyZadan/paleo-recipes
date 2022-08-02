@@ -60,11 +60,11 @@
                     {% if session.user|lower == 'superadmin' %}
                         <h1 class="text-center mt-5 mb-4 paleo-font profile-header">Admin Dashboard</h1>
                         <h2 class="text-center mt-3 mb-5 display-font profile-header">Hi {{ session.user|capitalize }}!</h2>
-                        <div>
+                        <!-- <div>
                             <p class="text-center mt-3 mb-5 h2 profile-header">
                                 Let's soon build your own custom admin dashboard!
                             </p>
-                        </div>
+                        </div> -->
                     {% endif %}
                 {% endif %}
                 <!-- CUSTOM INFO FOR REGISTERED USERS/ MEMBERS -->
@@ -111,7 +111,7 @@
                 <!-- LOGGED IN USER'S OWN RECIPES -->
                 {% if recipe_list %}
                     <div class="mt-3">
-                        <h3 class="mt-4 alt-display-font">The recipes you shared:</h3>
+                        <h3 class="mt-4 alt-display-font">Here are the recipes you shared:</h3>
                     </div>
                     <div class="container-fluid">
                         {% for recipe in recipe_list %}

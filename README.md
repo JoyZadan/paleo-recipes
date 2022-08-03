@@ -238,7 +238,7 @@ This shows what CRUD functionality is available from each page
 | login |  | username for password check |   |  |  |
 | edit_recipe |  | all information incl with recipe and image | all information incl with the recipe & image |  |
 | categories, requires log in and user is superadmin | categories | all available categories | all available categories | all available categories plus all recipes associated with the deleted category |
-| profile |  | user dashboard, custom information for registered users | view all available recipes shared by the loggedin user | edit own recipe functionality available to logged in users from their dashboard | delete own recipe functionality available to logged in users from their dashboard |
+| profile |  | user dashboard, custom information for registered users, view all available recipes shared by the logged in user | edit own recipe functionality available to logged in users from their dashboard | delete own recipe functionality available to logged in users from their dashboard |
 
 
 ### Defensive Programming

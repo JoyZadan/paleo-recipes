@@ -18,11 +18,11 @@
                                     <select name="category_id" id="category_id" class="validate d-flex mt-4" required>
                                         <option value="" disabled>Choose Category</option>
                                         {% for category in categories %}
-                                                {% if category.id == recipe.category_id | int %}
-                                                    <option value="{{ category.id }}" selected>{{ category.category_name }}</option>
-                                                {% else %}
-                                                    <option value="{{ category.id }}">{{ category.category_name }}</option>
-                                                {% endif %}
+                                            {% if category.id == recipe.category_id | int %}
+                                                <option value="{{ category.id }}" selected>{{ category.category_name }}</option>
+                                            {% else %}
+                                                <option value="{{ category.id }}">{{ category.category_name }}</option>
+                                            {% endif %}
                                         {% endfor %}
                                     </select>
                                 </div>

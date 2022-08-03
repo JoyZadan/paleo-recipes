@@ -21,13 +21,13 @@
 
 ## Validation Results
 ### HTML: W3C Markup Validator Test Results
-* [INSERT SCREENSHOT Home page](/documentation/validation/index-html-validation.png)
-* [INSERT SCREENSHOT Recipes page](/documentation/validation/recipes-html-validation.png)
-* ![INSERT SCREENSHOT other page](/documentation/validation/nu-html-add-recipe.webp)
+* [Home page](/documentation/validation/index-html-validation.png)
+* [Recipes page](/documentation/validation/recipes-html-validation.png)
+* [Add Recipe page](/documentation/validation/add-recipe-html-validation.png)
 * ![INSERT SCREENSHOT other page](/documentation/validation/nu-html-categories.webp)
 * ![INSERT SCREENSHOT other page](/documentation/validation/nu-html-register.webp)
 * ![INSERT SCREENSHOT other page](/documentation/validation//nu-html-login.webp)
-* [INSERT SCREENSHOT About page](/documentation/validation/about-html-validation.png)
+* [About page](/documentation/validation/about-html-validation.png)
 * ![INSERT SCREENSHOT other page](/documentation/validation/nu-html-profile.webp)
 ### CSS: W3C CSS Validator Test Results
 * ![INSERT SCREENSHOT Results](/documentation/validation/css-validation.webp)
@@ -37,9 +37,9 @@
 ### Python: PEP8 online Test Results
 * ![INSERT SCREENSHOT](/documentation/testing/pep8online.png)
 ### Lighthouse Test Results
-* ![INSERT SCREENSHOT Home page](/documentation/testing/lighthouse-desktop-top.webp)
-* ![INSERT SCREENSHOT Recipes page](/documentation/validation/recipes-lighthouse-desktop.png)
-* ![INSERT SCREENSHOT other page](/documentation/testing/lighthouse-desktop-categories.webp)
+* ![INSERT SCREENSHOT Home page](/documentation/testing/index-lighthouse-desktop.png)
+* ![INSERT SCREENSHOT Recipes page](/documentation/testing/recipes-lighthouse-desktop.png)
+* ![INSERT SCREENSHOT Add Recipe page](/documentation/testing/add-recipe-lighthouse-desktop.png)
 * ![INSERT SCREENSHOT other page](/documentation/testing/lighthouse-add-recipe.webp)
 * ![INSERT SCREENSHOT other page](/documentation/testing/lighthouse-profile.webp)
 * ![INSERT SCREENSHOT other page](/documentation/testing/lighthouse-recipes.webp)

@@ -89,36 +89,40 @@
 ## Testing User Stories from UX Development Section
 ### First Time Visitor Goals - As a first time user who has not created an account, I want to be able to:
 * Immediately understand the main purpose and use of the application, Paleo Recipes, and how to use it
-    * ![INSERT SCREENSHOT other page](/documentation/user-stories/user-story-1.png)
+    ![INSERT SCREENSHOT other page](/documentation/user-stories/user-story-1.png)
     * The first visitor is immediately greeted with a brief info Paleo Recipes with two calls to action
+
 * Search for specific recipes or view all recipes
-    * ![INSERT SCREENSHOT other page](/documentation/user-stories/user-story-2.png)
+    ![INSERT SCREENSHOT other page](/documentation/user-stories/user-story-2.png)
     * On the recipes page, the first visitor is able to search for any available recipes
 * Register/ create a user account
-    * ![INSERT SCREENSHOT other page](/documentation/user-stories/user-story-3.png)
-     * On the register page, the first visitor is able to register and create an account with Paleo Recipes
+    ![INSERT SCREENSHOT other page](/documentation/user-stories/user-story-3.png)
+    * On the register page, the first visitor is able to register and create an account with Paleo Recipes
 
+----
 ### Registered User Goals - As a registered user, I want to be able to:
 * Add, edit, retrieve and delete my own Paleo recipe(s)
-    * ![INSERT SCREENSHOT other page](/documentation/user-stories/user-story-4.png)
+    ![INSERT SCREENSHOT other page](/documentation/user-stories/user-story-4.png)
     * The registered user is able to add, edit, retrieve and delete his/her own Paleo recipe(s)
 * Add my own Paleo recipe(s), based on Categories
-    * ![INSERT SCREENSHOT other page](/documentation/user-stories/user-story-5.png)
+    ![INSERT SCREENSHOT other page](/documentation/user-stories/user-story-5.png)
     * Frpm the add_recipe page, the registered user has access to available categories when adding his/her own recipe.
 * Add, edit, retrieve and delete my review of the recipes
-    * ![INSERT SCREENSHOT other page](/documentation/user-stories/user-story-6.png)
+    ![INSERT SCREENSHOT other page](/documentation/user-stories/user-story-6.png)
     * The registered user is able to retrieve, edit and delete his/ her own recipe
 * Upload an image with my recipes
-    * ![INSERT SCREENSHOT other page](/documentation/user-stories/user-story-7.png)
+    ![INSERT SCREENSHOT other page](/documentation/user-stories/user-story-7.png)
     * The registered user is able to upload an image when uploading his/ her recipe
 * Search for specific recipes or view all recipes
-    * ![INSERT SCREENSHOT other page](/documentation/user-stories/user-story-2.png)
+    ![INSERT SCREENSHOT other page](/documentation/user-stories/user-story-2.png)
     * On the recipes page, the registered user is able to search for any available recipes
 * Learn more about what I can do on the Paleo Recipes App
-    * ![INSERT SCREENSHOT other page](/documentation/user-stories/user-story-8.png)
+    ![INSERT SCREENSHOT other page](/documentation/user-stories/user-story-8.png)
     * From the User Dashboard (Profile Page)m registered users are provided additional information about what they are able to do when using the Application.
 * Have my own member user dashboard (read functionality)
-    * The screenshot immediately above shows the user dashboard example
+    ![INSERT SCREENSHOT other page](/documentation/user-stories/user-story-8.png)
+    ![INSERT SCREENSHOT other page](/documentation/user-stories/user-experience-profile-page2.png)
+    * The screenshots immediately above shows the user dashboard example
 * Be able to add additional information about my recipe
     * ![INSERT SCREENSHOT other page](/documentation/user-stories/user-story-9.png)
     * An additional input area, called Additional Notes, is available on the add_recipe page for any registered users uploading a recipe
@@ -127,6 +131,7 @@
 * Logged users provided warnings when attempting to perform a function which may have destructive or unavoidable consequences
     * ![INSERT SCREENSHOT other page](/documentation/user-stories/user-story-10.png)
 
+----
 ### Site Admin Goals - As an administrator, I want to be able to:
 * Have the ability to maintain the Paleo Recipe App and its content
     * ![INSERT SCREENSHOT other page](/documentation/user-stories/user-story-11.png))

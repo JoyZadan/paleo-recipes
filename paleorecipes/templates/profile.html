@@ -104,7 +104,7 @@
                     {% endif %}
                 {% endif %}
                 <!-- LOGGED IN USER'S OWN RECIPES -->
-                {% if recipe_list|length > 0 %}
+                {% if recipe_list %}
                     <div class="mt-3">
                         <h3 class="mt-4 alt-display-font">Here are your recipes</h3>
                     </div>
@@ -179,8 +179,8 @@
                             </div>
                         {% endfor %}
                     </div>
-                {% else %}
-                    <h3 class="mt-4 alt-display-font">No recipes found.</h3>
+                    {% else %}
+                        <h3 class="mt-4 alt-display-font">No recipes found.</h3>
                 {% endif %}
             </div>
         </div>

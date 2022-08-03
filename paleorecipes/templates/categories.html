@@ -2,7 +2,7 @@
 {% block content %}
 
     <div class="min-vh-100 alt-bg bg-dark">
-        <!-- MANAGE CATEGORIES -->
+        <!-- MANAGE CATEGORIES PAGE HEADING-->
         <div class="recipe-container mx-auto">
             <h1 class="text-center display-3 mt-5">Manage Categories of Recipes</h1>
             <p class="paleo-font text-white h5 mt-4">SUPERADMIN USERS ONLY</p>
@@ -12,9 +12,11 @@
                 </a>
             </div>
         </div>
-        <!-- LIST OF CATEGORIES -->
+        <!-- START OF AVAILABLE CATEGORIES CONTENT -->
         <div class="alt-categories-container mt-5 mx-5">
+            <!-- looping through all available categories -->
             {% for category in categories %}
+                <!-- category card -->
                 <div class="each-category-card bg-dark">
                     <h3 class="text-white px-3 mt-2">{{ category.category_name }}</h3>
                     <div class="card-body text-center p-0 mx-2">
@@ -24,7 +26,7 @@
                         </a>
                     </div>
                 </div>
-                <!-- MODAL -->
+                <!-- START OF MODAL -->
                 <div class="modal fade" id="modal-{{ category.id }}" aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content text-center">
@@ -42,8 +44,11 @@
                         </div>
                     </div>
                 </div>
+                <!-- END OF MODAL -->
             {% endfor %}
+            <!-- end of looping through all available categories -->
         </div>
+        <!-- END OF AVAILABLE CATEGORIES CONTENT -->
         <!-- SCROLL TO TOP BUTTON -->
         <button id="btnScrollUp" title="Go to top"><i class="bi bi-arrow-up-circle-fill" aria-hidden="true"></i> Top</button>
     </div>

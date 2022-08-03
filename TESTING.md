@@ -21,13 +21,13 @@
 
 ## Validation Results
 ### HTML: W3C Markup Validator Test Results
-* [Home page](/documentation/validation/index-html-validation.png)
-* [Recipes page](/documentation/validation/recipes-html-validation.png)
-* [Add Recipe page](/documentation/validation/add-recipe-html-validation.png)
-* [Edit Recipe page](/documentation/validation/edit-recipe-html-validation.png)
-* [Categories page](/documentation/validation/categories-html-validation.png)
-* ![INSERT SCREENSHOT other page](/documentation/validation//nu-html-login.webp)
-* [About page](/documentation/validation/about-html-validation.png)
+* [/home](/documentation/validation/index-html-validation.png)
+* [/recipes](/documentation/validation/recipes-html-validation.png)
+* [/add_recipe](/documentation/validation/add-recipe-html-validation.png)
+* [/edit_recipe](/documentation/validation/edit-recipe-html-validation.png)
+* [/categories](/documentation/validation/categories-html-validation.png)
+* [/add_category](/documentation/validation/add-category-html-validation.png)
+* [/about](/documentation/validation/about-html-validation.png)
 * ![INSERT SCREENSHOT other page](/documentation/validation/nu-html-profile.webp)
 ### CSS: W3C CSS Validator Test Results
 * ![INSERT SCREENSHOT Results](/documentation/validation/css-validation.webp)
@@ -37,12 +37,12 @@
 ### Python: PEP8 online Test Results
 * ![INSERT SCREENSHOT](/documentation/testing/pep8online.png)
 ### Lighthouse Test Results
-* [Home page](/documentation/testing/index-lighthouse-desktop.png)
-* [Recipes page](/documentation/testing/recipes-lighthouse-desktop.png)
-* [Add Recipe page](/documentation/testing/add-recipe-lighthouse-desktop.png)
-* [Edit Recipe page](/documentation/testing/edit-recipe-lighthouse-desktop.png)
-* [Categories page](/documentation/testing/categories-lighthouse-desktop.png)
-* ![INSERT SCREENSHOT other page](/documentation/testing/lighthouse-categories.webp)
+* [/home](/documentation/testing/index-lighthouse-desktop.png)
+* [/recipes](/documentation/testing/recipes-lighthouse-desktop.png)
+* [/add_recipe](/documentation/testing/add-recipe-lighthouse-desktop.png)
+* [/edit_recipe](/documentation/testing/edit-recipe-lighthouse-desktop.png)
+* [/categories](/documentation/testing/categories-lighthouse-desktop.png)
+* [/add_category](/documentation/testing/add-category-lighthouse-desktop.png)
 * ![INSERT SCREENSHOT other page](/documentation/testing/lighthouse-recipes.webp)
 * ![INSERT SCREENSHOT other page](/documentation/testing/lighthouse-recipes.webp)
 * [About mobile](/documentation/testing/about-lighthouse-mobile.png)

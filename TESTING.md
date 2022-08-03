@@ -29,7 +29,10 @@
 * [/add_category](/documentation/validation/add-category-html-validation.png)
 * [/edit_category](/documentation/validation/edit-category-html-validation.png)
 * [/about](/documentation/validation/about-html-validation.png)
-*
+* [/profile](/documentation/validation/profile-user-html-validation.png)
+* [/register](/documentation/validation/register-html-validation.png)
+* [/login]()
+
 ### CSS: W3C CSS Validator Test Results
 * ![INSERT SCREENSHOT Results](/documentation/validation/css-validation.webp)
 * ![INSERT SCREENSHOT Warnings](/documentation/validation/css-warnings.webp)
@@ -45,7 +48,8 @@
 * [/categories](/documentation/testing/categories-lighthouse-desktop.png)
 * [/add_category](/documentation/testing/add-category-lighthouse-desktop.png)
 * [/edit_category](/documentation/testing/edit-category-lighthouse-desktop.png)
-*
+* [/profile](/documentation/testing/profile-user-lighthouse-desktop.png)
+
 * [/about](/documentation/testing/about-lighthouse-mobile.png)
 ### a11y Color Contrast Accessibility for the Visually Impaired Test Results
 * ![INSERT SCREENSHOT Home page](/documentation/testing/a11y-color-contrast-index.png)

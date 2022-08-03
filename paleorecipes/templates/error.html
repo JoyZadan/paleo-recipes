@@ -8,7 +8,7 @@
         <div class="text-center">
             <!-- displays error message -->
             <h2 class="mt-5 mb-5 text-white">{{ message }}</h2>
-            <i class="bi-exclamation-octagon display-1 text-danger mt-5 mb-5"></i>
+            <i class="bi-exclamation-octagon display-1 text-danger mt-5 mb-5" aria-hidden="true"></i>
             <p class="my-5 h6 text-white">{{ error_status }}</p>
             <a href="{{ url_for('home') }}" class="h4 mt-5 border border-white rounded py-2 px-2" role="button">
                 Go back to the homepage

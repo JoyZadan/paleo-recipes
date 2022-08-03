@@ -8,7 +8,7 @@
             <p class="paleo-font text-white h5 mt-4">SUPERADMIN USERS ONLY</p>
             <div class="text-center">
                 <a href="{{ url_for('add_category') }}" class="btn btn-alt border-0 px-3 h3" role="button">Add Category
-                    <i class="bi-plus-circle"></i>
+                    <i class="bi-plus-circle" aria-hidden="true"></i>
                 </a>
             </div>
         </div>
@@ -45,7 +45,7 @@
             {% endfor %}
         </div>
         <!-- SCROLL TO TOP BUTTON -->
-        <button id="btnScrollUp" title="Go to top"><i class="bi bi-arrow-up-circle-fill"></i> Top</button>
+        <button id="btnScrollUp" title="Go to top"><i class="bi bi-arrow-up-circle-fill" aria-hidden="true"></i> Top</button>
     </div>
 
 {% endblock %}

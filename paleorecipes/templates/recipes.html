@@ -20,7 +20,7 @@
                             <div class="card-body text-center">
                                 <a href="{{ url_for('recipes') }}" class="btn btn-solid">Reset</a>
                                 <button class="btn btn-alt text-center mx-2" type="submit">
-                                    <i class="bi bi-search"></i> Search
+                                    <i class="bi bi-search" aria-hidden="true"></i> Search
                                 </button>
                             </div>
                         </div>
@@ -29,7 +29,7 @@
             </form>
         </div>
         <!-- DISPLAYING ALL AVAILABLE RECIPES -->
-        <button id="btnScrollUp" title="Go to top"><i class="bi bi-arrow-up-circle-fill"></i> Top</button>
+        <button id="btnScrollUp" title="Go to top"><i class="bi bi-arrow-up-circle-fill" aria-hidden="true"></i> Top</button>
         <div class="container-fluid">
             {% if recipes|length > 0 %}
                 <div class="card-group recipe-card-group">
@@ -40,13 +40,13 @@
                                 <div class="list-group small">
                                     <ul class="list-group list-group-horizontal-md">
                                         <li class="list-group-item mx-1 bg-light rounded">
-                                            <i class="bi bi-hourglass-split"></i> Prep: {{ recipe.prep_time }} mins
+                                            <i class="bi bi-hourglass-split" aria-hidden="true"></i> Prep: {{ recipe.prep_time }} mins
                                         </li>
                                         <li class="list-group-item mx-1 bg-light rounded">
-                                            <i class="bi-clock"></i> Cook: {{ recipe.cook_time }} mins
+                                            <i class="bi-clock" aria-hidden="true"></i> Cook: {{ recipe.cook_time }} mins
                                         </li>
                                         <li class="list-group-item mx-1 bg-light rounded">
-                                            <i class="bi bi-people-fill"></i> Serves: {{ recipe.servings }}
+                                            <i class="bi bi-people-fill" aria-hidden="true"></i> Serves: {{ recipe.servings }}
                                         </li>
                                     </ul>
                                 </div>

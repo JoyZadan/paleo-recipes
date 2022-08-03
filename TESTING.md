@@ -35,15 +35,15 @@
 * [/error](/documentation/validation/error-html-validation.png)
 
 ### CSS: W3C CSS Validator Test Results
-* ![INSERT SCREENSHOT Results](/documentation/validation/css-validation.webp)
-* ![INSERT SCREENSHOT Warnings](/documentation/validation/css-warnings.webp)
+* [css validation](/documentation/validation/css-validation-new.png)
+* [css warnings](/documentation/validation/css-warnings-new.png)
 
 ### JavaScript: JSHint Linting Results
-* ![INSERT SCREENSHOT scroll.js](/documentation/validation/jshint-validation.webp)
-* ![INSERT SCREENSHOT script.js](/documentation/validation/script-js-validation.png)
+* [INSERT SCREENSHOT scroll.js](/documentation/validation/jshint-validation.webp)
+* [INSERT SCREENSHOT script.js](/documentation/validation/script-js-validation.png)
 
 ### Python: PEP8 online Test Results
-* ![INSERT SCREENSHOT](/documentation/validation/pep8-validation-new.png)
+* [INSERT SCREENSHOT](/documentation/validation/pep8-validation-new.png)
 
 ### Lighthouse Test Results
 * [/home](/documentation/testing/index-lighthouse-desktop.png)
@@ -59,23 +59,32 @@
 * [/login](/documentation/testing/login-lighthouse-desktop.png)
 
 ### a11y Color Contrast Accessibility for the Visually Impaired Test Results
-* ![INSERT SCREENSHOT Home page](/documentation/testing/a11y-color-contrast-index.png)
-* ![INSERT SCREENSHOT other page](/documentation/testing/a11y-color-contrast-recipes.png)
+* [/home](/documentation/testing/a11y-color-contrast-index.png)
+* [/recipes](/documentation/testing/a11y-color-contrast-recipes.png)
+
 ### WAVE Web Accessibility Evaluation Tool
-* ![INSERT SCREENSHOT Home page](/documentation/validation/homepage-web-accessibility-test-summary.png)
-* ![INSERT SCREENSHOT other page](/documentation/validation/homepage-web-accessibility-test.png)
-* ![INSERT SCREENSHOT other page](/documentation/validation/recipes-web-accessibility-test-summary.png)
-* ![INSERT SCREENSHOT other page](/documentation/validation/search-recipes-web-accessibility-summary.png)
+* [/home](/documentation/validation/homepage-web-accessibility-test-summary.png)
+* [/home](/documentation/validation/homepage-web-accessibility-test.png)
+* [/recipes](/documentation/validation/recipes-web-accessibility-test-summary.png)
+* [/search](/documentation/validation/search-recipes-web-accessibility-summary.png)
 
 ## Responsive Design Testing
-* ![INSERT SCREENSHOT Home page](/documentation/testing/responsiveness-1.png)
-* ![INSERT SCREENSHOT other page](/documentation/testing/responsiveness-2.png)
-* ![INSERT SCREENSHOT other page](/documentation/testing/responsiveness-3.png)
-* ![INSERT SCREENSHOT other page](/documentation/testing/responsiveness-4.png)
-* ![INSERT SCREENSHOT other page](/documentation/testing/responsiveness-5.png)
-* ![INSERT SCREENSHOT other page](/documentation/testing/responsiveness-6.png)
-* ![INSERT SCREENSHOT other page](/documentation/testing/responsiveness-7.png)
-* ![INSERT SCREENSHOT other page](/documentation/testing/responsiveness-8.png)
+* [/home - mobile](/documentation/testing/responsiveness-1.png)
+* [/home - notebook](/documentation/testing/responsiveness-2.png)
+* [/recipes - mobile](/documentation/testing/responsiveness-3.png)
+* [/recipes - desktop](/documentation/testing/responsiveness-4.png)
+* [/register - desktop](/documentation/testing/responsiveness-5.png)
+* [/add_recipe - tablet](/documentation/testing/responsiveness-6.png)
+* [/categories - notebook](/documentation/testing/responsiveness-7.png)
+* [/about - tablet](/documentation/testing/responsiveness-8.png)
+* [/profile - mobile1](/documentation/testing/profile-mobile1.png)
+* [/profile - mobile2](/documentation/testing/profile-mobile2.png)
+* [/profile - mobile3](/documentation/testing/profile-mobile3.png)
+* [/profile - tablet1](/documentation/testing/profile-tablet1.png)
+* [/profile - tablet2](/documentation/testing/profile-tablet2.png)
+* [/profile - xl-screen](/documentation/testing/profile-xl-screen.png)
+
+----
 
 ## Testing User Stories from UX Development Section
 ### First Time Visitor Goals - As a first time user who has not created an account, I want to be able to:

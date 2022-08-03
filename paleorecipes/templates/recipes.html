@@ -2,7 +2,7 @@
 {% block content %}
 
     <div class="min-vh-100 bg-dark recipe-bg">
-        <!-- SEARCH FOR RECIPES AREA -->
+        <!-- START OF SEARCH FOR RECIPES -->
         <div class="recipe-container mx-auto">
             <h1 class="text-center display-3 mt-5">Search for Recipes</h1>
             <p class="paleo-font text-white h5">Find delicious and healthy recipes that everyone in your family will enjoy!</p>
@@ -28,6 +28,7 @@
                 </div>
             </form>
         </div>
+        <!-- END OF SEARCH FOR RECIPES -->
         <!-- DISPLAYING ALL AVAILABLE RECIPES -->
         <button id="btnScrollUp" title="Go to top"><i class="bi bi-arrow-up-circle-fill" aria-hidden="true"></i> Top</button>
         <div class="container-fluid">
@@ -87,7 +88,7 @@
                                     <a href="#modal-{{ recipe._id }}" class="btn btn-delete text-center mx-5 text-center" data-bs-toggle="modal">Delete Recipe</a>
                                 {% endif %}
                             </div>
-                            <!-- MODAL -->
+                            <!-- START OF MODAL -->
                             <div class="modal fade" id="modal-{{ recipe._id }}" aria-hidden="true">
                                 <div class="modal-dialog">
                                     <div class="modal-content text-center">
@@ -100,6 +101,7 @@
                                     </div>
                                 </div>
                             </div>
+                            <!-- END OF MODAL -->
                         </div>
                     {% endfor %}
                 </div>

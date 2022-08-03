@@ -21,7 +21,7 @@
 
 ## Validation Results
 ### HTML: W3C Markup Validator Test Results
-* ![INSERT SCREENSHOT Home page](/documentation/validation/nu-html-index.webp)
+* ![INSERT SCREENSHOT Home page](/documentation/validation/index-html-validation.png)
 * ![INSERT SCREENSHOT other page](/documentation/validation/nu-html-recipes.webp)
 * ![INSERT SCREENSHOT other page](/documentation/validation/nu-html-add-recipe.webp)
 * ![INSERT SCREENSHOT other page](/documentation/validation/nu-html-categories.webp)

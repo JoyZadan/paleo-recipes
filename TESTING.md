@@ -127,7 +127,7 @@
     * ![INSERT SCREENSHOT other page](/documentation/user-stories/user-story-9.png)
     * An additional input area, called Additional Notes, is available on the add_recipe page for any registered users uploading a recipe
 * Be forewarned of the consequences of what I am about to do on the App, such as deleting my recipes
-    * ![INSERT SCREENSHOT other page](/documentation/user-stories/user-story-9.png)
+    * ![INSERT SCREENSHOT other page](/documentation/user-stories/user-story-10.png)
 * Logged users provided warnings when attempting to perform a function which may have destructive or unavoidable consequences
     * ![INSERT SCREENSHOT other page](/documentation/user-stories/user-story-10.png)
 

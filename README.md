@@ -151,7 +151,7 @@ The Paleo Recipes Application uses a combination of two databases, PostgreSQL an
 All User Authentication and the list of Categories are handled using **relational-backed database** (PostgreSQL using Flask+SQLAlchemy).
 Except for the deletion of Categories which requires a Superadmin user permission, all the Standard CRUD data manipulation is handled using a **nonrelational-backed database** (MongoDB using Flask+PyMongo). The diagram below show the structure and schema used in the databases and the relationship between the tables in Postgres with the collection in MongoDB.
 
-During the development of the Application, and prior to project submission, the Entity Relationship Diagram (ERD) below went through several iterations to adapt to the challenges encountered during development, specifically around time constraints. Aside from the recipe management and sharing functionalities, the development plan included a blog section and the corresponding topics and blog collections were also created in MongoDB. The blog feature is now tabled for future development. [Screenshot of ERD which includes collections that are not used in the current version](/documentation/schema-blog-topics-unused.png).
+During the development of the Application, and prior to project submission, the Entity Relationship Diagram (ERD) below went through several iterations to adapt to the challenges encountered during development, specifically around time constraints. Aside from the recipe management and sharing functionalities, the development plan also included a blog section; and the corresponding topics and blog collections were subsequently created in MongoDB. The blog feature is now tabled for future development. [Screenshot of ERD which includes collections that are not used in the current version](/documentation/schema-blog-topics-unused.png).
 
 ![COMBINED RELATIONAL(POSTGRES) AND NONRELATIONAL (MONGO )DATABASES SCHEMA](/documentation/paleo-recipes-schema.png)
 
@@ -312,9 +312,11 @@ The following error handlers were added to the Application to handle possible sc
     * Online-Convert was used to convert the png images to webp.
 
 ## Future Implementation
-* Include Blog Functionality
+* Include a Blog Functionality
 * Allow registered users to delete their own account
 * Add dynamic pagination on user's dashboard for better UX when viewing their own recipes
+* Add functionality that will allow the users the choice to upload a new image and not force them to re-upload an existing photo in order to edit recipe
+* Dynamically populate the Public API Key to enable image upload without having to display the Public Key to the users
 
 
 # Testing

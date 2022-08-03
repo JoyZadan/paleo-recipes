@@ -31,15 +31,19 @@
 * [/about](/documentation/validation/about-html-validation.png)
 * [/profile](/documentation/validation/profile-user-html-validation.png)
 * [/register](/documentation/validation/register-html-validation.png)
-* [/login]()
+* [/login](/documentation/validation/login-html-validation.png)
+* [/error](/documentation/validation/error-html-validation.png)
 
 ### CSS: W3C CSS Validator Test Results
 * ![INSERT SCREENSHOT Results](/documentation/validation/css-validation.webp)
 * ![INSERT SCREENSHOT Warnings](/documentation/validation/css-warnings.webp)
+
 ### JavaScript: JSHint Linting Results
 * ![INSERT SCREENSHOT scroll.js](/documentation/validation/jshint-validation.webp)
+
 ### Python: PEP8 online Test Results
 * ![INSERT SCREENSHOT](/documentation/testing/pep8online.png)
+
 ### Lighthouse Test Results
 * [/home](/documentation/testing/index-lighthouse-desktop.png)
 * [/recipes](/documentation/testing/recipes-lighthouse-desktop.png)
@@ -49,8 +53,10 @@
 * [/add_category](/documentation/testing/add-category-lighthouse-desktop.png)
 * [/edit_category](/documentation/testing/edit-category-lighthouse-desktop.png)
 * [/profile](/documentation/testing/profile-user-lighthouse-desktop.png)
-
 * [/about](/documentation/testing/about-lighthouse-mobile.png)
+* [/register](/documentation/testing/register-lighthouse-desktop.png)
+* [/login](/documentation/testing/login-lighthouse-desktop.png)
+
 ### a11y Color Contrast Accessibility for the Visually Impaired Test Results
 * ![INSERT SCREENSHOT Home page](/documentation/testing/a11y-color-contrast-index.png)
 * ![INSERT SCREENSHOT other page](/documentation/testing/a11y-color-contrast-recipes.png)

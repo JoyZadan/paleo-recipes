@@ -1,7 +1,6 @@
 /* GOOGLE FONTS IMPORT */
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&family=Poppins:ital,wght@0,400;0,500;1,300&display=swap');
 
-
 /* GLOBAL STYLING */
 :root {
     --ff-display: 'Dancing Script', Handwriting;
@@ -371,7 +370,7 @@ a {
     width: 18rem;
 }
 
-/* -------------------- ALT CATEGORIES PAGE STYLING ----------------------- */
+/* ALT CATEGORIES PAGE STYLING  */
 .alt-bg {
     background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(191,107,4, 0.4));
 }
@@ -500,16 +499,18 @@ footer p {
     font-size: 0.8rem;
 }
 
+/* COPYRIGHT ON FOOTER STYLING */
+.copyright-bg {
+    background-color: var(--custom-color-secondary);
+}
+
+/* DECORATIVE BOOTSTRAP ICONS STYLING */
 .bootstrap-icon {
     background-color: var(--buttons-color);
     border: 1px solid rgba(255,255,255,0.1);
     text-shadow: var(--text-shadow);
     border-radius: 10px;
     pointer-events: none;
-}
-
-.copyright-bg {
-    background-color: var(--custom-color-secondary);
 }
 
 /* ERROR PAGES STYLING */
@@ -577,7 +578,6 @@ for just above medium breakpoint of 768px to larger screens */
         display: grid;
         grid-template-columns: repeat(2, 1fr);
     }
-
 }
 
 @media screen and (max-width: 52.75em) {

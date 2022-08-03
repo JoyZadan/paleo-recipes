@@ -40,6 +40,7 @@
 
 ### JavaScript: JSHint Linting Results
 * ![INSERT SCREENSHOT scroll.js](/documentation/validation/jshint-validation.webp)
+* ![INSERT SCREENSHOT script.js](/documentation/validation/script-js-validation.png)
 
 ### Python: PEP8 online Test Results
 * ![INSERT SCREENSHOT](/documentation/validation/pep8-validation-new.png)

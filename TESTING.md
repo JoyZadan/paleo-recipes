@@ -37,16 +37,15 @@
 ### Python: PEP8 online Test Results
 * ![INSERT SCREENSHOT](/documentation/testing/pep8online.png)
 ### Lighthouse Test Results
-* ![INSERT SCREENSHOT Home page](/documentation/testing/index-lighthouse-desktop.png)
-* ![INSERT SCREENSHOT Recipes page](/documentation/testing/recipes-lighthouse-desktop.png)
-* ![INSERT SCREENSHOT Add Recipe page](/documentation/testing/add-recipe-lighthouse-desktop.png)
-* ![INSERT SCREENSHOT other page](/documentation/testing/lighthouse-add-recipe.webp)
+* [Home page](/documentation/testing/index-lighthouse-desktop.png)
+* [Recipes page](/documentation/testing/recipes-lighthouse-desktop.png)
+* [Add Recipe page](/documentation/testing/add-recipe-lighthouse-desktop.png)
 * ![INSERT SCREENSHOT other page](/documentation/testing/lighthouse-profile.webp)
 * ![INSERT SCREENSHOT other page](/documentation/testing/lighthouse-recipes.webp)
 * ![INSERT SCREENSHOT other page](/documentation/testing/lighthouse-categories.webp)
 * ![INSERT SCREENSHOT other page](/documentation/testing/lighthouse-recipes.webp)
 * ![INSERT SCREENSHOT other page](/documentation/testing/lighthouse-recipes.webp)
-* [INSERT SCREENSHOT About mobile](/documentation/validation/about-lighthouse-mobile.png)
+* [About mobile](/documentation/validation/about-lighthouse-mobile.png)
 ### a11y Color Contrast Accessibility for the Visually Impaired Test Results
 * ![INSERT SCREENSHOT Home page](/documentation/testing/a11y-color-contrast-index.png)
 * ![INSERT SCREENSHOT other page](/documentation/testing/a11y-color-contrast-recipes.png)

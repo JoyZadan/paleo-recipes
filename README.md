@@ -137,16 +137,23 @@ The add, edit and delete elements are only available to logged in users. The del
  - A SUPERADMIN DELETING A CATEGORY WILL DELETE ALL RECIPES ASSOCIATE WITH THE DELETED CATEGORY AND WILL RETURN TO THE CATEGORIES PAGE
 
 #### Guest User
-- ![GUEST USER JOURNEY ACROSS THE PALEO RECIPES APP](/documentation/user-stories/guest-user.png)
+![GUEST USER JOURNEY ACROSS THE PALEO RECIPES APP](/documentation/user-stories/guest-user.png)
 
 #### Registered User
-- ![REGISTERED USER'S JOURNEY ACROSS THE PALEO RECIPES APP](/documentation/user-stories/registered-user.png)
+![REGISTERED USER'S JOURNEY ACROSS THE PALEO RECIPES APP](/documentation/user-stories/registered-user.png)
 
 #### Superadmin User
-- ![SUPERADMIN'S PERMISSION AND ACCESS ACROSS THE PALEO RECIPES APP](/documentation/user-stories/superadmin-user.png)
+![SUPERADMIN'S PERMISSION AND ACCESS ACROSS THE PALEO RECIPES APP](/documentation/user-stories/superadmin-user.png)
 
 ### Database Schema and Structure
-- ![COMBINED RELATIONAL(POSTGRES) AND NONRELATIONAL (MONGO )DATABASES SCHEMA](/documentation/testing/combined-postgres-mongo-db.png)
+The Paleo Recipes Application uses a combination of two databases, PostgreSQL and MongoDB.
+
+All User Authentication and the list of Categories are handled using **relational-backed database** (PostgreSQL using Flask+SQLAlchemy).
+Except for the deletion of Categories which requires a Superadmin user permission, all the Standard CRUD data manipulation is handled using a **nonrelational-backed database** (MongoDB using Flask+PyMongo). The diagram below show the structure and schema used in the databases and the relationship between the tables in Postgres with the collection in MongoDB.
+
+During the development of the Application, the Entity Relationship Diagram (ERD) below went through several iterations to adapt to the challenges encountered during development, specifically around time constraints. Aside from the recipe management and sharing functionalities, the development plan included a blog section and the corresponding topics and blog collections were also created in MongoDB. The blog feature is now tabled for future development. [Screenshot of ERD including unused collections](/documentation/schema-blog-topics-unused.png).
+
+![COMBINED RELATIONAL(POSTGRES) AND NONRELATIONAL (MONGO )DATABASES SCHEMA](/documentation/paleo-recipes-schema.png)
 
 ## Skeleton
 ### Wireframes

@@ -2,9 +2,11 @@
 {% block content %}
 
     <div class="container mb-5 wrapper bg-dark">
+        <!-- EDIT CATEGORY PAGE HEADING-->
         <h1 class="text-center display-3 my-3 mt-5">Edit Category</h1>
         <p class="paleo-font text-white h5 text-center mb-5">SUPERADMIN USERS ONLY</p>
         <div class="row">
+            <!-- START OF FORM -->
             <form action="{{ url_for('edit_category', category_id=category.id) }}" method="POST" class="card col-12 col-md-8 offset-md-2 mb-5">
                 <div class="card-body">
                     <div class="row g-2">
@@ -30,6 +32,7 @@
                     </div>
                 </div>
             </form>
+            <!-- END OF FORM -->
         </div>
     </div>
 

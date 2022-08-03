@@ -255,7 +255,8 @@ The following error handlers were added to the Application to handle possible sc
     * [CSS3](https://en.wikipedia.org/wiki/CSS#CSS_3) was used for the styling of the site.
     * [JavaScript](https://en.wikipedia.org/wiki/JavaScript) was used for the interactivity of the site.
     * [Python](https://www.python.org/) was used for the back end programming of the site.
-    * [Cloudinary API](https://cloudinary.com/) was used to enable users to upload images for their recipes whilst keeping the App safe and secure
+
+* [Cloudinary API](https://cloudinary.com/) was used to enable users to upload images for their recipes whilst keeping the App safe and secure
 
 * [Flask](https://flask.palletsprojects.com/en/2.0.x/)
     * Flask was used to handle the templating for the site.
@@ -338,16 +339,16 @@ These are the steps used for deployment to Heroku:
 5. Navigate to the settings tab, click reveal config vars and input the the following:
 
 | Key | Value |
-| :--- | :--- |
+| :---: | :---: |
 | CLOUD_NAME | mycloudinaryname  |
 | API_KEY | myapikey |
 | API_SECRET | myapisecret |
 | IP | 0.0.0.0 |
-| MONGO_DBNAME | mongoname |
-| MONGO_URI |  | mongodb+srv://root:<myrootpassword>@cluster0.sgi7e.mongodb.net/<mydatabasename>?retryWrites=true&w=majority |
 | PORT | 5000 |
+| MONGO_DBNAME | mongodb_name |
+| MONGO_URI | mongodb+srv://<*USERNAME*>:<*PASSWORD*>@<*CLUSTER*>-4g3i1.mongodb.net/<*DATABASE*>?retryWrites=true&w=majority |
 | SECRET_KEY | mysecretkey |
-| DATABASE_URL | postgresl URL  |
+| DATABASE_URL | postgresql |
 
 6. Go back to the Deploy tab and select enable automatic deploys
 7. Click deploy branch

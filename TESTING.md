@@ -27,7 +27,7 @@
 * ![INSERT SCREENSHOT other page](/documentation/validation/nu-html-categories.webp)
 * ![INSERT SCREENSHOT other page](/documentation/validation/nu-html-register.webp)
 * ![INSERT SCREENSHOT other page](/documentation/validation//nu-html-login.webp)
-* ![INSERT SCREENSHOT other page](/documentation/validation/nu-html-about.webp)
+* ![INSERT SCREENSHOT about page](/documentation/validation/about-html-validation.png)
 * ![INSERT SCREENSHOT other page](/documentation/validation/nu-html-profile.webp)
 ### CSS: W3C CSS Validator Test Results
 * ![INSERT SCREENSHOT Results](/documentation/validation/css-validation.webp)
@@ -46,6 +46,7 @@
 * ![INSERT SCREENSHOT other page](/documentation/testing/lighthouse-categories.webp)
 * ![INSERT SCREENSHOT other page](/documentation/testing/lighthouse-recipes.webp)
 * ![INSERT SCREENSHOT other page](/documentation/testing/lighthouse-recipes.webp)
+* ![INSERT SCREENSHOT about mobile](/documentation/validation/about-lighthouse-mobile.png)
 ### a11y Color Contrast Accessibility for the Visually Impaired Test Results
 * ![INSERT SCREENSHOT Home page](/documentation/testing/a11y-color-contrast-index.png)
 * ![INSERT SCREENSHOT other page](/documentation/testing/a11y-color-contrast-recipes.png)

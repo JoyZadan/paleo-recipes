@@ -216,6 +216,7 @@ Breakdown of the features and elements implemented for the App.
 - Responsive sidebar for users to access links to search recipes, add recipe and log out
 - Username prominently displayed on top left hand side of sidebar (for desktops)
 - Sidebar dynamically moves below navbar on small and medium device
+- Render all recipes shared by the registered user to be available on his/ her User Dashboard
 
 
 ### **CRUD TABLE**
@@ -230,7 +231,7 @@ This shows what CRUD functionality is available from each page
 | login |  | username for password check |   |  |  |
 | edit_recipe |  | all information incl with recipe and image | all information incl with the recipe & image |  |
 | categories, requires log in and user is superadmin | categories | all available categories | all available categories | all available categories plus all recipes associated with the deleted category |
-| profile |  | user dashboard, custom information for registered users |  |  |  |
+| profile |  | user dashboard, custom information for registered users | view all available recipes shared by the loggedin user | edit own recipe functionality available to logged in users from their dashboard | delete own recipe functionality available to logged in users from their dashboard |
 
 
 ### Defensive Programming
@@ -306,7 +307,8 @@ The following error handlers were added to the Application to handle possible sc
 ## Future Implementation
 * Include Blog Functionality
 * Allow registered users to delete their own account
-* Render all recipes shared by the registered user to be available on his/ her User Dashboard
+* Add dynamic pagination on user's dashboard for better UX when viewing their own recipes
+
 
 # Testing
 ## All testing undertaken for this project can be found in the [Testing Document](/TESTING.md)
@@ -375,7 +377,11 @@ Sample recipes posted on the Paleo Recipes App were sourced from:
 * [Ambitious Kitchen](https://www.ambitiouskitchen.com/)
 * [Paleo Running Momma](https://www.paleorunningmomma.com/)
 
+Information about Paleo Diet was sourced from the [Mayo Clinic](https://www.mayoclinic.org/healthy-lifestyle/nutrition-and-healthy-eating/in-depth/paleo-diet/art-20111182#:~:text=A%20paleo%20diet%20typically%20includes,dairy%20products%2C%20legumes%20and%20grains.)
+
 ## Media
+* Images used for the project were licensed from Adobe Stock
+
 ## Resources
 README and Testing Inspirations from [Nick Lennon's](https://github.com/nlenno1/moviewiki-ms3) and [Naoise Gaffney's](https://github.com/NaoiseGaffney/Training) individual README documentation for MS3.
 

@@ -362,9 +362,12 @@ def logout():
 @login_required
 def profile():
     """
-    Query Postgres
-    Get user's profile from MongoDB
-    Get user's input for all fields and render on profile page
+    Checks if user in session
+    Queries MongoDB for recipes created by user in session
+    Queries Postgres for categories
+    Renders all available recipes created by user
+    including corresponding categories
+    Redirects user to log in page if user not logged in
     """
     if "user" in session:
         recipe_list = mongo.db.recipes.find(

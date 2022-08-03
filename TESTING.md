@@ -27,8 +27,9 @@
 * [/edit_recipe](/documentation/validation/edit-recipe-html-validation.png)
 * [/categories](/documentation/validation/categories-html-validation.png)
 * [/add_category](/documentation/validation/add-category-html-validation.png)
+* [/edit_category](/documentation/validation/edit-category-html-validation.png)
 * [/about](/documentation/validation/about-html-validation.png)
-* ![INSERT SCREENSHOT other page](/documentation/validation/nu-html-profile.webp)
+*
 ### CSS: W3C CSS Validator Test Results
 * ![INSERT SCREENSHOT Results](/documentation/validation/css-validation.webp)
 * ![INSERT SCREENSHOT Warnings](/documentation/validation/css-warnings.webp)
@@ -43,9 +44,9 @@
 * [/edit_recipe](/documentation/testing/edit-recipe-lighthouse-desktop.png)
 * [/categories](/documentation/testing/categories-lighthouse-desktop.png)
 * [/add_category](/documentation/testing/add-category-lighthouse-desktop.png)
-* ![INSERT SCREENSHOT other page](/documentation/testing/lighthouse-recipes.webp)
-* ![INSERT SCREENSHOT other page](/documentation/testing/lighthouse-recipes.webp)
-* [About mobile](/documentation/testing/about-lighthouse-mobile.png)
+* [/edit_category](/documentation/testing/edit-category-lighthouse-desktop.png)
+*
+* [/about](/documentation/testing/about-lighthouse-mobile.png)
 ### a11y Color Contrast Accessibility for the Visually Impaired Test Results
 * ![INSERT SCREENSHOT Home page](/documentation/testing/a11y-color-contrast-index.png)
 * ![INSERT SCREENSHOT other page](/documentation/testing/a11y-color-contrast-recipes.png)

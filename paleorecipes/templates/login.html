@@ -2,8 +2,10 @@
 {% block content %}
 
     <div class="container mb-5 wrapper bg-dark">
+        <!-- PAGE HEADING -->
         <h1 class="text-center display-3 mt-5">Login</h1>
         <div class="row">
+            <!-- START OF FORM -->
             <form action="{{ url_for('login') }}" method="POST" class="card col-12 col-md-8 offset-md-2 mb-5" >
                 <div class="card-body">
                     <div class="row g-2">
@@ -47,6 +49,7 @@
                     </div>
                 </div>
             </form>
+            <!-- END OF FORM -->
         </div>
     </div>
 

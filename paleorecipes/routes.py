@@ -32,9 +32,9 @@ def about():
 
 def login_required(f):
     """
-        Ensures page is only accessible to logged in users
-        @login_required decorator -
-        https://flask.palletsprojects.com/en/2.1.x/patterns/viewdecorators/
+    Ensures page is only accessible to logged in users
+    @login_required decorator -
+    https://flask.palletsprojects.com/en/2.1.x/patterns/viewdecorators/
     """
     @wraps(f)
     def decorated_function(*args, **kwargs):
@@ -208,9 +208,9 @@ def add_category():
 @login_required
 def edit_category(category_id):
     """
-        checks if user is superadmin
-        if not, user is redirected to recipes page
-        edit categories
+    checks if user is superadmin
+    if not, user is redirected to recipes page
+    edit categories
     """
     if "user" not in session or session["user"] != "superadmin":
         flash("You must be a superadmin to manage categories of recipes!")
@@ -229,9 +229,9 @@ def edit_category(category_id):
 @login_required
 def delete_category(category_id):
     """
-        checks if user is superadmin
-        if not, user is redirected to recipes page
-        delete category
+    checks if user is superadmin
+    if not, user is redirected to recipes page
+    delete category
     """
     if session["user"] != "superadmin":
         flash("You must be a superadmin to manage categories of recipes!")
@@ -249,13 +249,13 @@ def delete_category(category_id):
 @app.route("/register/", methods=["GET", "POST"])
 def register():
     """
-        Check if user is already logged in, if so redirect user
-        to the profile page. Get user's username from the form,
-        check if it already exists in the database.
-        If it does, flash a message to the user and redirect
-        to the registration page. Save user in postgres db,
-        insert user_profile in mongodb, put user
-        into session cookie and redirect to profile page.
+    Checks if user is already logged in, if so redirect user
+    to the profile page. Get user's username from the form,
+    checks if it already exists in the database.
+    If it does, flash a message to the user and redirect
+    to the registration page. Save user in postgres db,
+    insert user_profile in mongodb, put user
+    into session cookie and redirect to profile page.
     """
     if "user" in session:
         flash("You're already logged in!")
@@ -309,13 +309,13 @@ def register():
 @app.route("/login", methods=["GET", "POST"])
 def login():
     """
-        Check if user is already logged in, if so redirect user
-        to the profile page. Get user's username from the form,
-        check if it already exists in the database.
-        If it does, flash a message to the user and redirect
-        to the login page. Save user in postgres db,
-        insert user_profile in mongodb, put user
-        into session cookie and redirect to profile page.
+    Checks if user is already logged in, if so redirect user
+    to the profile page. Get user's username from the form,
+    checks if it already exists in the database.
+    If it does, flash a message to the user and redirect
+    to the login page. Save user in postgres db,
+    insert user_profile in mongodb, put user
+    into session cookie and redirect to profile page.
     """
     if "user" in session:
         flash("You're already logged in!")
@@ -352,7 +352,7 @@ def login():
 
 @app.route("/logout")
 def logout():
-    """ remove user from session cookie """
+    """ removes user from session cookie """
     flash("You have been logged out. See you soon!")
     session.pop("user")
     return redirect(url_for("login"))
@@ -362,9 +362,9 @@ def logout():
 @login_required
 def profile():
     """
-        Query Postgres
-        Get user's profile from MongoDB
-        Get user's input for all fields and render on profile page
+    Query Postgres
+    Get user's profile from MongoDB
+    Get user's input for all fields and render on profile page
     """
     if "user" in session:
         recipe_list = mongo.db.recipes.find(
@@ -384,8 +384,8 @@ def profile():
 @app.errorhandler(400)
 def handle_bad_request(e):
     """
-        handles a 400 Bad Request error
-        and returns an error message to the user
+    handles a 400 Bad Request error
+    and returns an error message to the user
     """
     message = "A Bad Request was made"
     return render_template("error.html", error_status=e, message=message), 400
@@ -394,8 +394,8 @@ def handle_bad_request(e):
 @app.errorhandler(404)
 def page_not_found(e):
     """
-        handles a 404 Not Found error
-        and returns an error message to the user
+    handles a 404 Not Found error
+    and returns an error message to the user
     """
     message = "Sorry, we cannot find the page you are looking for!"
     return render_template("error.html", error_status=e, message=message), 404
@@ -404,8 +404,8 @@ def page_not_found(e):
 @app.errorhandler(408)
 def request_timeout(e):
     """
-        handles a 408 Request Timeout Error
-        and displays an apology message to the user
+    handles a 408 Request Timeout Error
+    and displays an apology message to the user
     """
     message = "Sorry about this...Your request has exceeded the maximum time \
                 allowed. Please try again."
@@ -415,8 +415,8 @@ def request_timeout(e):
 @app.errorhandler(500)
 def internal_server_error(e):
     """
-        handles a 500 Internal Server Error
-        and displays an apology message to the user
+    handles a 500 Internal Server Error
+    and displays an apology message to the user
     """
     message = "Sorry! We seem to have made a mistake. Please try again soon."
     return render_template("error.html", error_status=e, message=message), 500

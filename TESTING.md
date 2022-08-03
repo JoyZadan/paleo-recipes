@@ -21,13 +21,13 @@
 
 ## Validation Results
 ### HTML: W3C Markup Validator Test Results
-* ![INSERT SCREENSHOT Home page](/documentation/validation/index-html-validation.png)
-* ![INSERT SCREENSHOT other page](/documentation/validation/nu-html-recipes.webp)
+* [INSERT SCREENSHOT Home page](/documentation/validation/index-html-validation.png)
+* [INSERT SCREENSHOT Recipes page](/documentation/validation/recipes-html-validation.png)
 * ![INSERT SCREENSHOT other page](/documentation/validation/nu-html-add-recipe.webp)
 * ![INSERT SCREENSHOT other page](/documentation/validation/nu-html-categories.webp)
 * ![INSERT SCREENSHOT other page](/documentation/validation/nu-html-register.webp)
 * ![INSERT SCREENSHOT other page](/documentation/validation//nu-html-login.webp)
-* ![INSERT SCREENSHOT about page](/documentation/validation/about-html-validation.png)
+* [INSERT SCREENSHOT About page](/documentation/validation/about-html-validation.png)
 * ![INSERT SCREENSHOT other page](/documentation/validation/nu-html-profile.webp)
 ### CSS: W3C CSS Validator Test Results
 * ![INSERT SCREENSHOT Results](/documentation/validation/css-validation.webp)
@@ -38,7 +38,7 @@
 * ![INSERT SCREENSHOT](/documentation/testing/pep8online.png)
 ### Lighthouse Test Results
 * ![INSERT SCREENSHOT Home page](/documentation/testing/lighthouse-desktop-top.webp)
-* ![INSERT SCREENSHOT other page](/documentation/testing/lighthouse-recipes.webp)
+* ![INSERT SCREENSHOT Recipes page](/documentation/validation/recipes-lighthouse-desktop.png)
 * ![INSERT SCREENSHOT other page](/documentation/testing/lighthouse-desktop-categories.webp)
 * ![INSERT SCREENSHOT other page](/documentation/testing/lighthouse-add-recipe.webp)
 * ![INSERT SCREENSHOT other page](/documentation/testing/lighthouse-profile.webp)
@@ -46,7 +46,7 @@
 * ![INSERT SCREENSHOT other page](/documentation/testing/lighthouse-categories.webp)
 * ![INSERT SCREENSHOT other page](/documentation/testing/lighthouse-recipes.webp)
 * ![INSERT SCREENSHOT other page](/documentation/testing/lighthouse-recipes.webp)
-* ![INSERT SCREENSHOT about mobile](/documentation/validation/about-lighthouse-mobile.png)
+* [INSERT SCREENSHOT About mobile](/documentation/validation/about-lighthouse-mobile.png)
 ### a11y Color Contrast Accessibility for the Visually Impaired Test Results
 * ![INSERT SCREENSHOT Home page](/documentation/testing/a11y-color-contrast-index.png)
 * ![INSERT SCREENSHOT other page](/documentation/testing/a11y-color-contrast-recipes.png)

@@ -3,10 +3,13 @@
 
     <div class="min-vh-100 bg-dark add-recipe-bg">
         <div class="add-recipe-container col-xs-12 mx-5 transparent">
+            <!-- PAGE HEADING -->
             <h1 class="text-center display-3 mt-5">Add a Recipe</h1>
             <p class="paleo-font text-white h5 mb-5">Share any of your favourite paleo recipes for everyone to enjoy!</p>
             <button id="btnScrollUp" title="Go to top"><i class="bi bi-arrow-up-circle-fill"></i> Top</button>
+            <!-- START OF ADD A RECIPE PAGE CONTENT -->
             <div class="row">
+                <!-- START OF FORM -->
                 <form action="{{ url_for('add_recipe') }}" method="POST" class="input-text card col-12 mb-5" enctype="multipart/form-data">
                     <div class="card-body">
                         <div class="row g-2">
@@ -155,7 +158,9 @@
                         </div>
                     </div>
                 </form>
+                <!-- END OF FORM -->
             </div>
+            <!-- END OF ADD A RECIPE PAGE CONTENT -->
         </div>
     </div>
 

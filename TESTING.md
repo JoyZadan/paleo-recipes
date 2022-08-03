@@ -42,7 +42,7 @@
 * ![INSERT SCREENSHOT scroll.js](/documentation/validation/jshint-validation.webp)
 
 ### Python: PEP8 online Test Results
-* ![INSERT SCREENSHOT](/documentation/testing/pep8online.png)
+* ![INSERT SCREENSHOT](/documentation/validation/pep8-validation-new.png)
 
 ### Lighthouse Test Results
 * [/home](/documentation/testing/index-lighthouse-desktop.png)
